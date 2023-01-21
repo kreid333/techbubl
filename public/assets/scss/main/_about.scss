@@ -1,0 +1,45 @@
+.about-header {
+  text-align: center;
+  .logo {
+    justify-content: center;
+    img {
+      width: 100px;
+    }
+    span {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-family: "IBM Plex Mono", monospace;
+    padding: 30px 0px;
+  }
+}
+
+hr {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.about-content {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 2rem;
+  }
+  p {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    width: 100%;
+  }
+}

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="public/assets/css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&family=Questrial&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -18,7 +18,7 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-    <div class="logo">
+    <div class="nav-logo">
         <a href="/">
             <img src="public/assets/images/TechBubl.svg" alt="TechBubl Logo">
             <span>TechBubl</span>
@@ -71,16 +71,14 @@
         <hr class="divider">
         <div class="aside-section">
             <div class="logo">
-                <a href="/">
-                    <img src="public/assets/images/TechBubl.svg" alt="TechBubl Logo">
-                    <span>TechBubl</span>
-                </a>
+                <img src="public/assets/images/TechBubl.svg" alt="TechBubl Logo">
+                <span>TechBubl</span>
             </div>
             <div class="popular-articles">
                 <h3>Popular Articles</h3>
                 <?php for ($i = 0; $i < 4; $i++) { ?>
                     <a href="#">
-                    <div class="aside-article">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                        <div class="aside-article">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
                     </a>
                 <?php } ?>
             </div>
@@ -88,7 +86,7 @@
                 <h3>Most Recent</h3>
                 <?php for ($i = 0; $i < 4; $i++) { ?>
                     <a href="#">
-                    <div class="aside-article">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                        <div class="aside-article">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
                     </a>
                 <?php } ?>
             </div>
