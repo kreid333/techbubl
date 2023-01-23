@@ -95,7 +95,7 @@
                 <span class="newsletter-info">A newsletter that offers bite-sized articles discussing various fields in the area of technology.</span>
                 <form class="signup-form" action="">
                     <input type="email" name="signup-email" id="signup-email" placeholder="Email Address">
-                    <button>Sign Up</button>
+                    <button class="btn black">Sign Up</button>
                 </form>
             </div>
         </div>

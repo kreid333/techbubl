@@ -28,6 +28,10 @@ i {
   font-size: 1.25rem;
 }
 
+textarea, input {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -38,6 +42,26 @@ i {
     font-family: "Questrial", sans-serif;
     font-size: 1rem;
     margin: 0px 2px;
+  }
+}
+
+.btn {
+  border: none;
+  padding: 10px 15px;
+  white-space: nowrap;
+  transition: 0.45s;
+  &.black {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+  }
+  &.white {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+  }
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -263,21 +287,10 @@ i {
         border: none;
         margin: none;
         padding: 10px;
-        height: 40px;
+        height: 41px;
         font-size: 12px;
         &:focus-visible {
           outline: none;
-        }
-      }
-      button {
-        background-color: #000000;
-        color: #ffffff;
-        border: none;
-        padding: 0px 15px;
-        white-space: nowrap;
-        transition: 0.45s;
-        &:hover {
-          cursor: pointer;
         }
       }
     }
