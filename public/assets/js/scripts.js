@@ -1,13 +1,13 @@
-const hamburger = document.querySelector(".hamburger");
+const hamburger = document.querySelector(".nav__hamburger");
 const mobileMenu = document.querySelector(".mobile-menu");
 
 hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    mobileMenu.classList.toggle("active");
+    hamburger.classList.toggle("nav__hamburger--active");
+    mobileMenu.classList.toggle("mobile-menu--active");
 })
 window.addEventListener("resize", () => {
     if (window.innerWidth >= 768) {
-        hamburger.classList.remove("active");
-        mobileMenu.classList.remove("active");
+        hamburger.classList.remove("nav__hamburger--active");
+        mobileMenu.classList.remove("mobile-menu--active");
     }
 });

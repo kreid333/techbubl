@@ -17,35 +17,38 @@
 </head>
 
 <!-- NAVBAR -->
-<nav class="navbar">
-    <div class="nav-logo">
+<nav class="nav">
+    <div class="nav__logo">
         <a href="/">
             <img src="public/assets/images/TechBubl.svg" alt="TechBubl Logo">
             <span>TechBubl</span>
         </a>
     </div>
 
-    <div class="search-bar">
+    <div class="nav__search-bar">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="search" name="" id="">
     </div>
 
-    <div class="nav-links">
+    <div class="nav__nav-links">
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
     </div>
 
-    <div class="social-links">
+    <div class="nav__social-links">
         <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
         <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
     </div>
-    <a href="/search" class="search">
+
+    <!-- mobile nav -->
+    <a class="nav__search-btn" href="/search">
         <i class="fa-solid fa-magnifying-glass"></i>
     </a>
-    <button class="hamburger">
-        <div class="bar"></div>
+
+    <button class="nav__hamburger">
+        <div></div>
     </button>
 </nav>
 
@@ -55,6 +58,7 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
     </div>
+
     <div class="mobile-menu__social-links">
         <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -65,37 +69,39 @@
 
 <body>
     <div class="wrapper">
-        <div class="main-section">
+        <div class="main">
             <?php require("$area/$name.view.php") ?>
         </div>
+
         <hr class="divider">
-        <div class="aside-section">
+
+        <div class="aside">
             <div class="logo">
                 <img src="public/assets/images/TechBubl.svg" alt="TechBubl Logo">
                 <span>TechBubl</span>
             </div>
-            <div class="popular-articles">
+            <div class="aside__popular-articles">
                 <h3>Popular Articles</h3>
                 <?php for ($i = 0; $i < 4; $i++) { ?>
                     <a href="#">
-                        <div class="aside-article">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                        <div class="aside__article">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
                     </a>
                 <?php } ?>
             </div>
-            <div class="most-recent">
+            <div class="aside__most-recent">
                 <h3>Most Recent</h3>
                 <?php for ($i = 0; $i < 4; $i++) { ?>
                     <a href="#">
-                        <div class="aside-article">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                        <div class="aside__article">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
                     </a>
                 <?php } ?>
             </div>
-            <div class="newsletter">
+            <div class="aside__newsletter">
                 <h3>Sign up for Daily Bubls</h3>
-                <span class="newsletter-info">A newsletter that offers bite-sized articles discussing various fields in the area of technology.</span>
-                <form class="signup-form" action="">
-                    <input type="email" name="signup-email" id="signup-email" placeholder="Email Address">
-                    <button class="btn black">Sign Up</button>
+                <span>A newsletter that offers bite-sized articles discussing various fields in the area of technology.</span>
+                <form action="">
+                    <input type="email" name="signup-email" placeholder="Email Address">
+                    <button class="btn btn--black">Sign Up</button>
                 </form>
             </div>
         </div>

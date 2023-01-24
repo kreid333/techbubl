@@ -3,7 +3,10 @@
 @use "main/about";
 @use "main/contact";
 
-// GLOBAL
+
+/* =========================== */
+/* START OF GLOBAL */
+/* =========================== */
 * {
   box-sizing: border-box;
 }
@@ -50,12 +53,12 @@ textarea, input {
   padding: 10px 15px;
   white-space: nowrap;
   transition: 0.45s;
-  &.black {
+  &--black {
     background-color: #000000;
     color: #ffffff;
     border: 1px solid #000000;
   }
-  &.white {
+  &--white {
     background-color: #ffffff;
     color: #000000;
     border: 1px solid #ffffff;
@@ -65,8 +68,15 @@ textarea, input {
   }
 }
 
-// NAVBAR
-.navbar {
+/* =========================== */
+/* END OF GLOBAL */
+/* =========================== */
+
+
+/* =========================== */
+/* START OF NAVBAR */
+/* =========================== */
+.nav {
   background-color: #ffffff;
   width: 100%;
   position: fixed;
@@ -79,7 +89,7 @@ textarea, input {
   padding: 0px 10px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
 
-  .nav-logo {
+  &__logo {
     width: fit-content;
     a {
       height: 100%;
@@ -96,7 +106,7 @@ textarea, input {
     }
   }
 
-  .search-bar {
+  &__search-bar {
     display: flex;
     background-color: #f5f5f5;
     border-radius: 20px;
@@ -121,63 +131,67 @@ textarea, input {
     }
   }
 
-  .nav-links {
+  &__nav-links {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex: 2;
   }
 
-  .social-links {
+  &__social-links {
     display: flex;
     justify-self: flex-end;
   }
-}
 
-// MOBILE SEARCH BUTTON
-.search {
-  display: none;
-  margin-left: auto;
-  i {
-    padding: 0;
-    margin: 0px 15px;
-    font-size: 1.75rem;
-    color: #a5a5a5;
-  }
-}
-
-// MOBILE HAMBURGER ICON
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  // creates 3 bars for hamburger menu
-  .bar,
-  &::before,
-  &::after {
-    transition: 0.45s;
-    content: "";
-    background-color: #a5a5a5;
-    height: 4px;
-    width: 2.5rem;
-    border-radius: 5px;
-    margin: 3px 0px;
-  }
-  // creates "x" when the hamburger is active
-  &.active::before {
-    transform: rotate(-45deg) translate(-4px, 4px);
-  }
-  &.active::after {
-    transform: rotate(45deg) translate(-3px, -3px);
-  }
-  &.active .bar {
+  &__search-btn {
     display: none;
+    margin-left: auto;
+    i {
+      padding: 0;
+      margin: 0px 15px;
+      font-size: 1.75rem;
+      color: #a5a5a5;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    // creates 3 bars for hamburger menu
+    div,
+    &::before,
+    &::after {
+      transition: 0.45s;
+      content: "";
+      background-color: #a5a5a5;
+      height: 4px;
+      width: 2.5rem;
+      border-radius: 5px;
+      margin: 3px 0px;
+    }
+    // creates "x" when the hamburger is active
+    &--active::before {
+      transform: rotate(-45deg) translate(-4px, 4px);
+    }
+    &--active::after {
+      transform: rotate(45deg) translate(-3px, -3px);
+    }
+    &--active div {
+      display: none;
+    }
   }
 }
+/* =========================== */
+/* END OF NAVBAR */
+/* =========================== */
 
-// MOBILE MENU
+
+/* =========================== */
+/* START OF MOBILE MENU */
+/* =========================== */
 .mobile-menu {
   background-color: #ffffff;
   display: flex;
@@ -192,35 +206,38 @@ textarea, input {
   height: 100%;
   transition: 0.45s;
   z-index: 100;
-  &.active {
+
+  &__nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    a {
+      transition: 0.45s;
+      width: 100vw;
+      padding: 60px 0;
+      &:hover {
+        background-color: #000000;
+        color: white;
+      }
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--active {
     left: 0;
   }
 }
+/* =========================== */
+/* END OF MOBILE MENU */
+/* =========================== */
 
-// MOBILE MENU NAV LINKS
-.mobile-menu__nav-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  a {
-    transition: 0.45s;
-    width: 100vw;
-    padding: 60px 0;
-    &:hover {
-      background-color: #000000;
-      color: white;
-    }
-  }
-}
-
-// MOBILE MENU SOCIAL LINKS
-.mobile-menu__social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 // WRAPPER
 .wrapper {
@@ -229,7 +246,7 @@ textarea, input {
 }
 
 // MAIN SECTION
-.main-section {
+.main {
   padding: 1.5rem;
 }
 
@@ -238,8 +255,11 @@ textarea, input {
   display: none;
 }
 
-// ASIDE SECTION
-.aside-section {
+
+/* =========================== */
+/* START OF ASIDE SECTION */
+/* =========================== */
+.aside {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -247,40 +267,39 @@ textarea, input {
   top: 80px;
   position: sticky;
   overflow-y: scroll;
-  .popular-articles,
-  .most-recent {
+
+  &__popular-articles,
+  &__most-recent {
     h3 {
       font-weight: 400;
       font-size: 1rem;
       margin: 30px 0px;
     }
+  }
 
-    .aside-article {
-      margin: 15px 0px;
-      padding: 10px;
-      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
-      transition: 0.45s;
-      &:hover {
-        cursor: pointer;
-        transform: scale(0.975);
-      }
+  &__article {
+    margin: 15px 0px;
+    padding: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.45s;
+    &:hover {
+      transform: scale(0.975);
     }
   }
 
-  .newsletter {
+  &__newsletter {
     margin: 45px 0px;
     display: flex;
     flex-direction: column;
     h3 {
       font-weight: 400;
     }
-    .newsletter-info {
+    span {
       display: block;
       font-size: 12px;
       margin: 10px 0px;
     }
-
-    .signup-form {
+    form {
       display: flex;
       input {
         background-color: #f5f5f5;
@@ -296,6 +315,10 @@ textarea, input {
     }
   }
 }
+/* =========================== */
+/* END OF ASIDE SECTION */
+/* =========================== */
+
 
 // FOOTER
 footer {
@@ -309,7 +332,10 @@ footer {
   }
 }
 
-// MEDIA QUERIES
+
+/* =========================== */
+/* START OF MEDIA QUERIES */
+/* =========================== */
 @media (max-width: 768px) {
   .wrapper {
     grid-template-columns: 1fr;
@@ -332,29 +358,33 @@ footer {
     }
   }
 
-  .navbar {
-    .search-bar {
+  .nav {
+    &__search-bar {
       display: none;
     }
-    .nav-links {
+    &__nav-links {
       display: none;
     }
 
-    .social-links {
+    &__social-links {
       display: none;
+    }
+
+    &__search-btn {
+      display: block;
+    }
+  
+    &__hamburger {
+      display: flex;
+      flex-direction: column;
     }
   }
 
-  .search {
-    display: block;
-  }
-
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-  }
 
   footer {
     text-align: center;
   }
 }
+/* =========================== */
+/* END OF MEDIA QUERIES */
+/* =========================== */
