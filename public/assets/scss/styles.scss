@@ -41,6 +41,7 @@ textarea, input {
   img {
     width: 55px;
   }
+
   span {
     font-family: "Questrial", sans-serif;
     font-size: 1rem;
@@ -58,11 +59,13 @@ textarea, input {
     color: #ffffff;
     border: 1px solid #000000;
   }
+
   &--white {
     background-color: #ffffff;
     color: #000000;
     border: 1px solid #ffffff;
   }
+
   &:hover {
     cursor: pointer;
   }
@@ -88,7 +91,6 @@ textarea, input {
   height: 80px;
   padding: 0px 10px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
-
   &__logo {
     width: fit-content;
     a {
@@ -206,7 +208,6 @@ textarea, input {
   height: 100%;
   transition: 0.45s;
   z-index: 100;
-
   &__nav-links {
     display: flex;
     flex-direction: column;
@@ -267,7 +268,6 @@ textarea, input {
   top: 80px;
   position: sticky;
   overflow-y: scroll;
-
   &__popular-articles,
   &__most-recent {
     h3 {
@@ -327,6 +327,7 @@ footer {
   position: absolute;
   width: 100%;
   bottom: 0;
+
   .footer-text {
     font-size: 10px;
   }
@@ -362,6 +363,7 @@ footer {
     &__search-bar {
       display: none;
     }
+
     &__nav-links {
       display: none;
     }
