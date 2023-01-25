@@ -3,6 +3,8 @@
 @use "main/about";
 @use "main/contact";
 
+@use "admin/login";
+
 
 /* =========================== */
 /* START OF GLOBAL */
@@ -19,6 +21,10 @@ body {
   position: relative;
   top: 80px;
   min-height: calc(100vh - 80px);
+}
+
+h1 {
+  font-size: 32px;
 }
 
 a {
@@ -249,6 +255,7 @@ textarea, input {
 // MAIN SECTION
 .main {
   padding: 1.5rem;
+  min-height: calc(100vh - 80px);
 }
 
 // DIVIDER

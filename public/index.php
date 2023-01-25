@@ -10,11 +10,23 @@ switch ($request) {
         break;
 
     case "/about":
+    case "/about/":
         require($root_directory . "/app/controllers/main/about.controller.php");
         break;
 
     case "/contact":
+    case "/contact/":
         require($root_directory . "/app/controllers/main/contact.controller.php");
+        break;
+
+    case "/admin":
+    case "/admin/":
+        require($root_directory . "/app/controllers/admin/index.controller.php");
+        break;
+
+    case "/admin/login":
+    case "/admin/login/":
+        require($root_directory . "/app/controllers/admin/login.controller.php");
         break;
 
     default:
