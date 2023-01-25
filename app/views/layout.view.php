@@ -16,58 +16,59 @@
     <title>TechBubl</title>
 </head>
 
-<!-- NAVBAR -->
-<nav class="nav">
-    <div class="nav__logo">
-        <a href="/">
-            <img src="public/assets/images/TechBubl.svg" alt="TechBubl Logo">
-            <span>TechBubl</span>
-        </a>
-    </div>
-
-    <div class="nav__search-bar">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="search" name="" id="">
-    </div>
-
-    <div class="nav__nav-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </div>
-
-    <div class="nav__social-links">
-        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-
-    <!-- mobile nav -->
-    <a class="nav__search-btn" href="/search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-
-    <button class="nav__hamburger">
-        <div></div>
-    </button>
-</nav>
-
-<!-- MOBLE MENU -->
-<div class="mobile-menu">
-    <div class="mobile-menu__nav-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </div>
-
-    <div class="mobile-menu__social-links">
-        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-</div>
-
 <body>
+    <!-- NAVBAR -->
+    <nav class="nav">
+        <div class="nav__logo">
+            <a href="/">
+                <img src="public/assets/images/TechBubl.svg" alt="TechBubl Logo">
+                <span>TechBubl</span>
+            </a>
+        </div>
+
+        <div class="nav__search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="post-search">
+        </div>
+
+        <div class="nav__nav-links">
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+        <div class="nav__social-links">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <!-- mobile nav -->
+        <a class="nav__search-btn" href="/search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <div class="nav__hamburger">
+            <div></div>
+        </div>
+    </nav>
+
+    <!-- MOBLE MENU -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__nav-links">
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+        <div class="mobile-menu__social-links">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- WRAPPER -->
     <div class="wrapper">
         <div class="main">
             <?php require("$area/$name.view.php") ?>
