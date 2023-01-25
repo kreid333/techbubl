@@ -551,13 +551,13 @@ footer .footer-text {
     width: 85%;
     margin: 0 auto;
   }
-  .aside-section {
+  .aside {
     justify-content: center;
     align-items: center;
     position: static;
     height: 100%;
   }
-  .aside-section .newsletter {
+  .aside__newsletter {
     align-items: center;
     text-align: center;
   }

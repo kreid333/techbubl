@@ -347,12 +347,12 @@ footer {
     margin: 0 auto;
   }
 
-  .aside-section {
+  .aside {
     justify-content: center;
     align-items: center;
     position: static;
     height: 100%;
-    .newsletter {
+    &__newsletter {
       align-items: center;
       text-align: center;
     }
