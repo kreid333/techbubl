@@ -5,7 +5,9 @@
     </div>
     <h2>A blog for tech nerds, by tech nerds</h2>
 </div>
-<hr>
+
+<hr class="about-divider">
+
 <div class="about-content">
     <img src="public/assets/images/Tech1.jpg" alt="">
     <p>

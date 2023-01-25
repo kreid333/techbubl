@@ -1,3 +1,4 @@
+// ABOUT HEADER
 .about-header {
   text-align: center;
   .logo {
@@ -17,11 +18,13 @@
   }
 }
 
-hr {
-  width: 75%;
+// ABOUT DIVIDER
+.about-divider {
+  width: 85%;
   margin: 0 auto;
 }
 
+// ABOUT CONTENT
 .about-content {
   margin: 0 auto;
   width: 80%;
@@ -38,6 +41,7 @@ hr {
   }
 }
 
+// MEDIA QUERIES
 @media (max-width: 768px) {
   .about-content {
     width: 100%;
