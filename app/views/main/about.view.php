@@ -1,3 +1,4 @@
+<!-- ABOUT HEADER -->
 <div class="about-header">
     <div class="logo">
         <img src="public/assets/images/TechBubl.svg" alt="TechBubl Logo">
@@ -6,8 +7,10 @@
     <h2>A blog for tech nerds, by tech nerds</h2>
 </div>
 
+<!-- ABOUT DIVIDER -->
 <hr class="about-divider">
 
+<!-- ABOUT CONTENT -->
 <div class="about-content">
     <img src="public/assets/images/Tech1.jpg" alt="">
     <p>

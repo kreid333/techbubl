@@ -1,9 +1,11 @@
 <div class="container">
+    <!-- CONTACT HEADER -->
     <div class="contact-header">
         <h1>CONTACT US</h1>
         <p>If you have any questions, concerns, or messages for us, please feel free to contact us.</p>
     </div>
 
+    <!-- CONTACT FORM -->
     <form class="contact-form" action="">
         <div class="contact-form__name-field">
             <div class="contact-form__input-field">

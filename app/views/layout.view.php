@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
+    <!-- NAV -->
     <nav class="nav">
         <div class="nav__logo">
             <a href="/">
@@ -107,6 +107,8 @@
             </div>
         </div>
     </div>
+
+    <!-- FOOTER -->
     <footer>
         <span class="footer-text">©2023, TechBubl</span>
     </footer>

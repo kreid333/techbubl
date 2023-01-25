@@ -1,3 +1,4 @@
+<!-- POSTS NAV -->
 <div class="posts-nav">
     <div class="posts-nav__categories">
         <a class="posts-nav__btn" href="#">
@@ -18,6 +19,7 @@
     </div>
 </div>
 
+<!-- POSTS GRID -->
 <div class="posts-grid">
     <?php for ($i = 0; $i < 12; $i++) { ?>
         <a href="#">
