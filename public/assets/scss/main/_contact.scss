@@ -71,10 +71,12 @@
 
 // MEDIA QUERIES
 @media (max-width: 768px) {
-  .name-field {
-    display: block;
-    .input-field {
-      width: 100%;
+  .contact-form {
+    &__name-field {
+      display: block;
+      > * {
+        width: 100%;
+      }
     }
   }
 }

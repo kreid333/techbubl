@@ -254,10 +254,10 @@
 /* END OF CONTACT FORM */
 /* =========================== */
 @media (max-width: 768px) {
-  .name-field {
+  .contact-form__name-field {
     display: block;
   }
-  .name-field .input-field {
+  .contact-form__name-field > * {
     width: 100%;
   }
 }
