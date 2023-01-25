@@ -1,12 +1,15 @@
-.post-nav {
+/* =========================== */
+/* START OF POSTS NAV */
+/* =========================== */
+.posts-nav {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
-.post-nav .categories {
+.posts-nav__categories {
   display: flex;
   align-items: center;
 }
-.post-nav .categories .category-btn {
+.posts-nav__btn {
   background-color: #ffffff;
   border: 1px solid #000000;
   border-radius: 20px;
@@ -15,30 +18,37 @@
   white-space: nowrap;
   transition: 0.45s;
 }
-.post-nav .categories .category-btn:hover {
+.posts-nav__btn:hover {
   cursor: pointer;
   background-color: #000000;
   color: #ffffff;
 }
-.post-nav .sorting {
+.posts-nav__sorting {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.post-nav .sorting select {
+.posts-nav__sorting select {
   background-color: white;
   border: 1px solid #000000;
   padding: 5px;
 }
 
-.post-grid {
+/* =========================== */
+/* END OF POSTS NAV */
+/* =========================== */
+.posts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 2rem 0;
   justify-items: center;
 }
-.post-grid .post-card {
+
+/* =========================== */
+/* START OF POST */
+/* =========================== */
+.post {
   position: relative;
   width: 100%;
   background-color: #ffffff;
@@ -48,84 +58,93 @@
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
   transition: 0.45s;
 }
-.post-grid .post-card:hover {
-  cursor: pointer;
-  transform: scale(0.975);
-}
-.post-grid .post-card .post-author {
+.post__author {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
 }
-.post-grid .post-card .post-author .post-author_img {
+.post__author-img {
   width: 20px;
   margin-right: 5px;
 }
-.post-grid .post-card .post-author .post-author_name {
+.post__author-name {
   font-size: 12px;
 }
-.post-grid .post-card .post-content .post-title {
+.post__title {
   font-weight: bold;
   margin-bottom: 5px;
 }
-.post-grid .post-card .post-content .post-desc {
+.post__desc {
   display: -webkit-box;
   -webkit-line-clamp: 9;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 14px;
 }
-.post-grid .post-card .post-info {
+.post__info {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 20px;
 }
-.post-grid .post-card .post-info .post-category {
+.post__info--seperator {
+  margin: 0px 5px;
+}
+.post__category {
   background-color: #e9e9e9;
   border-radius: 10px;
   padding: 5px 10px;
   font-size: 10px;
   white-space: nowrap;
 }
-.post-grid .post-card .post-info .seperator {
-  margin: 0px 5px;
-}
-.post-grid .post-card .post-info .post-read_time {
+.post__read-time {
   white-space: nowrap;
   font-size: 10px;
 }
+.post:hover {
+  cursor: pointer;
+  transform: scale(0.975);
+}
 
+/* =========================== */
+/* END OF POST */
+/* =========================== */
+/* =========================== */
+/* START OF MEDIA QUERIES */
+/* =========================== */
 @media (max-width: 1024px) {
-  .post-nav {
+  .posts-nav {
     grid-template-columns: 1fr;
   }
-  .post-nav .sorting {
+  .posts-nav__sorting {
     justify-content: flex-start;
     margin-top: 1rem;
   }
-  .post-grid {
+  .posts-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 768px) {
-  .post-nav .sorting {
+  .posts-nav__sorting {
     justify-content: center;
     margin-top: 1rem;
   }
-  .post-nav .categories {
+  .posts-nav__categories {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
   }
 }
 @media (max-width: 508px) {
-  .post-grid {
+  .posts-grid {
     grid-template-columns: 1fr;
   }
 }
+/* =========================== */
+/* END OF MEDIA QUERIES */
+/* =========================== */
 .about-header {
   text-align: center;
 }
