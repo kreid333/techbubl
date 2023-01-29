@@ -11,7 +11,7 @@
             Artificial Intelligence
         </a>
     </div>
-    <div class="posts-nav__sorting">
+    <div class="post-sorting sorting">
         <select name="sortby">
             <option value="most-recent">SORT BY: Most Recent</option>
             <option value="most-popular">SORT BY: Most Popular</option>

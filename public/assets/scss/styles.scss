@@ -1,8 +1,9 @@
 // MODULES
-@use "main/index";
+@use "main/index" as main-index;
 @use "main/about";
 @use "main/contact";
 
+@use "admin/index" as admin-index;
 @use "admin/login";
 
 
@@ -69,7 +70,7 @@ textarea, input {
   &--white {
     background-color: #ffffff;
     color: #000000;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
   }
 
   &:hover {
@@ -77,6 +78,41 @@ textarea, input {
   }
 }
 
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 0px 10px;
+  i {
+    padding: 2px;
+    color: #a5a5a5;
+  }
+  input[type="search"] {
+    border: none;
+    background-color: inherit;
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+.sorting {
+  select {
+    height: 2rem;
+    background-color: white;
+    border: 1px solid #000000;
+    padding: 5px;
+  }
+}
 /* =========================== */
 /* END OF GLOBAL */
 /* =========================== */
@@ -111,31 +147,6 @@ textarea, input {
         font-size: 1rem;
         margin: 0px 2px;
       }
-    }
-  }
-
-  &__search-bar {
-    display: flex;
-    background-color: #f5f5f5;
-    border-radius: 20px;
-    padding: 5px 10px;
-    margin: 0px 10px;
-    i {
-      padding: 2px;
-      color: #a5a5a5;
-    }
-    input[type="search"] {
-      border: none;
-      background-color: inherit;
-      &:focus-visible {
-        outline: none;
-      }
-    }
-    input[type="search"]::-webkit-search-decoration,
-    input[type="search"]::-webkit-search-cancel-button,
-    input[type="search"]::-webkit-search-results-button,
-    input[type="search"]::-webkit-search-results-decoration {
-      -webkit-appearance: none;
     }
   }
 
@@ -367,10 +378,10 @@ footer {
   }
 
   .nav {
-    &__search-bar {
+    .search-bar {
       display: none;
     }
-
+    
     &__nav-links {
       display: none;
     }

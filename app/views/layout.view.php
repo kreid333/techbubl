@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/public/assets/css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&family=Questrial&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&family=Questrial&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -26,9 +26,9 @@
             </a>
         </div>
 
-        <div class="nav__search-bar">
+        <div class="nav-search search-bar">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" name="post-search">
+            <input type="search" name="post-search" placeholder="Search">
         </div>
 
         <div class="nav__nav-links">
