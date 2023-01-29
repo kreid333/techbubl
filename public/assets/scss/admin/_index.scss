@@ -1,9 +1,12 @@
 // SETTINGS ICON
+.icon-wrapper {
+  height: 2rem;
+  position: relative;
+}
+
 .settings-icon {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: center;
+  position: absolute;
+  right: 0;
   .fa-cog {
     padding: 5px;
     font-size: 1.5rem;

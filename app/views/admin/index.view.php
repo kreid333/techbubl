@@ -1,6 +1,8 @@
 <!-- SETTINGS -->
-<div class="settings-icon">
-    <i class="fa fa-cog"></i>
+<div class="icon-wrapper">
+    <a href="/admin/settings" class="settings-icon">
+        <i class="fa fa-cog"></i>
+    </a>
 </div>
 
 <!-- AUTHOR -->

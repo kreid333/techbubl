@@ -29,6 +29,11 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/login.controller.php");
         break;
 
+    case "/admin/settings":
+    case "/admin/settings/":
+        require($root_directory . "/app/controllers/admin/settings.controller.php");
+        break;
+
     default:
         http_response_code(404);
         require($root_directory . "/app/views/404.php");
