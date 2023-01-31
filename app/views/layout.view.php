@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="/public/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="/public/assets/js/scripts.js" defer></script>
+    <script src="/vendor/tinymce/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '.content-area',
+            height: '475px',
+            plugins: 'emoticons image link lists',
+            toolbar: 'undo redo bold italic numlist bullist alignleft aligncenter alignright emoticons link image',
+            link_default_target: '_blank'
+        });
+    </script>
     <title>TechBubl</title>
 </head>
 

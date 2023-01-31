@@ -1,0 +1,45 @@
+// NEW POST SECTION
+.new-post {
+  &__header {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  &__input-field {
+    padding: 5px 5px 15px;
+    width: 100%;
+    label {
+      display: block;
+      padding-bottom: 5px;
+      white-space: nowrap;
+    }
+    input {
+      font-size: 1.5rem;
+      height: 3.5rem;
+      padding: 5px;
+      width: 100%;
+    }
+  }
+
+  &__submit-btn {
+    margin: 5px;
+    &:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  }
+}
+
+// STYLING FOR TINYMCE WYSIWYG EDITOR
+.tox-tinymce {
+  border: 1px solid #000000;
+}
+
+.tox-promotion {
+  display: none;
+}
+
+.tox-statusbar__branding {
+  display: none;
+}

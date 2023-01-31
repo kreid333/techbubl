@@ -493,6 +493,46 @@
     width: 100%;
   }
 }
+.new-post__header {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.new-post__input-field {
+  padding: 5px 5px 15px;
+  width: 100%;
+}
+.new-post__input-field label {
+  display: block;
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+.new-post__input-field input {
+  font-size: 1.5rem;
+  height: 3.5rem;
+  padding: 5px;
+  width: 100%;
+}
+.new-post__submit-btn {
+  margin: 5px;
+}
+.new-post__submit-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.tox-tinymce {
+  border: 1px solid #000000;
+}
+
+.tox-promotion {
+  display: none;
+}
+
+.tox-statusbar__branding {
+  display: none;
+}
+
 /* =========================== */
 /* START OF GLOBAL */
 /* =========================== */

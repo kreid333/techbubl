@@ -28,7 +28,7 @@
 
 <!-- ADMIN ACTIONS -->
 <div class="admin-actions">
-    <a class="btn btn--white" href="#">CREATE NEW POST</a>
+    <a class="btn btn--white" href="/admin/createnewpost">CREATE NEW POST</a>
     <a class="btn btn--white" href="#">CREATE NEW EDITOR</a>
     <a class="btn btn--white" href="#">VIEW EDITORS</a>
 </div>

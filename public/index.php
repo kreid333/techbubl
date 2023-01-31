@@ -34,6 +34,11 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/settings.controller.php");
         break;
 
+    case "/admin/createnewpost":
+    case "/admin/createnewpost/":
+        require($root_directory . "/app/controllers/admin/createnewpost.controller.php");
+        break;
+
     default:
         http_response_code(404);
         require($root_directory . "/app/views/404.php");
