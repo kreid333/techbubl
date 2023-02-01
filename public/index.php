@@ -36,7 +36,15 @@ switch ($request) {
 
     case "/admin/createnewpost":
     case "/admin/createnewpost/":
-    case "/admin/editpost?id=" . $_GET["id"];
+        require($root_directory . "/app/controllers/admin/cepost.controller.php");
+        break;
+
+    case "/admin/createneweditor":
+    case "/admin/createneweditor/":
+        require($root_directory . "/app/controllers/admin/neweditor.controller.php");
+        break;
+
+    case "/admin/editpost?id=" . $_GET["id"]:
         require($root_directory . "/app/controllers/admin/cepost.controller.php");
         break;
 

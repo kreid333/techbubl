@@ -1,3 +1,8 @@
+<!-- HOME -->
+<a href="/admin" class="home-icon">
+    <i class="fa fa-house"></i>
+</a>
+
 <div class="ce-post">
   <!-- NEW POST HEADER -->
   <?php if ($_SERVER["REQUEST_URI"] === "/admin/createnewpost" || $_SERVER["REQUEST_URI"] === "/admin/createnewpost/") { ?>

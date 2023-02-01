@@ -7,6 +7,7 @@
 @use "admin/login";
 @use "admin/settings";
 @use "admin/cepost";
+@use "admin/neweditor";
 
 
 /* =========================== */
@@ -114,6 +115,15 @@ textarea, input {
     border: 1px solid #000000;
     padding: 5px;
   }
+}
+
+// HOME ICON
+.home-icon {
+  position: absolute;
+.fa-house {
+  padding: 5px;
+  font-size: 1.5rem;
+}
 }
 /* =========================== */
 /* END OF GLOBAL */

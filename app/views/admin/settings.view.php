@@ -1,4 +1,4 @@
-<!-- SETTINGS -->
+<!-- HOME -->
 <a href="/admin" class="home-icon">
     <i class="fa fa-house"></i>
 </a>
