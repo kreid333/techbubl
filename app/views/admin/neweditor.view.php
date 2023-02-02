@@ -1,13 +1,15 @@
 <!-- HOME -->
-<a href="/admin" class="home-icon">
-    <i class="fa fa-house"></i>
-</a>
+<div class="icon-wrapper">
+    <a href="/admin" class="home-icon">
+        <i class="fa fa-house"></i>
+    </a>
+</div>
 
 <div class="neweditor">
-    <!-- LOGIN HEADER -->
+    <!-- NEW EDITOR HEADER -->
     <h1 class="neweditor-header">CREATE NEW EDITOR</h1>
 
-    <!-- LOGIN FORM -->
+    <!-- NEW EDITOR FORM -->
     <form class="neweditor-form" action="">
         <div class="neweditor-form__name-field">
             <div class="neweditor-form__input-field">

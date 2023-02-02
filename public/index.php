@@ -44,6 +44,11 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/neweditor.controller.php");
         break;
 
+    case "/admin/vieweditors":
+    case "/admin/vieweditors/":
+        require($root_directory . "/app/controllers/admin/vieweditors.controller.php");
+        break;
+
     case "/admin/editpost?id=" . $_GET["id"]:
         require($root_directory . "/app/controllers/admin/cepost.controller.php");
         break;

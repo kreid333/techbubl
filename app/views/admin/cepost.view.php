@@ -1,10 +1,12 @@
 <!-- HOME -->
-<a href="/admin" class="home-icon">
+<div class="icon-wrapper">
+  <a href="/admin" class="home-icon">
     <i class="fa fa-house"></i>
-</a>
+  </a>
+</div>
 
 <div class="ce-post">
-  <!-- NEW POST HEADER -->
+  <!-- CE POST HEADER -->
   <?php if ($_SERVER["REQUEST_URI"] === "/admin/createnewpost" || $_SERVER["REQUEST_URI"] === "/admin/createnewpost/") { ?>
     <h1 class="ce-post__header">CREATE NEW POST</h1>
   <?php } ?>
@@ -13,7 +15,7 @@
     <h1 class="ce-post__header">EDIT POST</h1>
   <?php } ?>
 
-  <!-- NEW POST FORM -->
+  <!-- CE POST FORM -->
   <form class="ce-post__form" method="">
     <div class="ce-post__input-field">
       <label for="title">Title</label>

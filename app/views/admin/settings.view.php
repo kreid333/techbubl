@@ -1,13 +1,15 @@
 <!-- HOME -->
-<a href="/admin" class="home-icon">
-    <i class="fa fa-house"></i>
-</a>
+<div class="icon-wrapper">
+    <a href="/admin" class="home-icon">
+        <i class="fa fa-house"></i>
+    </a>
+</div>
 
 <div class="settings">
     <!-- INFO HEADER -->
     <h2 class="info-header">EDIT INFO</h2>
 
-    <!-- EDIT INFO FORM -->
+    <!-- INFO FORM -->
     <form class="info-form" action="">
         <div class="info-form__name-field">
             <div class="info-form__input-field">
@@ -33,7 +35,7 @@
     <!-- PASSWORD HEADER -->
     <h2 class="password-header">EDIT PASSWORD</h2>
 
-    <!-- LOGIN FORM -->
+    <!-- PASSWORD FORM -->
     <form class="password-form" action="">
         <div class="password-form__input-field">
             <label for="email-address">Old Password</label>

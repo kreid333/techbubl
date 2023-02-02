@@ -30,7 +30,7 @@
 <div class="admin-actions">
     <a class="btn btn--white" href="/admin/createnewpost">CREATE NEW POST</a>
     <a class="btn btn--white" href="/admin/createneweditor">CREATE NEW EDITOR</a>
-    <a class="btn btn--white" href="#">VIEW EDITORS</a>
+    <a class="btn btn--white" href="/admin/vieweditors">VIEW EDITORS</a>
 </div>
 
 <!-- ADMIN GRID -->

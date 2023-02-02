@@ -8,7 +8,7 @@
 @use "admin/settings";
 @use "admin/cepost";
 @use "admin/neweditor";
-
+@use "admin/vieweditors";
 
 /* =========================== */
 /* START OF GLOBAL */
@@ -41,7 +41,8 @@ i {
   font-size: 1.25rem;
 }
 
-textarea, input {
+textarea,
+input {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -120,15 +121,20 @@ textarea, input {
 // HOME ICON
 .home-icon {
   position: absolute;
-.fa-house {
-  padding: 5px;
-  font-size: 1.5rem;
+  .fa-house {
+    padding: 5px;
+    font-size: 1.5rem;
+  }
 }
+
+// ICON WRAPPER
+.icon-wrapper {
+  height: 2rem;
+  position: relative;
 }
 /* =========================== */
 /* END OF GLOBAL */
 /* =========================== */
-
 
 /* =========================== */
 /* START OF NAVBAR */
@@ -219,7 +225,6 @@ textarea, input {
 /* END OF NAVBAR */
 /* =========================== */
 
-
 /* =========================== */
 /* START OF MOBILE MENU */
 /* =========================== */
@@ -268,7 +273,6 @@ textarea, input {
 /* END OF MOBILE MENU */
 /* =========================== */
 
-
 // WRAPPER
 .wrapper {
   display: grid;
@@ -285,7 +289,6 @@ textarea, input {
 .divider {
   display: none;
 }
-
 
 /* =========================== */
 /* START OF ASIDE SECTION */
@@ -349,7 +352,6 @@ textarea, input {
 /* END OF ASIDE SECTION */
 /* =========================== */
 
-
 // FOOTER
 footer {
   padding: 1.5rem;
@@ -362,7 +364,6 @@ footer {
     font-size: 10px;
   }
 }
-
 
 /* =========================== */
 /* START OF MEDIA QUERIES */
@@ -393,7 +394,7 @@ footer {
     .search-bar {
       display: none;
     }
-    
+
     &__nav-links {
       display: none;
     }
@@ -405,13 +406,12 @@ footer {
     &__search-btn {
       display: block;
     }
-  
+
     &__hamburger {
       display: flex;
       flex-direction: column;
     }
   }
-
 
   footer {
     text-align: center;

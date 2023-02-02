@@ -8,9 +8,10 @@
   align-items: center;
 }
 
-.info-header, .password-header {
-    font-size: 1.5rem;
-    padding: 5px;
+.info-header,
+.password-header {
+  font-size: 1.5rem;
+  padding: 5px;
 }
 
 // EDIT INFO FORM & PASSWORD FORM
@@ -57,15 +58,16 @@
 
 // MEDIA QUERIES
 @media (max-width: 768px) {
-    .info-form, .password-form {
-        width: 80%;
-    }
-    .info-form {
-      &__name-field {
-        display: block;
-        > * {
-          width: 100%;
-        }
+  .info-form,
+  .password-form {
+    width: 80%;
+  }
+  .info-form {
+    &__name-field {
+      display: block;
+      > * {
+        width: 100%;
       }
     }
   }
+}
