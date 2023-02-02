@@ -7,7 +7,7 @@
 
 <div class="vieweditors">
     <!-- VIEW EDITORS HEADER -->
-    <h1 class="vieweditors-header">VIEW EDITORS</h1>
+    <h1 class="vieweditors-header">EDITORS</h1>
 
     <!-- EDITORS GRID -->
     <div class="editor-grid">
