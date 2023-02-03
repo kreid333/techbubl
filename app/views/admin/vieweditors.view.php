@@ -18,7 +18,7 @@
                     <span class="editor-card__email">izzycantella@techbubl.com</span>
                 </div>
                 <div class="editor-card__actions">
-                    <a class="btn btn--white" href="#">EDIT INFO</a>
+                    <a class="btn btn--white" href="/admin/editeditor?id=1">EDIT INFO</a>
                     <a class="btn btn--black" href="#">DELETE EDITOR</a>
                 </div>
             </div>

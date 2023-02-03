@@ -1,6 +1,8 @@
 const hamburger = document.querySelector(".nav__hamburger");
 const mobileMenu = document.querySelector(".mobile-menu");
 const body = document.querySelector("body");
+const deletePostBtn = document.querySelectorAll(".delete-btn");
+const modal = document.querySelector(".modal");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("nav__hamburger--active");
@@ -15,12 +17,20 @@ hamburger.addEventListener("click", () => {
     body.removeAttribute("style");
   }
 });
+
+deletePostBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modal.classList.add("modal--active");
+    body.style.position = "fixed";
+  });
+});
+
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 768) {
     hamburger.classList.remove("nav__hamburger--active");
     mobileMenu.classList.remove("mobile-menu--active");
 
-    if (body.hasAttribute("style")) {
+    if (body.hasAttribute("style") && !modal.classList.contains("modal--active")) {
       body.removeAttribute("style");
     }
   }

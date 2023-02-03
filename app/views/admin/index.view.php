@@ -1,3 +1,15 @@
+<!-- MODAL -->
+<div class="modal">
+    <div class="modal__card">
+        <span class="modal__question">Are you sure you want to delete this post?</span>
+        <span class="modal__post-title">My first post!</span>
+        <span class="modal__post-author">By Izzy Cantalla</span>
+        <span class="modal__post-date">Posted on 1/23/23</span>
+        <a class="modal__delete btn btn--black" href="/admin/deletepost?id=1">DELETE</a>
+        <a class="modal__cancel" href="/admin">CANCEL</a>
+    </div>
+</div>
+
 <!-- SETTINGS -->
 <div class="icon-wrapper">
     <a href="/admin/settings" class="settings-icon">
@@ -43,8 +55,8 @@
                 <span class="admin-post__date">Posted on 1/28/23</span>
             </div>
             <div class="admin-post__actions">
-                <a class="btn btn--white" href="#">EDIT POST</a>
-                <a class="btn btn--black" href="#">DELETE POST</a>
+                <a class="btn btn--white" href="/admin/editpost?id=1">EDIT POST</a>
+                <button class="delete-btn btn btn--black" data-id="1">DELETE POST</a>
             </div>
         </div>
     <?php } ?>

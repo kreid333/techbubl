@@ -7,7 +7,7 @@
 
 <div class="editeditor">
     <!-- NEW EDITOR HEADER -->
-    <h1 class="editeditor-header">EDIT INFO</h1>
+    <h1 class="editeditor-header">EDIT EDITOR</h1>
 
     <!-- NEW EDITOR FORM -->
     <form class="editeditor-form" action="">

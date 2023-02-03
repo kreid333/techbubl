@@ -57,6 +57,10 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/cepost.controller.php");
         break;
 
+    case "/admin/deletepost?id=" . $_GET["id"]:
+        require($root_directory . "/app/controllers/admin/deletepost.controller.php");
+        break;
+
     default:
         http_response_code(404);
         require($root_directory . "/app/views/404.php");

@@ -66,6 +66,7 @@ input {
   padding: 10px 15px;
   white-space: nowrap;
   transition: 0.45s;
+  font-family: "IBM Plex Sans", sans-serif;
   &--black {
     background-color: #000000;
     color: #ffffff;
@@ -119,7 +120,6 @@ input {
   }
 }
 
-// HOME ICON
 .home-icon {
   position: absolute;
   .fa-house {
@@ -128,10 +128,57 @@ input {
   }
 }
 
-// ICON WRAPPER
 .icon-wrapper {
   height: 2rem;
   position: relative;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #00000075;
+  &--active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__card {
+    text-align: center;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    min-width: 300px;
+    width: 40%;
+    height: 250px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    > span {
+      margin: 5px;
+      &.modal__question {
+        margin: 10px;
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+      &.modal__post-author {
+        color: #939393;
+      }
+      &.modal__post-date {
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #a5a5a5;
+      }
+    }
+  }
+  &__cancel {
+    padding: 10px 15px;
+    white-space: nowrap;
+  }
 }
 /* =========================== */
 /* END OF GLOBAL */
@@ -370,6 +417,10 @@ footer {
 /* START OF MEDIA QUERIES */
 /* =========================== */
 @media (max-width: 768px) {
+  .modal__card {
+    width: 60%;
+  }
+
   .wrapper {
     grid-template-columns: 1fr;
   }
