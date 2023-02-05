@@ -1,4 +1,4 @@
 <?php
 require("../helpers/functions.php");
 
-view("admin", "cepost");
+view("admin", "editpost");

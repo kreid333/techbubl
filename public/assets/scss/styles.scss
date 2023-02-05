@@ -6,7 +6,8 @@
 @use "admin/index" as admin-index;
 @use "admin/login";
 @use "admin/settings";
-@use "admin/cepost";
+@use "admin/createpost";
+@use "admin/editpost";
 @use "admin/createeditor";
 @use "admin/vieweditors";
 @use "admin/editeditor";

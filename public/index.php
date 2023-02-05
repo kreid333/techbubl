@@ -34,9 +34,9 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/settings.controller.php");
         break;
 
-    case "/admin/createnewpost":
-    case "/admin/createnewpost/":
-        require($root_directory . "/app/controllers/admin/cepost.controller.php");
+    case "/admin/createpost":
+    case "/admin/createpost/":
+        require($root_directory . "/app/controllers/admin/createpost.controller.php");
         break;
 
     case "/admin/createeditor":
@@ -59,7 +59,7 @@ switch ($request) {
         break;
 
     case "/admin/editpost?id=" . $_GET["id"]:
-        require($root_directory . "/app/controllers/admin/cepost.controller.php");
+        require($root_directory . "/app/controllers/admin/editpost.controller.php");
         break;
 
     case "/admin/deletepost?id=" . $_GET["id"]:
