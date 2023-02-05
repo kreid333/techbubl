@@ -39,9 +39,9 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/cepost.controller.php");
         break;
 
-    case "/admin/createneweditor":
-    case "/admin/createneweditor/":
-        require($root_directory . "/app/controllers/admin/neweditor.controller.php");
+    case "/admin/createeditor":
+    case "/admin/createeditor/":
+        require($root_directory . "/app/controllers/admin/createeditor.controller.php");
         break;
 
     case "/admin/vieweditors":

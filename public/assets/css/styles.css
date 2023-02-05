@@ -528,7 +528,7 @@
 /* =========================== */
 /* START OF NEW EDITOR */
 /* =========================== */
-.neweditor {
+.createeditor {
   width: 100%;
   height: 100%;
   display: flex;
@@ -536,43 +536,43 @@
   justify-content: center;
   align-items: center;
 }
-.neweditor-header {
+.createeditor-header {
   text-align: center;
 }
-.neweditor-form {
+.createeditor-form {
   padding: 10px;
   width: 70%;
   margin: 0 auto;
   text-align: center;
 }
-.neweditor-form__name-field {
+.createeditor-form__name-field {
   width: 100%;
   display: flex;
 }
-.neweditor-form__name-field > * {
+.createeditor-form__name-field > * {
   width: 50%;
 }
-.neweditor-form__name-field > * input {
+.createeditor-form__name-field > * input {
   width: 100%;
 }
-.neweditor-form__input-field {
+.createeditor-form__input-field {
   padding: 5px 5px 10px;
   width: 100%;
 }
-.neweditor-form__input-field label {
+.createeditor-form__input-field label {
   text-align: left;
   display: block;
   padding-bottom: 5px;
   white-space: nowrap;
 }
-.neweditor-form__input-field input {
+.createeditor-form__input-field input {
   padding: 5px;
   width: 100%;
 }
-.neweditor__submit-btn {
+.createeditor__submit-btn {
   margin: 5px;
 }
-.neweditor__submit-btn:hover {
+.createeditor__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }
@@ -581,14 +581,14 @@
 /* END OF NEW EDITOR */
 /* =========================== */
 @media (max-width: 768px) {
-  .neweditor-form {
+  .createeditor-form {
     width: 100%;
     margin: 0;
   }
-  .neweditor-form__name-field {
+  .createeditor-form__name-field {
     display: block;
   }
-  .neweditor-form__name-field > * {
+  .createeditor-form__name-field > * {
     width: 100%;
   }
 }
