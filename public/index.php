@@ -49,9 +49,8 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/vieweditors.controller.php");
         break;
 
-    case "/admin/setpassword":
-    case "/admin/setpassword/":
-        require($root_directory . "/app/controllers/admin/setpassword.controller.php");
+    case "/admin/createpassword?uid=" . $_GET["uid"]:
+        require($root_directory . "/app/controllers/admin/createpassword.controller.php");
         break;
 
     case "/admin/editeditor?id=" . $_GET["id"]:
