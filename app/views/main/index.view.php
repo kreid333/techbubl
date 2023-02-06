@@ -2,13 +2,13 @@
 <div class="posts-nav">
     <div class="posts-nav__categories">
         <a class="posts-nav__btn" href="#">
-            Cryptocurrency
+            Crypto
         </a>
         <a class="posts-nav__btn" href="#">
-            Web Development
+            Web Dev
         </a>
         <a class="posts-nav__btn" href="#">
-            Artificial Intelligence
+            AI
         </a>
     </div>
     <div class="post-sorting sorting">

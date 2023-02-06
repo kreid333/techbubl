@@ -7,14 +7,15 @@
   &__categories {
     display: flex;
     align-items: center;
+    gap: 1em;
   }
 
   &__btn {
+    display: block;
     background-color: #ffffff;
     border: 1px solid #000000;
     border-radius: 20px;
     padding: 5px 15px;
-    margin-right: 5px;
     white-space: nowrap;
     transition: 0.45s;
     &:hover {
@@ -120,13 +121,8 @@
 /* START OF MEDIA QUERIES */
 /* =========================== */
 @media (max-width: 1024px) {
-  .posts-nav {
-    grid-template-columns: 1fr;
-  }
-
   .post-sorting {
     justify-content: flex-start;
-    margin-top: 1rem;
   }
 
   .posts-grid {
@@ -136,10 +132,11 @@
 
 @media (max-width: 768px) {
   .posts-nav {
+    grid-template-columns: 1fr;
+    gap: 1rem;
     &__categories {
       justify-content: center;
       flex-wrap: wrap;
-      gap: 1rem;
     }
   }
 
