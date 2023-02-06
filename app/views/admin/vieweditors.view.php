@@ -1,3 +1,13 @@
+<!-- MODAL -->
+<div class="modal">
+    <div class="modal__card">
+        <span class="modal__question">Are you sure you want to delete this editor?</span>
+        <span class="modal__post-editor">Izzy Cantella</span>
+        <a class="modal__delete btn btn--black" href="/admin/deleteeditor?id=1">DELETE</a>
+        <a class="modal__cancel" href="/admin/vieweditors">CANCEL</a>
+    </div>
+</div>
+
 <!-- HOME -->
 <div class="icon-wrapper">
     <a href="/admin" class="home-icon">
@@ -19,7 +29,7 @@
                 </div>
                 <div class="editor-card__actions">
                     <a class="btn btn--white" href="/admin/editeditor?id=1">EDIT INFO</a>
-                    <a class="btn btn--black" href="#">DELETE EDITOR</a>
+                    <button class="delete-btn btn btn--black" data-id="1">DELETE POST</a>
                 </div>
             </div>
         <?php } ?>

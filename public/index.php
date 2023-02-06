@@ -61,6 +61,10 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/editpost.controller.php");
         break;
 
+    case "/admin/deleteeditor?id=" . $_GET["id"]:
+        require($root_directory . "/app/controllers/admin/deleteeditor.controller.php");
+        break;
+
     case "/admin/deletepost?id=" . $_GET["id"]:
         require($root_directory . "/app/controllers/admin/deletepost.controller.php");
         break;

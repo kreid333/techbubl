@@ -69,6 +69,7 @@ input {
   white-space: nowrap;
   transition: 0.45s;
   font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
   &--black {
     background-color: #000000;
     color: #ffffff;
@@ -174,6 +175,11 @@ input {
         margin-bottom: 15px;
         font-size: 14px;
         color: #a5a5a5;
+      }
+      &.modal__post-editor {
+        margin: 10px;
+        margin-bottom: 20px;
+        color: #000000;
       }
     }
   }
@@ -389,7 +395,7 @@ input {
         border: none;
         padding: 10px;
         height: 41px;
-        min-width: 130px;
+        min-width: 120px;
         font-size: 12px;
         &:focus-visible {
           outline: none;
