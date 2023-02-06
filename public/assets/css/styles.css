@@ -1171,9 +1171,7 @@ input {
 footer {
   padding: 1.5rem;
   text-align: left;
-  position: absolute;
   width: 100%;
-  bottom: 0;
 }
 footer .footer-text {
   font-size: 10px;
