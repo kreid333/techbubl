@@ -54,10 +54,6 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/vieweditors.controller.php");
         break;
 
-    case "/admin/createpassword?uid=" . $_GET["uid"]:
-        require($root_directory . "/app/controllers/admin/createpassword.controller.php");
-        break;
-
     case "/admin/editeditor?id=" . $_GET["id"]:
         require($root_directory . "/app/controllers/admin/editeditor.controller.php");
         break;
@@ -74,6 +70,9 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/deletepost.controller.php");
         break;
 
+    case "/admin/createpassword?uid=" . $_GET["uid"]:
+        require($root_directory . "/app/controllers/admin/createpassword.controller.php");
+        break;
     default:
         http_response_code(404);
         require($root_directory . "/app/views/404.php");
