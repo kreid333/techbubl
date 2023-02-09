@@ -16,4 +16,10 @@ class User {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         return $user;
     }
+
+    public static function updateUser($first_name, $last_name, $email, $id) {
+        $sql = "UPDATE users SET first_name = :first_name, last_name = :last_name, email = :email WHERE id = :id";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["first_name" => $first_name, "last_name" => $last_name, "email" => $email, "id" => $id]);
+    }
 }

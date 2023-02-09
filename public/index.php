@@ -39,6 +39,11 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/settings.controller.php");
         break;
 
+    case "/admin/updateinfo":
+    case "/admin/updateinfo/":
+        require($root_directory . "/app/controllers/admin/editinfo.controller.php");
+        break;
+
     case "/admin/createpost":
     case "/admin/createpost/":
         require($root_directory . "/app/controllers/admin/createpost.controller.php");
