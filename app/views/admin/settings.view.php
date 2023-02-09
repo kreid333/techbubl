@@ -47,4 +47,7 @@
         </div>
         <button type="submit" class="btn btn--black login-form__submit-btn">UPDATE</button>
     </form>
+
+    <!-- LOGOUT BUTTON -->
+    <a class="logout-btn" href="/admin/logout">LOGOUT</a>
 </div>

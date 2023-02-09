@@ -19,8 +19,8 @@
 
 <!-- AUTHOR -->
 <div class="author">
-    <h1 class="author__name">Kai Reid</h1>
-    <h2 class="author__role">Admin</h2>
+    <h1 class="author__name"><?php echo $data["name"]; ?></h1>
+    <h2 class="author__role"><?php echo $data["role"]; ?></h2>
 </div>
 
 <!-- SEARCH BAR -->

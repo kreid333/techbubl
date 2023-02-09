@@ -405,12 +405,21 @@
   color: #000000;
 }
 
+.login-err {
+  margin: 10px;
+}
+
 @media (max-width: 768px) {
   .login-form {
     width: 100%;
     margin: 0;
   }
 }
+.logout-btn {
+  margin: 1rem;
+  text-decoration: underline;
+}
+
 .settings {
   width: 100%;
   height: 100%;

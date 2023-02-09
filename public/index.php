@@ -29,6 +29,11 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/login.controller.php");
         break;
 
+    case "/admin/logout":
+    case "/admin/logout/":
+        require($root_directory . "/app/controllers/admin/logout.controller.php");
+        break;
+
     case "/admin/settings":
     case "/admin/settings/":
         require($root_directory . "/app/controllers/admin/settings.controller.php");

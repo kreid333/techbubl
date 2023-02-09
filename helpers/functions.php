@@ -1,5 +1,5 @@
 <?php
-function view($area, $name)
+function view($area, $name, $data = null)
 {
     require("../app/views/layout.view.php");
 }
