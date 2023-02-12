@@ -7,6 +7,10 @@ use PHPMailer\PHPMailer\Exception;
 // load Composer's autoloader
 require '../vendor/autoload.php';
 
+// loading dontenv to access .env variable
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__, 1));
+$dotenv->load();
+
 // functions
 function view($area, $name, $data = null)
 {
@@ -30,7 +34,7 @@ function sendEmail($recipient, $name, $verification_code)
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'kairetech@gmail.com';
-        $mail->Password = 'bboyojogvnhibhqk';
+        $mail->Password = $_ENV["PASSWORD"];
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
