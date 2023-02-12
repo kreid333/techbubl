@@ -6,11 +6,12 @@
 </div>
 
 <div class="createeditor">
-    <!-- NEW EDITOR HEADER -->
+    <!-- CREATE EDITOR HEADER -->
     <h1 class="createeditor-header">CREATE EDITOR</h1>
 
-    <!-- NEW EDITOR FORM -->
-    <form class="createeditor-form" action="">
+    <!-- CREATE EDITOR FORM -->
+    <form class="createeditor-form" action="/admin/createeditor" method="POST">
+        <input type="hidden" name="role" value="Editor">
         <div class="createeditor-form__name-field">
             <div class="createeditor-form__input-field">
                 <label for="first-name">First Name</label>
@@ -27,4 +28,20 @@
         </div>
         <button type="submit" class="btn btn--black createeditor__submit-btn">CREATE</button>
     </form>
+
+    <?php if (isset($data["name_err"])) { ?>
+        <p> <?php echo $data["name_err"]; ?> </p>
+    <?php } ?>
+
+    <?php if (isset($data["email_err"])) { ?>
+        <p> <?php echo $data["email_err"]; ?> </p>
+    <?php } ?>
+
+    <?php if (isset($data["email-in-use_err"])) { ?>
+        <p> <?php echo $data["email-in-use_err"]; ?> </p>
+    <?php } ?>
+
+    <?php if (isset($data["email_mess"])) { ?>
+        <p> <?php echo $data["email_mess"]; ?> </p>
+    <?php } ?>
 </div>

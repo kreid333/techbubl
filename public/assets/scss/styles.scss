@@ -7,12 +7,15 @@
 @use "admin/login";
 @use "admin/logout";
 @use "admin/settings";
-@use "admin/createpost";
+@use "admin/editinfo";
+@use "admin/editpassword";
 @use "admin/editpost";
-@use "admin/createeditor";
-@use "admin/vieweditors";
 @use "admin/editeditor";
-@use "admin/createpassword";
+@use "admin/createpost";
+@use "admin/createeditor";
+@use "admin/verifyaccount";
+@use "admin/vieweditors";
+@use "admin/success";
 
 /* =========================== */
 /* START OF GLOBAL */

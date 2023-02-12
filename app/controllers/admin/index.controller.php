@@ -5,10 +5,10 @@ session_start();
 
 $data = [];
 
-if (!isset($_SESSION["author_id"])) {
+if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
-    $data["author"] = User::getUser($_SESSION["author_id"]);
+    $data["user"] = User::getUser($_SESSION["email"]);
 }
 
 view("admin", "index", $data);

@@ -372,11 +372,9 @@
   justify-content: center;
   align-items: center;
 }
-
 .login-header {
   text-align: center;
 }
-
 .login-form {
   padding: 10px;
   width: 60%;
@@ -404,7 +402,6 @@
   background-color: #ffffff;
   color: #000000;
 }
-
 .login-err {
   margin: 10px;
 }
@@ -428,69 +425,246 @@
   justify-content: center;
   align-items: center;
 }
+.settings .btn {
+  margin: 1rem;
+}
+.settings .btn:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
 
-.info-header,
-.password-header {
+/* =========================== */
+/* START OF EDIT INFO */
+/* =========================== */
+.info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info-header {
   font-size: 1.5rem;
   padding: 5px;
 }
-
-.info-form,
-.password-form {
+.info-form {
   padding: 10px;
   width: 60%;
   margin: 0 auto;
   text-align: center;
 }
-.info-form__name-field,
-.password-form__name-field {
+.info-form__name-field {
   width: 100%;
   display: flex;
 }
-.info-form__name-field > *,
-.password-form__name-field > * {
+.info-form__name-field > * {
   width: 50%;
 }
-.info-form__name-field > * input,
-.password-form__name-field > * input {
+.info-form__name-field > * input {
   width: 100%;
 }
-.info-form__input-field,
-.password-form__input-field {
+.info-form__input-field {
   padding: 5px 5px 10px;
   width: 100%;
 }
-.info-form__input-field label,
-.password-form__input-field label {
+.info-form__input-field label {
   text-align: left;
   display: block;
   padding-bottom: 5px;
   white-space: nowrap;
 }
-.info-form__input-field input,
-.password-form__input-field input {
+.info-form__input-field input {
   padding: 5px;
   width: 100%;
 }
-.info-form__submit-btn,
-.password-form__submit-btn {
+.info-form__submit-btn {
   margin: 5px;
 }
-.info-form__submit-btn:hover,
-.password-form__submit-btn:hover {
+.info-form__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }
 
+/* =========================== */
+/* END OF EDIT INFO */
+/* =========================== */
 @media (max-width: 768px) {
-  .info-form,
-  .password-form {
+  .info-form {
     width: 80%;
   }
   .info-form__name-field {
     display: block;
   }
   .info-form__name-field > * {
+    width: 100%;
+  }
+}
+/* =========================== */
+/* START OF PASSWORD */
+/* =========================== */
+.password {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.password-header {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+.password-form {
+  padding: 10px;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.password-form__name-field {
+  width: 100%;
+  display: flex;
+}
+.password-form__name-field > * {
+  width: 50%;
+}
+.password-form__name-field > * input {
+  width: 100%;
+}
+.password-form__input-field {
+  padding: 5px 5px 10px;
+  width: 100%;
+}
+.password-form__input-field label {
+  text-align: left;
+  display: block;
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+.password-form__input-field input {
+  padding: 5px;
+  width: 100%;
+}
+.password-form__submit-btn {
+  margin: 5px;
+}
+.password-form__submit-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* =========================== */
+/* END OF PASSWORD */
+/* =========================== */
+@media (max-width: 768px) {
+  .password-form {
+    width: 80%;
+  }
+}
+.editpost__header {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.editpost__input-field {
+  padding: 5px 5px 15px;
+  width: 100%;
+}
+.editpost__input-field label {
+  display: block;
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+.editpost__input-field input {
+  font-size: 1.5rem;
+  height: 3.5rem;
+  padding: 5px;
+  width: 100%;
+}
+.editpost__submit-btn {
+  margin: 5px;
+}
+.editpost__submit-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.tox-tinymce {
+  border: 1px solid #000000;
+}
+
+.tox-promotion {
+  display: none;
+}
+
+.tox-statusbar__branding {
+  display: none;
+}
+
+/* =========================== */
+/* START OF EDIT EDITOR */
+/* =========================== */
+.editeditor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.editeditor-header {
+  text-align: center;
+}
+.editeditor-form {
+  padding: 10px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+.editeditor-form__name-field {
+  width: 100%;
+  display: flex;
+}
+.editeditor-form__name-field > * {
+  width: 50%;
+}
+.editeditor-form__name-field > * input {
+  width: 100%;
+}
+.editeditor-form__input-field {
+  padding: 5px 5px 10px;
+  width: 100%;
+}
+.editeditor-form__input-field label {
+  text-align: left;
+  display: block;
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+.editeditor-form__input-field input {
+  padding: 5px;
+  width: 100%;
+}
+.editeditor__submit-btn {
+  margin: 5px;
+}
+.editeditor__submit-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* =========================== */
+/* END OF EDIT EDITOR */
+/* =========================== */
+@media (max-width: 768px) {
+  .editeditor-form {
+    width: 100%;
+    margin: 0;
+  }
+  .editeditor-form__name-field {
+    display: block;
+  }
+  .editeditor-form__name-field > * {
     width: 100%;
   }
 }
@@ -534,48 +708,8 @@
   display: none;
 }
 
-.editpost__header {
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-}
-.editpost__input-field {
-  padding: 5px 5px 15px;
-  width: 100%;
-}
-.editpost__input-field label {
-  display: block;
-  padding-bottom: 5px;
-  white-space: nowrap;
-}
-.editpost__input-field input {
-  font-size: 1.5rem;
-  height: 3.5rem;
-  padding: 5px;
-  width: 100%;
-}
-.editpost__submit-btn {
-  margin: 5px;
-}
-.editpost__submit-btn:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.tox-tinymce {
-  border: 1px solid #000000;
-}
-
-.tox-promotion {
-  display: none;
-}
-
-.tox-statusbar__branding {
-  display: none;
-}
-
 /* =========================== */
-/* START OF NEW EDITOR */
+/* START OF CREATE EDITOR */
 /* =========================== */
 .createeditor {
   width: 100%;
@@ -627,7 +761,7 @@
 }
 
 /* =========================== */
-/* END OF NEW EDITOR */
+/* END OF CREATE EDITOR */
 /* =========================== */
 @media (max-width: 768px) {
   .createeditor-form {
@@ -639,6 +773,53 @@
   }
   .createeditor-form__name-field > * {
     width: 100%;
+  }
+}
+.verifyaccount {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.verifyaccount-header {
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+}
+.verifyaccount-form {
+  padding: 10px;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.verifyaccount-form__input-field {
+  padding: 5px 5px 10px;
+  width: 100%;
+}
+.verifyaccount-form__input-field label {
+  text-align: left;
+  display: block;
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+.verifyaccount-form__input-field input {
+  padding: 5px;
+  width: 100%;
+}
+.verifyaccount-form__submit-btn {
+  margin: 5px;
+}
+.verifyaccount-form__submit-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .verifyaccount-form {
+    width: 100%;
+    margin: 0;
   }
 }
 .vieweditors {
@@ -700,10 +881,7 @@
     grid-template-columns: 1fr;
   }
 }
-/* =========================== */
-/* START OF NEW EDITOR */
-/* =========================== */
-.editeditor {
+.success {
   width: 100%;
   height: 100%;
   display: flex;
@@ -711,107 +889,14 @@
   justify-content: center;
   align-items: center;
 }
-.editeditor-header {
-  text-align: center;
+.success .btn {
+  margin: 1rem;
 }
-.editeditor-form {
-  padding: 10px;
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
-}
-.editeditor-form__name-field {
-  width: 100%;
-  display: flex;
-}
-.editeditor-form__name-field > * {
-  width: 50%;
-}
-.editeditor-form__name-field > * input {
-  width: 100%;
-}
-.editeditor-form__input-field {
-  padding: 5px 5px 10px;
-  width: 100%;
-}
-.editeditor-form__input-field label {
-  text-align: left;
-  display: block;
-  padding-bottom: 5px;
-  white-space: nowrap;
-}
-.editeditor-form__input-field input {
-  padding: 5px;
-  width: 100%;
-}
-.editeditor__submit-btn {
-  margin: 5px;
-}
-.editeditor__submit-btn:hover {
-  background-color: #ffffff;
-  color: #000000;
+.success .btn:hover {
+  color: #ffffff;
+  background-color: #000000;
 }
 
-/* =========================== */
-/* END OF NEW EDITOR */
-/* =========================== */
-@media (max-width: 768px) {
-  .editeditor-form {
-    width: 100%;
-    margin: 0;
-  }
-  .editeditor-form__name-field {
-    display: block;
-  }
-  .editeditor-form__name-field > * {
-    width: 100%;
-  }
-}
-.createpassword {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.createpassword-header {
-  text-align: center;
-}
-.createpassword-form {
-  padding: 10px;
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-}
-.createpassword-form__input-field {
-  padding: 5px 5px 10px;
-  width: 100%;
-}
-.createpassword-form__input-field label {
-  text-align: left;
-  display: block;
-  padding-bottom: 5px;
-  white-space: nowrap;
-}
-.createpassword-form__input-field input {
-  padding: 5px;
-  width: 100%;
-}
-.createpassword-form__submit-btn {
-  margin: 5px;
-}
-.createpassword-form__submit-btn:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-@media (max-width: 768px) {
-  .createpassword-form {
-    width: 100%;
-    margin: 0;
-  }
-}
 /* =========================== */
 /* START OF GLOBAL */
 /* =========================== */

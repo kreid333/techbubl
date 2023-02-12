@@ -6,10 +6,10 @@
 </div>
 
 <div class="editeditor">
-    <!-- NEW EDITOR HEADER -->
+    <!-- EDIT EDITOR HEADER -->
     <h1 class="editeditor-header">EDIT EDITOR</h1>
 
-    <!-- NEW EDITOR FORM -->
+    <!-- EDIT EDITOR FORM -->
     <form class="editeditor-form" action="">
         <div class="editeditor-form__name-field">
             <div class="editeditor-form__input-field">

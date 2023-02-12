@@ -19,8 +19,8 @@
 
 <!-- AUTHOR -->
 <div class="author">
-    <h1 class="author__name"><?php echo $data["author"]["first_name"]; echo " "; echo $data["author"]["last_name"]; ?></h1>
-    <h2 class="author__role"><?php echo $data["author"]["role"]; ?></h2>
+    <h1 class="author__name"><?php echo $data["user"]["first_name"]; echo " "; echo $data["user"]["last_name"]; ?></h1>
+    <h2 class="author__role"><?php echo $data["user"]["role"]; ?></h2>
 </div>
 
 <!-- SEARCH BAR -->
@@ -41,8 +41,10 @@
 <!-- ADMIN ACTIONS -->
 <div class="admin-actions">
     <a class="btn btn--white" href="/admin/createpost">CREATE POST</a>
+    <?php if ($data["user"]["role"] == "Admin") { ?>
     <a class="btn btn--white" href="/admin/createeditor">CREATE EDITOR</a>
     <a class="btn btn--white" href="/admin/vieweditors">VIEW EDITORS</a>
+    <?php } ?>
 </div>
 
 <!-- ADMIN GRID -->

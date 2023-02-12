@@ -5,49 +5,9 @@
     </a>
 </div>
 
+<!-- SETTINGS -->
 <div class="settings">
-    <!-- INFO HEADER -->
-    <h2 class="info-header">EDIT INFO</h2>
-
-    <!-- INFO FORM -->
-    <form class="info-form" action="/admin/updateinfo" method="POST">
-        <div class="info-form__name-field">
-            <div class="info-form__input-field">
-                <label for="first-name">First Name</label>
-                <input name="first-name" type="text" value="<?php echo $data["author"]["first_name"]; ?>">
-            </div>
-            <div class="info-form__input-field">
-                <label for="last-name">Last Name</label>
-                <input name="last-name" type="text" value="<?php echo $data["author"]["last_name"]; ?>">
-            </div>
-        </div>
-        <div class="info-form__input-field">
-            <label for="email-address">Email Address</label>
-            <input name="email-address" type="text" value="<?php echo $data["author"]["email"]; ?>">
-        </div>
-        <button type="submit" class="btn btn--black login-form__submit-btn">UPDATE</button>
-    </form>
-
-    <!-- BREAKS -->
-    <br>
-    <br>
-
-    <!-- PASSWORD HEADER -->
-    <h2 class="password-header">EDIT PASSWORD</h2>
-
-    <!-- PASSWORD FORM -->
-    <form class="password-form" action="">
-        <div class="password-form__input-field">
-            <label for="email-address">Old Password</label>
-            <input name="email-address" type="text" placeholder="Old Password">
-        </div>
-        <div class="password-form__input-field">
-            <label for="password">New Password</label>
-            <input name="password" type="password" placeholder="New Password">
-        </div>
-        <button type="submit" class="btn btn--black login-form__submit-btn">UPDATE</button>
-    </form>
-
-    <!-- LOGOUT BUTTON -->
-    <a class="logout-btn" href="/admin/logout">LOGOUT</a>
+    <a class="btn btn--white" href="/admin/settings/editinfo">EDIT INFO</a>
+    <a class="btn btn--white" href="/admin/settings/editpassword">EDIT PASSWORD</a>
+    <a class="btn btn--white" href="/admin/logout">LOGOUT</a>
 </div>

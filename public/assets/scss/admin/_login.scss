@@ -6,51 +6,48 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  &-header {
+    text-align: center;
+  }
 
-.login-header {
-  text-align: center;
-}
-
-// LOGIN FORM
-.login-form {
-  padding: 10px;
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-  &__input-field {
-    padding: 5px 5px 10px;
-    width: 100%;
-    label {
-      text-align: left;
-      display: block;
-      padding-bottom: 5px;
-      white-space: nowrap;
-    }
-    input {
-      padding: 5px;
+  &-form {
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    &__input-field {
+      padding: 5px 5px 10px;
       width: 100%;
+      label {
+        text-align: left;
+        display: block;
+        padding-bottom: 5px;
+        white-space: nowrap;
+      }
+      input {
+        padding: 5px;
+        width: 100%;
+      }
+    }
+
+    &__submit-btn {
+      margin: 5px;
+      &:hover {
+        background-color: #ffffff;
+        color: #000000;
+      }
     }
   }
 
-  &__submit-btn {
-    margin: 5px;
-    &:hover {
-      background-color: #ffffff;
-      color: #000000;
-    }
+  &-err {
+    margin: 10px;
   }
-}
-
-// LOGIN ERROR
-.login-err {
-  margin: 10px;
 }
 
 // MEDIA QUERIES
 @media (max-width: 768px) {
-    .login-form {
-        width: 100%;
-        margin: 0;
-    }
+  .login-form {
+    width: 100%;
+    margin: 0;
   }
+}

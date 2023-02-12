@@ -2,7 +2,7 @@
 require(dirname(__FILE__, 4) . "/helpers/functions.php");
 session_start();
 
-if (!isset($_SESSION["author_id"])) {
+if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 }
 
