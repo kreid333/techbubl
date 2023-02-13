@@ -12,13 +12,13 @@
     <!-- EDIT PASSWORD FORM -->
     <form class="password-form" action="">
         <div class="password-form__input-field">
-            <label for="email-address">Old Password</label>
-            <input name="email-address" type="text" placeholder="Old Password">
+            <label for="old-password">Old Password</label>
+            <input name="old-password" type="password" placeholder="Old Password">
         </div>
         <div class="password-form__input-field">
-            <label for="password">New Password</label>
-            <input name="password" type="password" placeholder="New Password">
+            <label for="new-password">New Password</label>
+            <input name="new-password" type="password" placeholder="New Password">
         </div>
-        <button type="submit" class="btn btn--black login-form__submit-btn">UPDATE</button>
+        <button type="submit" class="btn btn--black password__submit-btn">UPDATE</button>
     </form>
 </div>

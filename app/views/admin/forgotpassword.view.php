@@ -9,7 +9,7 @@
             <label for="email-address">Email Address</label>
             <input name="email-address" type="email" placeholder="Email Address">
         </div>
-        <button type="submit" class="btn btn--black forgotpassword-form__submit-btn">REQUEST RESET LINK</button>
+        <button type="submit" class="btn btn--black forgotpassword__submit-btn">REQUEST RESET LINK</button>
     </form>
 
     <a class="forgotpassword__go-back" href="/admin/login">GO BACK</a>

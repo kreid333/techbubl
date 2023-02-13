@@ -395,10 +395,10 @@
   padding: 5px;
   width: 100%;
 }
-.login-form__submit-btn {
+.login__submit-btn {
   margin: 5px;
 }
-.login-form__submit-btn:hover {
+.login__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }
@@ -482,10 +482,10 @@
   padding: 5px;
   width: 100%;
 }
-.info-form__submit-btn {
+.info__submit-btn {
   margin: 5px;
 }
-.info-form__submit-btn:hover {
+.info__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }
@@ -549,10 +549,10 @@
   padding: 5px;
   width: 100%;
 }
-.password-form__submit-btn {
+.password__submit-btn {
   margin: 5px;
 }
-.password-form__submit-btn:hover {
+.password__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }
@@ -812,10 +812,10 @@
   padding: 5px;
   width: 100%;
 }
-.verifyaccount-form__submit-btn {
+.verifyaccount__submit-btn {
   margin: 5px;
 }
-.verifyaccount-form__submit-btn:hover {
+.verifyaccount__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }
@@ -859,10 +859,10 @@
   padding: 5px;
   width: 100%;
 }
-.resetpassword-form__submit-btn {
+.resetpassword__submit-btn {
   margin: 5px;
 }
-.resetpassword-form__submit-btn:hover {
+.resetpassword__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }
@@ -980,10 +980,10 @@
   padding: 5px;
   width: 100%;
 }
-.forgotpassword-form__submit-btn {
+.forgotpassword__submit-btn {
   margin: 5px;
 }
-.forgotpassword-form__submit-btn:hover {
+.forgotpassword__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }

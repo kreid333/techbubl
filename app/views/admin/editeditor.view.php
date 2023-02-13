@@ -25,6 +25,6 @@
             <label for="email-address">Email Address</label>
             <input name="email-address" type="text" placeholder="Email Address">
         </div>
-        <button type="submit" class="btn btn--black login-form__submit-btn">UPDATE</button>
+        <button type="submit" class="btn btn--black editeditor__submit-btn">UPDATE</button>
     </form>
 </div>
