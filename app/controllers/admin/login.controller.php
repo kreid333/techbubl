@@ -13,32 +13,36 @@ if (isset($_SESSION["id"])) {
         $email = $_POST["email-address"];
         $password = $_POST["password"];
 
-        // is the password field is empty...
-        if (empty($password)) {
-            $data["password_err"] = "Please enter password.";
+        $is_emailFormatted = filter_var($_POST["email-address"], FILTER_VALIDATE_EMAIL);
+
+        // if the password or email field was not filled in...
+        if (empty($password) || empty($email)) {
+            $data["login_err"] = "Please fill in all fields.";
         }
 
-        // is the email field is empty...
-        if (empty($email)) {
-            $data["email_err"] = "Please enter email address.";
-        }
+        // if both fields were filled...
+        if (empty($data["login_err"])) {
 
-        // if neither of the fields produced an error...
-        if (empty($data["email_err"]) && empty($data["password_err"])) {
-            $user = User::getUser($email);
+            // if the email is formatted correctly...
+            if ($is_emailFormatted) {
+                $user = User::getUser($email);
 
-            // if the user provided email gave us a user
-            if ($user) {
-                // if the user provided password matches the one in the database...
-                if (password_verify($password, $user["password"])) {
-                    $_SESSION["id"] = $user["id"];
-                    $_SESSION["email"] = $user["email"];
-                    redirect("/admin");
+                // if the user provided email gave us a user...
+                if ($user) {
+                    
+                    // if the user provided password matches the one in the database...
+                    if (password_verify($password, $user["password"])) {
+                        $_SESSION["id"] = $user["id"];
+                        $_SESSION["email"] = $user["email"];
+                        redirect("/admin");
+                    } else {
+                        $data["login_err"] = "Wrong credentials. Please try again.";
+                    }
                 } else {
                     $data["login_err"] = "Wrong credentials. Please try again.";
                 }
             } else {
-                $data["login_err"] = "Wrong credentials. Please try again.";
+                $data["login_err"] = "Invalid email format.";
             }
         }
     }

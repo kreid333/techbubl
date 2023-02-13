@@ -22,29 +22,29 @@ for ($i = 0; $i < count($codes); $i++) {
 
 if ($is_valid) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $createPassword = $_POST["create-password"];
+        $newPassword = $_POST["new-password"];
         $confirmPassword = $_POST["confirm-password"];
 
         // if either of the password fields are empty...
-        if (empty($createPassword) || empty($confirmPassword)) {
+        if (empty($newPassword) || empty($confirmPassword)) {
             $data["password_err"] = "Please fill out both fields.";
         }
 
         // if both of the password fields are empty...
-        if (empty($createPassword) && empty($confirmPassword)) {
+        if (empty($newPassword) && empty($confirmPassword)) {
             $data["password_err"] = "You cannot submit empty fields. Please try again.";
         }
 
         // if the both of the password fields do not match and they are NOT empty...
-        if ($createPassword !== $confirmPassword && !empty($createPassword) && !empty($confirmPassword)) {
+        if ($newPassword !== $confirmPassword && !empty($newPassword) && !empty($confirmPassword)) {
             $data["password_err"] = "Passwords do not match. Please try again";
         }
 
         // if both password fields are NOT empty and they match...
-        if (!empty($createPassword) && !empty($confirmPassword) && $createPassword === $confirmPassword) {
+        if (!empty($newPassword) && !empty($confirmPassword) && $newPassword === $confirmPassword) {
             $user_id = Verification::getUser($_GET["c"]);
             $hashedPassword = password_hash($confirmPassword, PASSWORD_DEFAULT);
-            Verification::createPassword($user_id[1], $hashedPassword);
+            Verification::updatePassword($user_id[1], $hashedPassword);
 
             $_SESSION["id"] = $user_id[0];
             $_SESSION["verified"] = true;
@@ -56,4 +56,4 @@ if ($is_valid) {
     redirect("/admin/login");
 }
 
-view("admin", "verifyaccount", $data);
+view("admin", "resetpassword", $data);

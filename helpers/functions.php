@@ -22,7 +22,7 @@ function redirect($url)
     header("Location:$url");
     die();
 }
-function sendEmail($recipient, $name, $verification_code)
+function sendEmail($recipient_email, $recipient_name, $subject, $body)
 {
 
     // create an instance; passing `true` enables exceptions
@@ -40,16 +40,14 @@ function sendEmail($recipient, $name, $verification_code)
 
         // recipients
         $mail->setFrom('kairetech@gmail.com', 'TechBubl');
-        $mail->addAddress($recipient, $name);
+        $mail->addAddress($recipient_email, $recipient_name);
 
         // content
         $mail->isHTML(true);
-        $mail->Subject = 'Verify your account';
-        $mail->Body    = '<span style="display: block;">Please click the link below to verify your account.</span>
-        <a href="localhost/admin/verifyaccount?vc=' . $verification_code . '" style="display: block; margin-top: 10px;">Click here</a>';
+        $mail->Subject = $subject;
+        $mail->Body    = $body;
 
         $mail->send();
-        return "A verification email has been sent to " . $recipient;
     } catch (Exception $e) {
         return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }

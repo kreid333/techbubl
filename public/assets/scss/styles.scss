@@ -14,8 +14,10 @@
 @use "admin/createpost";
 @use "admin/createeditor";
 @use "admin/verifyaccount";
+@use "admin/resetpassword";
 @use "admin/vieweditors";
 @use "admin/success";
+@use "admin/forgotpassword";
 
 /* =========================== */
 /* START OF GLOBAL */

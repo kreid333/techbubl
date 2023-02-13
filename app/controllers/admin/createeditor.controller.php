@@ -27,20 +27,25 @@ if (!isset($_SESSION["id"])) {
             // looping through all users to see if the provided email already exitsts
             for ($i = 0; $i < count($users); $i++) {
                 if ($users[$i][0] == $_POST["email-address"]) {
-                    $data["email-in-use_err"] = $_POST["email-address"] . " is already in use. Please try again.";
+                    $data["email_err"] = $_POST["email-address"] . " is already in use. Please try again.";
                     break;
                 }
             }
 
             // if the provided email does not exist already...
-            if (!isset($data["email-in-use_err"])) {
-                $uid = uniqid();
+            if (!isset($data["email_err"])) {
+                $code = uniqid();
                 $full_name = $_POST["first-name"] . " " . $_POST["last-name"];
                 User::createUser($_POST["first-name"], $_POST["last-name"], $_POST["role"], $_POST["email-address"]);
                 $createdUser = User::getUser($_POST["email-address"]);
-                Verification::createVerificationCode($createdUser["id"], $uid);
-                $confirmEmail = sendEmail($_POST["email-address"], $full_name, $uid);
-                $data["email_mess"] = $confirmEmail;
+                Verification::createVerificationCode($createdUser["id"], $code);
+
+                $subject = "Verify your account";
+                $body = '<span style="display: block;">Please click the link below to verify your account.</span>
+                <a href="localhost/admin/verifyaccount?c=' . $code . '" style="display: block; margin-top: 10px;">Click here</a>';
+
+                sendEmail($_POST["email-address"], $full_name, $subject, $body);
+                $data["success"] = "A verification email has been sent to " . $_POST["email-address"] . ".";
             }
         }
     }

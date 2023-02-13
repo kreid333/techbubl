@@ -14,7 +14,7 @@ class User
 
     public static function getUsers()
     {
-        $sql = "SELECT email FROM users";
+        $sql = "SELECT email, is_verified FROM users";
         $stmt = DB::conn()->query($sql);
         $users = $stmt->fetchAll(PDO::FETCH_NUM);
         $stmt = NULL;

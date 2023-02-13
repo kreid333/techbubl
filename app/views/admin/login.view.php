@@ -13,14 +13,11 @@
             <input name="password" type="password" placeholder="Password">
         </div>
         <button type="submit" class="btn btn--black login-form__submit-btn">SUBMIT</button>
-        <?php if (!empty($data["password_err"])) { ?>
-            <p class="login-err"><?php echo $data["password_err"];  ?></p>
-        <?php } ?>
-        <?php if (!empty($data["email_err"])) { ?>
-            <p class="login-err"><?php echo $data["email_err"];  ?></p>
-        <?php } ?>
-        <?php if (!empty($data["login_err"])) { ?>
-            <p class="login-err"><?php echo $data["login_err"];  ?></p>
-        <?php } ?>
     </form>
+
+    <a class="forgot-password" href="/admin/forgotpassword">Forgot password?</a>
+
+    <?php if (!empty($data["login_err"])) { ?>
+        <p class="login-err"><?php echo $data["login_err"];  ?></p>
+    <?php } ?>
 </div>

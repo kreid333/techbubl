@@ -9,8 +9,8 @@ if (isset($_GET["id"])) {
     $id = NULL;
 }
 
-if (isset($_GET["vc"])) {
-    $verification_code = $_GET["vc"];
+if (isset($_GET["c"])) {
+    $code = $_GET["c"];
 } else {
     $verification_code = NULL;
 }
@@ -81,6 +81,11 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/success.controller.php");
         break;
 
+    case "/admin/forgotpassword":
+    case "/admin/forgotpassword/":
+        require($root_directory . "/app/controllers/admin/forgotpassword.controller.php");
+        break;
+
     case "/admin/editeditor?id=" . $id:
         require($root_directory . "/app/controllers/admin/editeditor.controller.php");
         break;
@@ -97,9 +102,14 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/deletepost.controller.php");
         break;
 
-    case "/admin/verifyaccount?vc=" . $verification_code:
+    case "/admin/verifyaccount?c=" . $code:
         require($root_directory . "/app/controllers/admin/verifyaccount.controller.php");
         break;
+
+    case "/admin/resetpassword?c=" . $code:
+        require($root_directory . "/app/controllers/admin/resetpassword.controller.php");
+        break;
+
     default:
         http_response_code(404);
         require($root_directory . "/app/views/404.php");

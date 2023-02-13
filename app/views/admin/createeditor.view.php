@@ -37,11 +37,7 @@
         <p> <?php echo $data["email_err"]; ?> </p>
     <?php } ?>
 
-    <?php if (isset($data["email-in-use_err"])) { ?>
-        <p> <?php echo $data["email-in-use_err"]; ?> </p>
-    <?php } ?>
-
-    <?php if (isset($data["email_mess"])) { ?>
-        <p> <?php echo $data["email_mess"]; ?> </p>
+    <?php if (isset($data["success"])) { ?>
+        <p> <?php echo $data["success"]; ?> </p>
     <?php } ?>
 </div>

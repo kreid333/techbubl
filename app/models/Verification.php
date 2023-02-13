@@ -32,6 +32,13 @@ class Verification {
         $stmt = NULL;
     }
 
+    public static function updatePassword($id, $password) {
+        $sql = "UPDATE users SET password = :password WHERE id = :id ";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["id" => $id, "password" => $password]);
+        $stmt = NULL;
+    }
+
     public static function deleteCode($id) {
         $sql = "DELETE from verification WHERE id = :id";
         $stmt = DB::conn()->prepare($sql);
