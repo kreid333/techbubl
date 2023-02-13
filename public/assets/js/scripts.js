@@ -18,19 +18,21 @@ hamburger.addEventListener("click", () => {
   }
 });
 
-deletePostBtn.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    modal.classList.add("modal--active");
-    body.style.position = "fixed";
-  });
-});
+url = new URL(window.location.href);
+if (url.searchParams.has("id") && window.location.href.includes("/admin/deleteeditor")) {
+  modal.classList.add("modal--active");
+  body.style.position = "fixed";
+}
 
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 768) {
     hamburger.classList.remove("nav__hamburger--active");
     mobileMenu.classList.remove("mobile-menu--active");
 
-    if (body.hasAttribute("style") && !modal.classList.contains("modal--active")) {
+    if (
+      body.hasAttribute("style") &&
+      !modal.classList.contains("modal--active")
+    ) {
       body.removeAttribute("style");
     }
   }

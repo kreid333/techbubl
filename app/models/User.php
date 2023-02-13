@@ -12,6 +12,16 @@ class User
         return $user;
     }
 
+    public static function getUserByID($id)
+    {
+        $sql = "SELECT id, first_name, last_name, role, email FROM users WHERE id = :id";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["id" => $id]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt = NULL;
+        return $user;
+    }
+
     public static function getUsers()
     {
         $sql = "SELECT email, is_verified FROM users";
@@ -31,9 +41,25 @@ class User
 
     public static function createUser($first_name, $last_name, $role, $email)
     {
-        $sql = "INSERT INTO users (first_name, last_name, role, email, password, is_verified) VALUES (:first_name, :last_name, :role, :email, NULL, 0);";
+        $sql = "INSERT INTO users (first_name, last_name, role, email, password, is_verified) VALUES (:first_name, :last_name, :role, :email, NULL, 0)";
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["first_name" => $first_name, "last_name" => $last_name, "role" => $role, "email" => $email]);
         $stmt = NULL;
+    }
+
+    public static function getEditors()
+    {
+        $sql = "SELECT id, first_name, last_name, role, email FROM users WHERE role = 'Editor'";
+        $stmt = DB::conn()->query($sql);
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = NULL;
+        return $users;
+    }
+
+    public static function deleteUser($id)
+    {
+        $sql = "DELETE FROM users WHERE id = :id";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["id" => $id]);
     }
 }

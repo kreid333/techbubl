@@ -76,6 +76,10 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/vieweditors.controller.php");
         break;
 
+    case "/admin/deleteeditor?id=" . $id:
+        require($root_directory . "/app/controllers/admin/deleteeditor.controller.php");
+        break;
+
     case "/success":
     case "/success/":
         require($root_directory . "/app/controllers/admin/success.controller.php");
