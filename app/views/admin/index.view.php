@@ -57,7 +57,7 @@
                 <span class="admin-post__date"><?php echo $post["date_formatted"]; ?></span>
             </div>
             <div class="admin-post__actions">
-                <a class="btn btn--white" href="/admin/editpost?id=1">EDIT POST</a>
+                <a class="btn btn--white" href="/admin/editpost?id=<?php echo $post["id"]; ?>">EDIT POST</a>
                 <button class="delete-btn btn btn--black" data-id="1">DELETE POST</a>
             </div>
         </div>
