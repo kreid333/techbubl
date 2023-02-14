@@ -1,14 +1,17 @@
-<!-- MODAL -->
-<div class="modal">
-    <div class="modal__card">
-        <span class="modal__question">Are you sure you want to delete this post?</span>
-        <span class="modal__post-title">My first post!</span>
-        <span class="modal__post-author">By Izzy Cantalla</span>
-        <span class="modal__post-date">Posted on 1/23/23</span>
-        <a class="modal__delete btn btn--black" href="/admin/deletepost?id=1">DELETE</a>
-        <a class="modal__cancel" href="/admin">CANCEL</a>
+<?php if (isset($_GET["id"])) { ?>
+    <div class="modal">
+        <div class="modal__card">
+            <span class="modal__question">Are you sure you want to delete this post?</span>
+            <span class="modal__post-title"><?php echo $data["post"]["title"]; ?></span>
+            <span class="modal__post-author">By <?php echo $data["post"]["first_name"] . " " . $data["post"]["last_name"]; ?></span>
+            <span class="modal__post-date">Posted on <?php echo $data["post"]["date_formatted"]; ?></span>
+            <form action="/admin/deletepost?id=<?php echo $_GET["id"]; ?>" method="POST">
+                <button class="modal__delete btn btn--black" type="submit">DELETE</button>
+            </form>
+            <a class="modal__cancel" href="/admin">CANCEL</a>
+        </div>
     </div>
-</div>
+<?php } ?>
 
 <!-- SETTINGS -->
 <div class="icon-wrapper">
@@ -19,7 +22,7 @@
 
 <!-- AUTHOR -->
 <div class="author">
-    <h1 class="author__name"><?php echo $data["user"]["first_name"]; echo " "; echo $data["user"]["last_name"]; ?></h1>
+    <h1 class="author__name"><?php echo $data["user"]["first_name"] . " " . $data["user"]["last_name"]; ?></h1>
     <h2 class="author__role"><?php echo $data["user"]["role"]; ?></h2>
 </div>
 
@@ -42,8 +45,8 @@
 <div class="admin-actions">
     <a class="btn btn--white" href="/admin/createpost">CREATE POST</a>
     <?php if ($data["user"]["role"] == "Admin") { ?>
-    <a class="btn btn--white" href="/admin/createeditor">CREATE EDITOR</a>
-    <a class="btn btn--white" href="/admin/vieweditors">VIEW EDITORS</a>
+        <a class="btn btn--white" href="/admin/createeditor">CREATE EDITOR</a>
+        <a class="btn btn--white" href="/admin/vieweditors">VIEW EDITORS</a>
     <?php } ?>
 </div>
 
@@ -58,7 +61,7 @@
             </div>
             <div class="admin-post__actions">
                 <a class="btn btn--white" href="/admin/editpost?id=<?php echo $post["id"]; ?>">EDIT POST</a>
-                <button class="delete-btn btn btn--black" data-id="1">DELETE POST</a>
+                <a class="delete-btn btn btn--black" href="/admin/deletepost?id=<?php echo $post["id"]; ?>">DELETE POST</a>
             </div>
         </div>
     <?php } ?>

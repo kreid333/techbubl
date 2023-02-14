@@ -24,6 +24,11 @@ if (url.searchParams.has("id") && window.location.href.includes("/admin/deleteed
   body.style.position = "fixed";
 }
 
+if (url.searchParams.has("id") && window.location.href.includes("/admin/deletepost")) {
+  modal.classList.add("modal--active");
+  body.style.position = "fixed";
+}
+
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 768) {
     hamburger.classList.remove("nav__hamburger--active");

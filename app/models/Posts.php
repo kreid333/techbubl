@@ -34,7 +34,8 @@ class Posts {
 
     public static function getPostByID($id)
     {
-        $sql = "SELECT title, body FROM posts WHERE id = :id";
+        $sql = "SELECT first_name, last_name, title, DATE_FORMAT(created_at, '%m/%d/%Y') 
+        AS date_formatted FROM users INNER JOIN posts on posts.user_id = users.id WHERE posts.id = :id";
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["id" => $id]);
         $users = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -48,5 +49,12 @@ class Posts {
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["title" => $title, "body" => $body, "id" => $id]);
         $stmt = NULL;
+    }
+
+    public static function deletePost($id)
+    {
+        $sql = "DELETE FROM posts WHERE id = :id";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["id" => $id]);
     }
 }
