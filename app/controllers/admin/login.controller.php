@@ -34,6 +34,7 @@ if (isset($_SESSION["id"])) {
                     if (password_verify($password, $user["password"])) {
                         $_SESSION["id"] = $user["id"];
                         $_SESSION["email"] = $user["email"];
+                        $_SESSION["role"] = $user["role"];
                         redirect("/admin");
                     } else {
                         $data["login_err"] = "Wrong credentials. Please try again.";

@@ -49,12 +49,12 @@
 
 <!-- ADMIN GRID -->
 <div class="admin-grid">
-    <?php for ($i = 0; $i < 6; $i++) { ?>
+    <?php foreach ($data["posts"] as $post) { ?>
         <div class="admin-post">
             <div class="admin-post__info">
-                <span class="admin-post__title">My first ever post!</span>
-                <span class="admin-post__author">By Izzy Cantella</span>
-                <span class="admin-post__date">Posted on 1/28/23</span>
+                <span class="admin-post__title"><?php echo $post["title"]; ?></span>
+                <span class="admin-post__author"><?php echo $post["first_name"] . " " . $post["last_name"]; ?></span>
+                <span class="admin-post__date"><?php echo $post["date_formatted"]; ?></span>
             </div>
             <div class="admin-post__actions">
                 <a class="btn btn--white" href="/admin/editpost?id=1">EDIT POST</a>
