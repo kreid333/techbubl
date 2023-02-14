@@ -699,6 +699,10 @@
   background-color: #ffffff;
   color: #000000;
 }
+.createpost .publish-err {
+  text-align: center;
+  margin-top: 1rem;
+}
 
 .tox-tinymce {
   border: 1px solid #000000;
