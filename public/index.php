@@ -12,7 +12,7 @@ if (isset($_GET["id"])) {
 if (isset($_GET["c"])) {
     $code = $_GET["c"];
 } else {
-    $verification_code = NULL;
+    $code = NULL;
 }
 
 switch ($request) {

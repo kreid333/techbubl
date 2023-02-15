@@ -10,7 +10,7 @@
     <h2 class="info-header">EDIT INFO</h2>
 
     <!-- EDIT INFO FORM -->
-    <form class="info-form" action="/admin/editinfo" method="POST">
+    <form class="info-form" action="/admin/settings/editinfo" method="POST">
         <div class="info-form__name-field">
             <div class="info-form__input-field">
                 <label for="first-name">First Name</label>

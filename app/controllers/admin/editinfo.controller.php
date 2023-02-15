@@ -8,9 +8,9 @@ $data = [];
 if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
-    $data["user"] = User::getUser($_SESSION["email"]);
+    $data["user"] = User::getUserByID($_SESSION["id"]);
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        User::updateUser($_POST["first-name"], $_POST["last-name"], $_POST["email-address"], $_SESSION["id"]);
+        User::updateUser($_POST["first-name"], $_POST["last-name"], $_POST["email-address"], $data["user"]["id"]);
         redirect("/admin");
     }
 }
