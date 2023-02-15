@@ -14,7 +14,7 @@ class User
 
     public static function getUserByID($id)
     {
-        $sql = "SELECT id, first_name, last_name, role, email FROM users WHERE id = :id";
+        $sql = "SELECT * FROM users WHERE id = :id";
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["id" => $id]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -36,6 +36,14 @@ class User
         $sql = "UPDATE users SET first_name = :first_name, last_name = :last_name, email = :email WHERE id = :id";
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["first_name" => $first_name, "last_name" => $last_name, "email" => $email, "id" => $id]);
+        $stmt = NULL;
+    }
+
+    public static function updatePassword($password, $id)
+    {
+        $sql = "UPDATE users SET password = :password WHERE id = :id";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["password" => $password, "id" => $id]);
         $stmt = NULL;
     }
 
