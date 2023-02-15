@@ -56,4 +56,4 @@ if ($is_valid) {
     redirect("/admin/login");
 }
 
-view("admin", "verifyaccount", $data);
+view("admin/verifyaccount", $data);

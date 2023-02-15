@@ -6,4 +6,4 @@ if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 }
 
-view("admin", "editeditor");
+view("admin/editeditor");

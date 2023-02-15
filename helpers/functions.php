@@ -12,7 +12,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__, 1));
 $dotenv->load();
 
 // functions
-function view($area, $name, $data = null)
+function view($name, $data = null)
 {
     require("../app/views/layout.view.php");
 }

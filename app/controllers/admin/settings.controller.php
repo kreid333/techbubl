@@ -9,4 +9,4 @@ if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 }
 
-view("admin", "settings", $data);
+view("admin/settings", $data);

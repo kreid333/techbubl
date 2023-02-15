@@ -17,4 +17,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $data["editors"] = User::getEditors();
 
-view("admin", "vieweditors", $data);
+view("admin/vieweditors", $data);

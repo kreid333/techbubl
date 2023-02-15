@@ -52,4 +52,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-view("admin", "forgotpassword", $data);
+view("admin/forgotpassword", $data);

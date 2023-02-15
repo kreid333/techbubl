@@ -15,4 +15,4 @@ if (!isset($_SESSION["id"])) {
     }
 }
 
-view("admin", "editinfo", $data);
+view("admin/editinfo", $data);

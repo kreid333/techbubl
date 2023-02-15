@@ -40,17 +40,16 @@
   gap: 20px;
   padding: 2rem 0;
   justify-items: center;
+  align-items: center;
 }
 
 /* =========================== */
 /* START OF POST */
 /* =========================== */
 .post {
-  position: relative;
   width: 100%;
-  background-color: #ffffff;
-  min-height: 250px;
   min-width: 200px;
+  background-color: #ffffff;
   padding: 20px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
   transition: 0.45s;
@@ -59,7 +58,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .post__author-img {
   width: 20px;
@@ -68,37 +67,20 @@
 .post__author-name {
   font-size: 12px;
 }
+.post__date {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
 .post__title {
   font-weight: bold;
-  margin-bottom: 5px;
-}
-.post__desc {
-  display: -webkit-box;
-  -webkit-line-clamp: 9;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  font-size: 14px;
-}
-.post__info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 20px;
-}
-.post__info--seperator {
-  margin: 0px 5px;
+  margin-bottom: 10px;
 }
 .post__category {
   background-color: #e9e9e9;
-  border-radius: 10px;
   padding: 5px 10px;
   font-size: 10px;
   white-space: nowrap;
-}
-.post__read-time {
-  white-space: nowrap;
-  font-size: 10px;
 }
 .post:hover {
   cursor: pointer;
@@ -253,6 +235,87 @@
     width: 100%;
   }
 }
+.article {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.article__author {
+  display: block;
+  font-size: 20px;
+  padding-bottom: 1rem;
+}
+.article__date {
+  display: block;
+  color: #939393;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+.article h1 {
+  font-size: 32px;
+  font-weight: 700;
+  padding: 1rem;
+}
+.article h2 {
+  font-size: 26px;
+  font-weight: 700;
+  padding: 1rem;
+}
+.article h3 {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 1rem;
+}
+.article h4 {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 1rem;
+}
+.article p {
+  font-size: 16px;
+  padding: 5px 0px;
+}
+.article ul,
+.article ol {
+  text-align: left;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.article ul {
+  list-style-type: disc;
+}
+.article ol {
+  list-style-type: decimal;
+}
+.article li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.article strong {
+  font-weight: 600;
+}
+.article em {
+  font-style: italic;
+}
+.article figure {
+  margin: 0.5rem;
+}
+.article figcaption {
+  padding: 2.5px;
+}
+.article code {
+  font-family: monospace;
+}
+.article pre {
+  font-family: monospace;
+  margin: 1rem;
+  text-align: left;
+}
+
 .settings-icon {
   position: absolute;
   right: 0;

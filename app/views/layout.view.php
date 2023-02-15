@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/public/assets/css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&family=Questrial&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Questrial&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -19,7 +19,7 @@
             selector: '.content-area',
             height: '475px',
             plugins: 'emoticons image link lists',
-            toolbar: 'undo redo bold italic numlist bullist alignleft aligncenter alignright emoticons link image',
+            toolbar: 'undo redo h2 h3 h4 bold italic numlist bullist emoticons link image',
             link_default_target: '_blank'
         });
     </script>
@@ -81,7 +81,7 @@
     <!-- WRAPPER -->
     <div class="wrapper">
         <div class="main">
-            <?php require("$area/$name.view.php") ?>
+            <?php require($name . ".view.php") ?>
         </div>
 
         <hr class="divider">

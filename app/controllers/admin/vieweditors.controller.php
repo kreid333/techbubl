@@ -11,4 +11,4 @@ if (!isset($_SESSION["id"])) {
 
 $data["editors"] = User::getEditors();
 
-view("admin", "vieweditors", $data);
+view("admin/vieweditors", $data);

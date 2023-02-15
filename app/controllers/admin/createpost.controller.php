@@ -18,4 +18,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-view("admin", "createpost", $data);
+view("admin/createpost", $data);

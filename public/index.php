@@ -31,6 +31,10 @@ switch ($request) {
         require($root_directory . "/app/controllers/main/contact.controller.php");
         break;
 
+    case "/post?id=" . $id:
+        require($root_directory . "/app/controllers/post.controller.php");
+        break;
+
     case "/admin":
     case "/admin/":
         require($root_directory . "/app/controllers/admin/index.controller.php");

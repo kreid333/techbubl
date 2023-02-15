@@ -56,4 +56,4 @@ if ($is_valid) {
     redirect("/admin/login");
 }
 
-view("admin", "resetpassword", $data);
+view("admin/resetpassword", $data);

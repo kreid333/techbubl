@@ -1,0 +1,96 @@
+.article {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  &__author {
+    display: block;
+    font-size: 20px;
+    padding-bottom: 1rem;
+  }
+
+  &__date {
+    display: block;
+    color: #939393;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    padding: 1rem;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 1rem;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 1rem;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 5px 0px;
+  }
+
+  ul,
+  ol {
+    text-align: left;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  figure {
+    margin: 0.5rem;
+  }
+
+  figcaption {
+    padding: 2.5px;
+  }
+
+  code {
+    font-family: monospace;
+  }
+
+  pre {
+    font-family: monospace;
+    margin: 1rem;
+    text-align: left;
+  }
+}

@@ -51,4 +51,4 @@ if (!isset($_SESSION["id"])) {
     }
 }
 
-view("admin", "createeditor", $data);
+view("admin/createeditor", $data);

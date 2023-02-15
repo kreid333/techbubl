@@ -49,4 +49,4 @@ if (isset($_SESSION["id"])) {
     }
 }
 
-view("admin", "login", $data);
+view("admin/login", $data);

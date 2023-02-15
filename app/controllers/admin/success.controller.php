@@ -11,4 +11,4 @@ if (!isset($_SESSION["verified"])) {
     session_destroy();
 }
 
-view("admin", "success");
+view("admin/success");

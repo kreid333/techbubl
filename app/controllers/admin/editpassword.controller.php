@@ -33,4 +33,4 @@ if (!isset($_SESSION["id"])) {
     }
 }
 
-view("admin", "editpassword", $data);
+view("admin/editpassword", $data);
