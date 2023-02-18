@@ -7,6 +7,7 @@ class Posts {
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["user_id" => $user_id, "title" => $title, "body" => $body]);
         $stmt = NULL;
+        return true;
     }
 
     public static function getPosts()

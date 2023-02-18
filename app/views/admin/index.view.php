@@ -46,6 +46,7 @@
     <a class="btn btn--white" href="/admin/createpost">CREATE POST</a>
     <?php if ($data["user"]["role"] == "Admin") { ?>
         <a class="btn btn--white" href="/admin/createeditor">CREATE EDITOR</a>
+        <a class="btn btn--white" href="/admin/createcategory">CREATE CATEGORY</a>
         <a class="btn btn--white" href="/admin/vieweditors">VIEW EDITORS</a>
     <?php } ?>
 </div>

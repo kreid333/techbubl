@@ -75,6 +75,11 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/createeditor.controller.php");
         break;
 
+    case "/admin/createcategory":
+    case "/admin/createcategory/":
+        require($root_directory . "/app/controllers/admin/createcategory.controller.php");
+        break;
+
     case "/admin/vieweditors":
     case "/admin/vieweditors/":
         require($root_directory . "/app/controllers/admin/vieweditors.controller.php");

@@ -19,6 +19,7 @@
             selector: '.content-area',
             height: '475px',
             plugins: 'emoticons image link lists',
+            menubar: 'file edit view insert',
             toolbar: 'undo redo h2 h3 h4 bold italic numlist bullist emoticons link image',
             link_default_target: '_blank'
         });

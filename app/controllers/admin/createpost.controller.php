@@ -13,8 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["title"]) || empty($_POST["body"])) {
         $data["publish_err"] = "You cannot submit a post with blank fields.";
     } else {
-        Posts::createPost($_SESSION["id"], $_POST["title"], $_POST["body"]);
-        redirect("/admin");
+        if (Posts::createPost($_SESSION["id"], $_POST["title"], $_POST["body"])) {
+            redirect("/admin");
+        } else {
+            $data["publish_err"] = "There was an error creating the post.";
+        }
     }
 }
 
