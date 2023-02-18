@@ -7,4 +7,12 @@ class Categories {
         $stmt->execute(["name" => $name]);
         $stmt = NULL;
     }
+
+    public static function getCategories() {
+        $sql = "SELECT * FROM categories";
+        $stmt = DB::conn()->query($sql);
+        $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = NULL;
+        return $categories;
+    }
 }

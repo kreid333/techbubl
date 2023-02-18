@@ -6,6 +6,10 @@
     padding-bottom: 1rem;
   }
 
+  &__title {
+    border: 2px solid #eee;
+  }
+
   &__input-field {
     padding: 5px 5px 15px;
     width: 100%;
@@ -22,6 +26,23 @@
     }
   }
 
+  &__categories {
+    padding: 5px;
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__radio {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    input {
+      margin: 0;
+    }
+    margin: 10px 0;
+  }
+
   &__submit-btn {
     margin: 5px;
     &:hover {
@@ -32,8 +53,10 @@
 }
 
 // STYLING FOR TINYMCE WYSIWYG EDITOR
-.tox-tinymce {
-  border: 1px solid #000000;
+.tox {
+  &.tox-tinymce {
+    border-radius: 0;
+  }
 }
 
 .tox-promotion {
