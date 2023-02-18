@@ -12,7 +12,8 @@
         <span class="article__author"><?php echo $data["post"]["first_name"] . " " . $data["post"]["last_name"]; ?></span>
         <span class="article__date"><?php echo $data["post"]["date_formatted"]; ?></span>
     </div>
-    <div class="article_body">
+    <div class="article__body">
         <?php echo $data["post"]["body"]; ?>
     </div>
+    <span class="article__category"><?php echo $data["post"]["name"]; ?></span>
 </div>

@@ -12,8 +12,8 @@ class Posts {
 
     public static function getPosts()
     {
-        $sql = "SELECT posts.id, first_name, last_name, title, DATE_FORMAT(created_at, '%m/%d/%Y') 
-        AS date_formatted FROM users INNER JOIN posts on posts.user_id = users.id 
+        $sql = "SELECT posts.id, first_name, last_name, category_id, name, title, DATE_FORMAT(created_at, '%m/%d/%Y') 
+        AS date_formatted FROM posts INNER JOIN users on users.id = posts.user_id INNER JOIN categories on categories.id = posts.category_id 
         ORDER BY created_at DESC";
         $stmt = DB::conn()->query($sql);
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -35,7 +35,7 @@ class Posts {
 
     public static function getPostByID($id)
     {
-        $sql = "SELECT first_name, last_name, category_id, title, body, DATE_FORMAT(created_at, '%m/%d/%Y') 
+        $sql = "SELECT first_name, last_name, category_id, name, title, body, DATE_FORMAT(created_at, '%m/%d/%Y') 
         AS date_formatted FROM posts INNER JOIN users on users.id = posts.user_id INNER JOIN categories on categories.id = posts.category_id WHERE posts.id = :id";
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["id" => $id]);

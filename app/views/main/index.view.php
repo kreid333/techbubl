@@ -30,7 +30,7 @@
                 </div>
                 <span class="post__date"><?php echo $post["date_formatted"]; ?></span>
                 <h4 class="post__title"><?php echo $post["title"]; ?></h4>
-                <span class="post__category">Artificial Intelligence</span>
+                <span class="post__category"><?php echo $post["name"]; ?></span>
             </div>
         </a>
     <?php } ?>
