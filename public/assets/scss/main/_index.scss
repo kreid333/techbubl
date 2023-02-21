@@ -7,7 +7,7 @@
   &__categories {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 0.5rem;
   }
 
   &__btn {
@@ -34,6 +34,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  &__btn.btn--white {
+    padding: 5px;
+    border-left: none;
+  }
 }
 
 // POST GRID

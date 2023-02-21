@@ -20,6 +20,28 @@ class Posts {
         $stmt = NULL;
         return $users;
     }
+    
+    public static function getMostRecent()
+    {
+        $sql = "SELECT posts.id, first_name, last_name, category_id, name, title, DATE_FORMAT(created_at, '%m/%d/%Y') 
+        AS date_formatted FROM posts INNER JOIN users on users.id = posts.user_id INNER JOIN categories on categories.id = posts.category_id 
+        ORDER BY created_at DESC";
+        $stmt = DB::conn()->query($sql);
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = NULL;
+        return $users;
+    }
+
+    public static function getMostPopular()
+    {
+        $sql = "SELECT posts.id, first_name, last_name, category_id, name, title, DATE_FORMAT(created_at, '%m/%d/%Y') 
+        AS date_formatted FROM posts INNER JOIN users on users.id = posts.user_id INNER JOIN categories on categories.id = posts.category_id 
+        ORDER BY view_count DESC";
+        $stmt = DB::conn()->query($sql);
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = NULL;
+        return $users;
+    }
 
     public static function getPostsByID($id)
     {
@@ -35,7 +57,7 @@ class Posts {
 
     public static function getPostByID($id)
     {
-        $sql = "SELECT first_name, last_name, category_id, name, title, body, DATE_FORMAT(created_at, '%m/%d/%Y') 
+        $sql = "SELECT first_name, last_name, category_id, name, title, body, view_count, DATE_FORMAT(created_at, '%m/%d/%Y') 
         AS date_formatted FROM posts INNER JOIN users on users.id = posts.user_id INNER JOIN categories on categories.id = posts.category_id WHERE posts.id = :id";
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["id" => $id]);
@@ -58,5 +80,14 @@ class Posts {
         $sql = "DELETE FROM posts WHERE id = :id";
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["id" => $id]);
+    }
+
+    public static function updateViewCount($view_count, $id)
+    {
+        $sql = "UPDATE posts SET view_count = :view_count WHERE id = :id";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["view_count" => $view_count, "id" => $id]);
+        $stmt = NULL;
+        return true;
     }
 }

@@ -15,9 +15,20 @@ if (isset($_GET["c"])) {
     $code = NULL;
 }
 
+if (isset($_GET["sortby"])) {
+    $sortby = $_GET["sortby"];
+} else {
+    $sortby = NULL;
+}
+
 switch ($request) {
     case "":
     case "/":
+        require($root_directory . "/app/controllers/main/index.controller.php");
+        break;
+
+    case "?sortby=" . $sortby:
+    case "/?sortby=" . $sortby:
         require($root_directory . "/app/controllers/main/index.controller.php");
         break;
 

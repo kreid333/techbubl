@@ -8,7 +8,7 @@
 .posts-nav__categories {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 0.5rem;
 }
 .posts-nav__btn {
   display: block;
@@ -32,6 +32,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+.post-sorting__btn.btn--white {
+  padding: 5px;
+  border-left: none;
 }
 
 .posts-grid {
@@ -1261,7 +1265,10 @@ input {
   height: 2rem;
   background-color: white;
   border: 1px solid #000000;
-  padding: 5px;
+  padding: 2.5px;
+}
+.sorting select:focus {
+  outline: none;
 }
 
 .home-icon {

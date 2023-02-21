@@ -11,12 +11,17 @@
             AI
         </a>
     </div>
-    <div class="post-sorting sorting">
+    <form class="post-sorting sorting" action="" method="GET">
         <select name="sortby">
-            <option value="most-recent">SORT BY: Most Recent</option>
-            <option value="most-popular">SORT BY: Most Popular</option>
+            <option value="most-recent" 
+            <?php if (isset($_GET["sortby"]) && $_GET["sortby"] == "most-recent" || $_SERVER["REQUEST_URI"] == "/") { echo "selected"; }; ?>
+            >SORT BY: Most Recent</option>
+            <option value="most-popular" 
+            <?php if (isset($_GET["sortby"]) && $_GET["sortby"] == "most-popular") { echo "selected"; }; ?>
+            >SORT BY: Most Popular</option>
         </select>
-    </div>
+        <button class="btn btn--white post-sorting__btn" type="submit">GO</button>
+</form>
 </div>
 
 <!-- POSTS GRID -->
