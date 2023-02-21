@@ -1,8 +1,11 @@
 <?php
 require_once(dirname(__FILE__, 3) . "/helpers/classes.php");
 
-class Posts {
-    public static function createPost($user_id, $category_id, $title, $body) {
+class Posts
+{
+    // CREATE
+    public static function createPost($user_id, $category_id, $title, $body)
+    {
         $sql = "INSERT INTO posts (user_id, category_id, title, body) VALUES (:user_id, :category_id, :title, :body)";
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["user_id" => $user_id, "category_id" => $category_id, "title" => $title, "body" => $body]);
@@ -10,6 +13,7 @@ class Posts {
         return true;
     }
 
+    // READ
     public static function getPosts()
     {
         $sql = "SELECT posts.id, first_name, last_name, category_id, name, title, DATE_FORMAT(created_at, '%m/%d/%Y') 
@@ -20,7 +24,7 @@ class Posts {
         $stmt = NULL;
         return $users;
     }
-    
+
     public static function getMostRecent()
     {
         $sql = "SELECT posts.id, first_name, last_name, category_id, name, title, DATE_FORMAT(created_at, '%m/%d/%Y') 
@@ -66,6 +70,26 @@ class Posts {
         return $users;
     }
 
+    public static function getMostRecentAside()
+    {
+        $sql = "SELECT id, title, DATE_FORMAT(created_at, '%m/%d/%Y') 
+        AS date_formatted FROM posts ORDER BY created_at DESC LIMIT 4";
+        $stmt = DB::conn()->query($sql);
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = NULL;
+        return $users;
+    }
+
+    public static function getMostPopularAside()
+    {
+        $sql = "SELECT id, title, view_count FROM posts ORDER BY view_count DESC LIMIT 4";
+        $stmt = DB::conn()->query($sql);
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = NULL;
+        return $users;
+    }
+
+    // UPDATE
     public static function updatePost($category_id, $title, $body, $id)
     {
         $sql = "UPDATE posts SET category_id = :category_id, title = :title, body = :body WHERE id = :id";
@@ -75,13 +99,6 @@ class Posts {
         return true;
     }
 
-    public static function deletePost($id)
-    {
-        $sql = "DELETE FROM posts WHERE id = :id";
-        $stmt = DB::conn()->prepare($sql);
-        $stmt->execute(["id" => $id]);
-    }
-
     public static function updateViewCount($view_count, $id)
     {
         $sql = "UPDATE posts SET view_count = :view_count WHERE id = :id";
@@ -89,5 +106,13 @@ class Posts {
         $stmt->execute(["view_count" => $view_count, "id" => $id]);
         $stmt = NULL;
         return true;
+    }
+
+    // DELETE
+    public static function deletePost($id)
+    {
+        $sql = "DELETE FROM posts WHERE id = :id";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["id" => $id]);
     }
 }

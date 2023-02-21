@@ -1,3 +1,4 @@
+<?php require(dirname(__FILE__, 2) . "/controllers/layout.controller.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,17 +95,17 @@
             </div>
             <div class="aside__popular-articles">
                 <h3>Popular Articles</h3>
-                <?php for ($i = 0; $i < 4; $i++) { ?>
-                    <a href="#">
-                        <div class="aside__article">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                <?php foreach ($data["popular_posts"] as $post) { ?>
+                    <a href="/post?id=<?php echo $post["id"]; ?>">
+                        <div class="aside__article"><?php echo $post["title"]; ?></div>
                     </a>
                 <?php } ?>
             </div>
             <div class="aside__most-recent">
                 <h3>Most Recent</h3>
-                <?php for ($i = 0; $i < 4; $i++) { ?>
-                    <a href="#">
-                        <div class="aside__article">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                <?php foreach ($data["recent_posts"] as $post) { ?>
+                    <a href="/post?id=<?php echo $post["id"]; ?>">
+                        <div class="aside__article"><?php echo $post["title"]; ?></div>
                     </a>
                 <?php } ?>
             </div>
