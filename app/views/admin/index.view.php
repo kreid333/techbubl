@@ -18,6 +18,11 @@
     <a href="/admin/settings" class="settings-icon">
         <i class="fa fa-cog"></i>
     </a>
+    <?php if (!empty($_POST["search"])) { ?>
+        <a href="/admin" class="home-icon">
+            <i class="fa fa-house"></i>
+        </a>
+    <?php } ?>
 </div>
 
 <!-- AUTHOR -->
@@ -27,10 +32,10 @@
 </div>
 
 <!-- SEARCH BAR -->
-<div class="admin-search search-bar">
+<form class="admin-search search-bar" action="/admin" method="POST">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="search" name="post-search" placeholder="Search">
-</div>
+    <input type="search" name="search" placeholder="Search">
+</form>
 
 <!-- SORTING -->
 <div class="admin-sorting sorting">
@@ -51,6 +56,9 @@
     <?php } ?>
 </div>
 
+<?php if (!empty($_POST)) { ?>
+    <h2 class="search">Search Results for "<?php echo $_POST["search"]; ?>"</h2>
+<?php } ?>
 <!-- ADMIN GRID -->
 <div class="admin-grid">
     <?php foreach ($data["posts"] as $post) { ?>

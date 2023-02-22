@@ -11,7 +11,11 @@ if (!isset($_SESSION["id"])) {
 } else {
     $data["user"] = User::getUser($_SESSION["email"]);
     if ($_SESSION["role"] == "Admin") {
-        $data["posts"] = Posts::getPosts();
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $data["posts"] = Posts::searchPosts($_POST["search"]);
+        } else {
+            $data["posts"] = Posts::getPosts();
+        }
     }
 
     if ($_SESSION["role"] == "Editor") {
