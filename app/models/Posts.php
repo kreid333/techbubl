@@ -105,6 +105,23 @@ class Posts
         return $posts;
     }
 
+    public static function searchPostsByID($id, $search)
+    {
+        $sql = "SELECT posts.id, first_name, last_name, DATE_FORMAT(created_at, '%m/%d/%Y') AS date_formatted, title, name AS category_name FROM posts 
+        INNER JOIN users on users.id = posts.user_id 
+        INNER JOIN categories on categories.id = posts.category_id 
+        WHERE posts.user_id = :id 
+        AND (title LIKE :search 
+        OR name LIKE :search 
+        OR first_name LIKE :search
+        OR last_name LIKE :search)";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["id" => $id, "search" => "%" . $search . "%"]);
+        $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = NULL;
+        return $posts;
+    }
+
 
     // UPDATE
     public static function updatePost($category_id, $title, $body, $id)

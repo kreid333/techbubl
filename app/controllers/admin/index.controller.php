@@ -19,7 +19,11 @@ if (!isset($_SESSION["id"])) {
     }
 
     if ($_SESSION["role"] == "Editor") {
-        $data["posts"] = Posts::getPostsByID($_SESSION["id"]);
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $data["posts"] = Posts::searchPostsByID($_SESSION["id"], $_POST["search"]);
+        } else {
+            $data["posts"] = Posts::getPostsByID($_SESSION["id"]);
+        }
     }
 }
 
