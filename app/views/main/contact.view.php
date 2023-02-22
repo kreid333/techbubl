@@ -6,25 +6,33 @@
     </div>
 
     <!-- CONTACT FORM -->
-    <form class="contact-form" action="">
+    <form class="contact-form" action="/contact" method="POST">
         <div class="contact-form__name-field">
             <div class="contact-form__input-field">
                 <label for="first-name">First Name</label>
-                <input name="first-name" type="text" placeholder="First Name">
+                <input name="first-name" type="text" placeholder="First Name" required>
             </div>
             <div class="contact-form__input-field">
                 <label for="last-name">Last Name</label>
-                <input name="last-name" type="text" placeholder="Last Name">
+                <input name="last-name" type="text" placeholder="Last Name" required>
             </div>
         </div>
         <div class="contact-form__input-field">
             <label for="email-address">Email Address</label>
-            <input name="email-address" type="text" placeholder="Email Address">
+            <input name="email-address" type="email" placeholder="Email Address" required>
         </div>
         <div class="contact-form__input-field">
             <label for="message">Message</label>
-            <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+            <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
         </div>
         <button type="submit" class="btn btn--black contact-form__submit-btn">SUBMIT</button>
     </form>
 </div>
+
+<?php if (isset($data["success"])) { ?>
+    <span class="message"><?php echo $data["success"]; ?></span>
+<?php } ?>
+
+<?php if (isset($data["err"])) { ?>
+    <span class="message"><?php echo $data["err"]; ?></span>
+<?php } ?>
