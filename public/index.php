@@ -24,6 +24,12 @@ if (isset($_GET["sortby"])) {
 switch ($request) {
     case "":
     case "/":
+    case "/crypto":
+    case "/crypto/":
+    case "/webdev":
+    case "/webdev/":
+    case "/ai":
+    case "/ai/":
         require($root_directory . "/app/controllers/main/index.controller.php");
         break;
 

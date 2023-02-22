@@ -15,4 +15,13 @@ class Categories {
         $stmt = NULL;
         return $categories;
     }
+
+    public static function getCategory($category_name) {
+        $sql = "SELECT posts.id, first_name, last_name, name, title, DATE_FORMAT(created_at, '%m/%d/%Y') AS date_formatted FROM posts INNER JOIN categories on categories.id = posts.category_id INNER JOIN users on users.id = posts.user_id WHERE name = :category_name";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["category_name" => $category_name]);
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = NULL;
+        return $users;
+    }
 }

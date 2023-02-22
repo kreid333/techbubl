@@ -2,15 +2,16 @@
 /* START OF POSTS NAV */
 /* =========================== */
 .posts-nav {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
   &__categories {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 1rem;
   }
 
   &__btn {
+    font-size: 16px;
+    font-weight: 300;
     display: block;
     background-color: #ffffff;
     border: 1px solid #000000;
@@ -29,15 +30,10 @@
 /* END OF POSTS NAV */
 /* =========================== */
 
-// POST SORTING
-.post-sorting {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  &__btn.btn--white {
-    padding: 5px;
-    border-left: none;
-  }
+// CATEGORY TITLE
+.category-title {
+  padding-top: 2rem;
+  text-align: center;
 }
 
 // POST GRID
@@ -105,10 +101,6 @@
 /* START OF MEDIA QUERIES */
 /* =========================== */
 @media (max-width: 1024px) {
-  .post-sorting {
-    justify-content: flex-start;
-  }
-
   .posts-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -122,10 +114,6 @@
       justify-content: center;
       flex-wrap: wrap;
     }
-  }
-
-  .post-sorting {
-    justify-content: center;
   }
 }
 

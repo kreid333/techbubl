@@ -88,7 +88,6 @@ class Posts
         $stmt = NULL;
         return $users;
     }
-
     // UPDATE
     public static function updatePost($category_id, $title, $body, $id)
     {

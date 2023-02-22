@@ -1,28 +1,24 @@
 <!-- POSTS NAV -->
 <div class="posts-nav">
     <div class="posts-nav__categories">
-        <a class="posts-nav__btn" href="#">
-            Crypto
-        </a>
-        <a class="posts-nav__btn" href="#">
-            Web Dev
-        </a>
-        <a class="posts-nav__btn" href="#">
-            AI
-        </a>
+        <?php if ($_SERVER["REQUEST_URI"] != "/crypto") { ?>
+            <a class="posts-nav__btn" href="/crypto">Crypto</a>
+        <?php } ?>
+        <?php if ($_SERVER["REQUEST_URI"] != "/webdev") { ?>
+            <a class="posts-nav__btn" href="/webdev">Web Dev</a>
+        <?php } ?>
+        <?php if ($_SERVER["REQUEST_URI"] != "/ai") { ?>
+            <a class="posts-nav__btn" href="/ai">AI</a>
+        <?php } ?>
+        <?php if ($_SERVER["REQUEST_URI"] != "/") { ?>
+            <a class="posts-nav__btn" href="/">View All</a>
+        <?php } ?>
     </div>
-    <form class="post-sorting sorting" action="" method="GET">
-        <select name="sortby">
-            <option value="most-recent" 
-            <?php if (isset($_GET["sortby"]) && $_GET["sortby"] == "most-recent" || $_SERVER["REQUEST_URI"] == "/") { echo "selected"; }; ?>
-            >SORT BY: Most Recent</option>
-            <option value="most-popular" 
-            <?php if (isset($_GET["sortby"]) && $_GET["sortby"] == "most-popular") { echo "selected"; }; ?>
-            >SORT BY: Most Popular</option>
-        </select>
-        <button class="btn btn--white post-sorting__btn" type="submit">GO</button>
-</form>
 </div>
+
+<?php if ($_SERVER["REQUEST_URI"] != "/") { ?>
+    <h1 class="category-title"><?php echo $data["category_title"]; ?></h1>
+<?php } ?>
 
 <!-- POSTS GRID -->
 <div class="posts-grid">
