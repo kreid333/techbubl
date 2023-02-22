@@ -29,12 +29,8 @@
         <button type="submit" class="btn btn--black createeditor__submit-btn">CREATE</button>
     </form>
 
-    <?php if (isset($data["name_err"])) { ?>
-        <p> <?php echo $data["name_err"]; ?> </p>
-    <?php } ?>
-
-    <?php if (isset($data["email_err"])) { ?>
-        <p> <?php echo $data["email_err"]; ?> </p>
+    <?php if (isset($data["err"])) { ?>
+        <p> <?php echo $data["err"]; ?> </p>
     <?php } ?>
 
     <?php if (isset($data["success"])) { ?>

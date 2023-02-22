@@ -10,30 +10,32 @@ if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // if either of the name fields are empty...
-        if (empty($_POST["first-name"]) || empty($_POST["last-name"])) {
-            $data["name_err"] = "Please fill in all name fields.";
+        $is_emailFormatted = filter_var($_POST["email-address"], FILTER_VALIDATE_EMAIL);
+
+        // if any field is empty...
+        if (empty($_POST["first-name"]) || empty($_POST["last-name"]) || empty($_POST["email-address"])) {
+            $data["err"] = "Please fill in all fields.";
         }
 
-        // if the email field is empty...
-        if (empty($_POST["email-address"])) {
-            $data["email_err"] = "Please enter email address.";
+        // if the given email is not empty and is not formatted correctly...
+        if (!empty($_POST["email-address"]) && !$is_emailFormatted) {
+            $data["err"] = "Please enter a valid email address.";
         }
 
-        // if all fields are not empty...
-        if (!empty($_POST["first-name"]) && !empty($_POST["last-name"]) && !empty($_POST["email-address"])) {
+        // if all fields are not empty and the given email is formatted correctly...
+        if (!empty($_POST["first-name"]) && !empty($_POST["last-name"]) && !empty($_POST["email-address"]) && $is_emailFormatted) {
             $users = User::getUsers();
 
             // looping through all users to see if the provided email already exitsts
             for ($i = 0; $i < count($users); $i++) {
                 if ($users[$i][0] == $_POST["email-address"]) {
-                    $data["email_err"] = $_POST["email-address"] . " is already in use. Please try again.";
+                    $data["err"] = $_POST["email-address"] . " is already in use. Please try again.";
                     break;
                 }
             }
 
             // if the provided email does not exist already...
-            if (!isset($data["email_err"])) {
+            if (!isset($data["err"])) {
                 $code = uniqid();
                 $full_name = $_POST["first-name"] . " " . $_POST["last-name"];
                 User::createUser($_POST["first-name"], $_POST["last-name"], $_POST["role"], $_POST["email-address"]);
