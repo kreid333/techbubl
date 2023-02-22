@@ -37,15 +37,6 @@
     <input type="search" name="search" placeholder="Search">
 </form>
 
-<!-- SORTING -->
-<div class="admin-sorting sorting">
-    <select name="sortby">
-        <option value="date">SORT BY: Date</option>
-        <option value="author">SORT BY: Author</option>
-    </select>
-</div>
-
-
 <!-- ADMIN ACTIONS -->
 <div class="admin-actions">
     <a class="btn btn--white" href="/admin/createpost">CREATE POST</a>

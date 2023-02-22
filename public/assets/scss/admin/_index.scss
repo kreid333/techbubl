@@ -28,15 +28,7 @@
 .search-bar {
   &.admin-search {
     margin: 0 auto;
-  }
-}
-
-// ADMIN SORTING
-.admin-sorting {
-  select {
-    position: relative;
-    bottom: 33px;
-    float: right;
+    margin-bottom: 2rem;
   }
 }
 
