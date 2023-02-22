@@ -9,19 +9,23 @@ $data = [];
 if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
-    $data["categories"] = Categories::getCategories();
     $data["post"] = Posts::getPostByID($_GET["id"]);
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["category"]) || empty($_POST["title"]) || empty($_POST["body"])) {
-            $data["publish_err"] = "You cannot submit a post with blank fields.";
-        } else {
-            if (Posts::updatePost($_POST["category"], $_POST["title"], $_POST["body"], $_GET["id"])) {
-                redirect("/admin");
+    if ($_SESSION["id"] == $data["post"]["user_id"]) {
+        $data["categories"] = Categories::getCategories();
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["category"]) || empty($_POST["title"]) || empty($_POST["body"])) {
+                $data["publish_err"] = "You cannot submit a post with blank fields.";
             } else {
-                $data["publish_err"] = "There was an error creating the post.";
+                if (Posts::updatePost($_POST["category"], $_POST["title"], $_POST["body"], $_GET["id"])) {
+                    redirect("/admin");
+                } else {
+                    $data["publish_err"] = "There was an error creating the post.";
+                }
             }
         }
+    } else {
+        redirect("/admin");
     }
 }
 

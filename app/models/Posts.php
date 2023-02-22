@@ -61,7 +61,7 @@ class Posts
 
     public static function getPostByID($id)
     {
-        $sql = "SELECT first_name, last_name, category_id, name, title, body, view_count, DATE_FORMAT(created_at, '%m/%d/%Y') 
+        $sql = "SELECT user_id, first_name, last_name, category_id, name, title, body, view_count, DATE_FORMAT(created_at, '%m/%d/%Y') 
         AS date_formatted FROM posts INNER JOIN users on users.id = posts.user_id INNER JOIN categories on categories.id = posts.category_id WHERE posts.id = :id";
         $stmt = DB::conn()->prepare($sql);
         $stmt->execute(["id" => $id]);
