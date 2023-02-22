@@ -10,10 +10,10 @@ if (!isset($_SESSION["id"])) {
 } else {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["category-name"])) {
-            $data["err"] = "Please provide a category name";
+            $data["err"] = "Please provide a category name.";
         } else {
             Categories::createCategory($_POST["category-name"]);
-            $data["success"] = "Category successfully created";
+            $data["success"] = "Category successfully created.";
         }
     }
 }
