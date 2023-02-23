@@ -11,7 +11,7 @@ if (!isset($_SESSION["id"])) {
 } else {
     $data["post"] = Posts::getPostByID($_GET["id"]);
 
-    if ($_SESSION["id"] == $data["post"]["user_id"]) {
+    if ($_SESSION["id"] == $data["post"]["user_id"] || $_SESSION["role"] == "Admin") {
         $data["categories"] = Categories::getCategories();
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (empty($_POST["category"]) || empty($_POST["title"]) || empty($_POST["body"])) {
