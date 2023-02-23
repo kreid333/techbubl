@@ -38,10 +38,10 @@
             </a>
         </div>
 
-        <div class="nav-search search-bar">
+        <form class="nav-search search-bar" action="/search" method="GET">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" name="post-search" placeholder="Search">
-        </div>
+            <input type="search" name="term" placeholder="Search">
+        </form>
 
         <div class="nav__nav-links">
             <a href="/about">About</a>

@@ -21,6 +21,12 @@ if (isset($_GET["sortby"])) {
     $sortby = NULL;
 }
 
+if (isset($_GET["term"])) {
+    $term = $_GET["term"];
+} else {
+    $term = NULL;
+}
+
 switch ($request) {
     case "":
     case "/":
@@ -36,6 +42,10 @@ switch ($request) {
     case "?sortby=" . $sortby:
     case "/?sortby=" . $sortby:
         require($root_directory . "/app/controllers/main/index.controller.php");
+        break;
+
+    case "/search?term=" . $term:
+        require($root_directory . "/app/controllers/search.controller.php");
         break;
 
     case "/about":
