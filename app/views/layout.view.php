@@ -124,10 +124,16 @@
             <div class="aside__newsletter">
                 <h3>Sign up for Daily Bubls</h3>
                 <span>A newsletter that offers bite-sized articles discussing various fields in the area of technology.</span>
-                <form action="">
-                    <input type="email" name="signup-email" placeholder="Email Address">
+                <form method="POST">
+                    <input type="email" name="newsletter-email" placeholder="Email Address">
                     <button class="btn btn--black">Sign Up</button>
                 </form>
+                <?php if (isset($data["err"])) { ?>
+                    <span><?php echo $data["err"]; ?></span>
+                <?php } ?>
+                <?php if (isset($data["success"])) { ?>
+                    <span><?php echo $data["success"]; ?></span>
+                <?php } ?>
             </div>
         </div>
     </div>
