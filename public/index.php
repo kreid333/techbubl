@@ -111,6 +111,11 @@ switch ($request) {
     case "/admin/vieweditors/":
         require($root_directory . "/app/controllers/admin/vieweditors.controller.php");
         break;
+        
+    case "/admin/viewcategories":
+    case "/admin/viewcategories/":
+        require($root_directory . "/app/controllers/admin/viewcategories.controller.php");
+        break;
 
     case "/admin/deleteeditor?id=" . $id:
         require($root_directory . "/app/controllers/admin/deleteeditor.controller.php");
@@ -140,6 +145,10 @@ switch ($request) {
 
     case "/admin/deletepost?id=" . $id:
         require($root_directory . "/app/controllers/admin/deletepost.controller.php");
+        break;
+
+    case "/admin/deletecategory?id=" . $id:
+        require($root_directory . "/app/controllers/admin/deletecategory.controller.php");
         break;
 
     case "/admin/verifyaccount?c=" . $code:

@@ -44,6 +44,7 @@
         <a class="btn btn--white" href="/admin/createeditor">CREATE EDITOR</a>
         <a class="btn btn--white" href="/admin/createcategory">CREATE CATEGORY</a>
         <a class="btn btn--white" href="/admin/vieweditors">VIEW EDITORS</a>
+        <a class="btn btn--white" href="/admin/viewcategories">VIEW CATEGORIES</a>
     <?php } ?>
 </div>
 

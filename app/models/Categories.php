@@ -24,4 +24,21 @@ class Categories {
         $stmt = NULL;
         return $users;
     }
+
+    public static function getCategoryByID($id)
+    {
+        $sql = "SELECT * FROM categories WHERE id = :id";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["id" => $id]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt = NULL;
+        return $user;
+    }
+
+    public static function deleteCategory($id)
+    {
+        $sql = "DELETE FROM categories WHERE id = :id";
+        $stmt = DB::conn()->prepare($sql);
+        $stmt->execute(["id" => $id]);
+    }
 }
