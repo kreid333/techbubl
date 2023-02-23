@@ -29,7 +29,7 @@
     padding: 1rem;
     text-align: center;
     & span {
-      word-break: break-all;
+      word-break: break-word;
       display: block;
       margin: 10px;
     }
@@ -61,5 +61,14 @@
 @media (max-width: 768px) {
   .editor-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 320px) {
+  .editor-card__actions {
+    flex-direction: column;
+    .btn {
+        width: 100%;
+    }
   }
 }
