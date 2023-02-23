@@ -1,10 +1,3 @@
-<!-- SETTINGS -->
-<div class="icon-wrapper">
-    <a href="/admin/settings" class="settings-icon">
-        <i class="fa fa-cog"></i>
-    </a>
-</div>
-
 <div class="info">
     <!-- EDIT INFO HEADER -->
     <h2 class="info-header">EDIT INFO</h2>
@@ -27,4 +20,5 @@
         </div>
         <button type="submit" class="btn btn--black info__submit-btn">UPDATE</button>
     </form>
+    <a class="info__cancel" href="/admin/settings">GO BACK</a>
 </div>

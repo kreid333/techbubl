@@ -1,10 +1,3 @@
-<!-- SETTINGS -->
-<div class="icon-wrapper">
-    <a href="/admin/settings" class="settings-icon">
-        <i class="fa fa-cog"></i>
-    </a>
-</div>
-
 <div class="password">
     <!-- EDIT PASSWORD HEADER -->
     <h2 class="password-header">EDIT PASSWORD</h2>
@@ -25,6 +18,7 @@
         </div>
         <button type="submit" class="btn btn--black password__submit-btn">UPDATE</button>
     </form>
+    <a class="password__cancel" href="/admin/settings">GO BACK</a>
 
     <?php if (!empty($data["err"])) { ?>
         <p class="publish-err"><?php echo $data["err"]; ?></p>

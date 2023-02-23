@@ -571,6 +571,10 @@
   background-color: #ffffff;
   color: #000000;
 }
+.info__cancel {
+  padding: 5px;
+  white-space: nowrap;
+}
 
 /* =========================== */
 /* END OF EDIT INFO */
@@ -637,6 +641,10 @@
 .password__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
+}
+.password__cancel {
+  padding: 5px;
+  white-space: nowrap;
 }
 
 /* =========================== */
