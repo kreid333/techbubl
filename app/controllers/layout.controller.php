@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $data["success"] = "You are now signed up for the DailyBubl newsletter!";
 
         $body = $body = '<span style="display: block;">Welcome to the DailyBubl newsletter! We are honored that you have chosen us as your new source of 
-        information for Cryptocurrency, Web Development, and Artifcial Inelligence.</span>';
+        information for Cryptocurrency, Web Development, and Artificial Intelligence.</span>';
 
         sendEmail($_POST["newsletter-email"], "", "You are now subscribed to the DailyBubl newsletter!", $body);
     } else {
