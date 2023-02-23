@@ -433,6 +433,7 @@ input {
   overflow-y: scroll;
   &__popular-articles,
   &__most-recent {
+    width: 100%;
     h3 {
       font-weight: 400;
       font-size: 1rem;

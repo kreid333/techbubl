@@ -1633,6 +1633,9 @@ input {
   position: sticky;
   overflow-y: scroll;
 }
+.aside__popular-articles, .aside__most-recent {
+  width: 100%;
+}
 .aside__popular-articles h3, .aside__most-recent h3 {
   font-weight: 400;
   font-size: 1rem;
