@@ -56,9 +56,9 @@
         </div>
 
         <!-- mobile nav -->
-        <a class="nav__search-btn" href="/search">
+        <button class="nav__search-btn">
             <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
+        </button>
 
         <div class="nav__hamburger">
             <div></div>
@@ -77,6 +77,18 @@
             <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
             <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- MOBILE SEARCH MODAL -->
+    <div class="search-modal">
+        <div class="search-modal__card">
+            <span class="search-modal__close">x</span>
+            <span class="search-modal__title">Search</span>
+            <form class="nav-search search-bar" action="/search" method="GET">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="term" placeholder="Search">
+            </form>
         </div>
     </div>
 
