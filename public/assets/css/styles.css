@@ -772,6 +772,57 @@
     width: 100%;
   }
 }
+/* =========================== */
+/* START OF EDIT CATEGORY */
+/* =========================== */
+.editcategory {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.editcategory-header {
+  text-align: center;
+}
+.editcategory-form {
+  padding: 10px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+.editcategory-form__input-field {
+  padding: 5px 5px 10px;
+  width: 100%;
+}
+.editcategory-form__input-field label {
+  text-align: left;
+  display: block;
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+.editcategory-form__input-field input {
+  padding: 5px;
+  width: 100%;
+}
+.editcategory__submit-btn {
+  margin: 5px;
+}
+.editcategory__submit-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* =========================== */
+/* END OF EDIT CATEGORY */
+/* =========================== */
+@media (max-width: 768px) {
+  .editcategory-form {
+    width: 100%;
+    margin: 0;
+  }
+}
 .createpost__header {
   text-align: center;
   padding-top: 2rem;

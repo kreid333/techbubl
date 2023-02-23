@@ -8,7 +8,7 @@ if (!isset($data)) {
     $data = [];
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" & isset($_POST["newsletter-email"])) {
     $is_emailFormatted = filter_var($_POST["newsletter-email"], FILTER_VALIDATE_EMAIL);
     if ($is_emailFormatted && !empty($_POST["newsletter-email"])) {
         Newsletter::createSubscriber($_POST["newsletter-email"]);

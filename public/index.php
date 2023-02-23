@@ -139,6 +139,10 @@ switch ($request) {
         require($root_directory . "/app/controllers/admin/editpost.controller.php");
         break;
 
+    case "/admin/editcategory?id=" . $id:
+        require($root_directory . "/app/controllers/admin/editcategory.controller.php");
+        break;
+
     case "/admin/deleteeditor?id=" . $id:
         require($root_directory . "/app/controllers/admin/deleteeditor.controller.php");
         break;
