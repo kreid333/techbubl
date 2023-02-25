@@ -20,5 +20,5 @@
         </div>
         <button type="submit" class="btn btn--black info__submit-btn">UPDATE</button>
     </form>
-    <a class="info__cancel" href="/admin/settings">GO BACK</a>
+    <a class="go-back" href="/admin/settings">GO BACK</a>
 </div>

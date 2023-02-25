@@ -18,7 +18,7 @@
         </div>
         <button type="submit" class="btn btn--black password__submit-btn">UPDATE</button>
     </form>
-    <a class="password__cancel" href="/admin/settings">GO BACK</a>
+    <a class="go-back" href="/admin/settings">GO BACK</a>
 
     <?php if (!empty($data["err"])) { ?>
         <p class="publish-err"><?php echo $data["err"]; ?></p>

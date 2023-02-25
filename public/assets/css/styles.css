@@ -571,10 +571,6 @@
   background-color: #ffffff;
   color: #000000;
 }
-.info__cancel {
-  padding: 5px;
-  white-space: nowrap;
-}
 
 /* =========================== */
 /* END OF EDIT INFO */
@@ -641,10 +637,6 @@
 .password__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
-}
-.password__cancel {
-  padding: 5px;
-  white-space: nowrap;
 }
 
 /* =========================== */
@@ -1493,6 +1485,11 @@ input {
   text-align: center;
   font-size: 1.5rem;
   margin-top: 2rem;
+}
+
+.go-back {
+  padding: 5px;
+  white-space: nowrap;
 }
 
 /* =========================== */

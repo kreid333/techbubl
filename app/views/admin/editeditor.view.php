@@ -27,4 +27,5 @@
         </div>
         <button type="submit" class="btn btn--black editeditor__submit-btn">UPDATE</button>
     </form>
+    <a class="go-back" href="/admin/vieweditors">GO BACK</a>
 </div>

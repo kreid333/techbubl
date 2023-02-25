@@ -17,6 +17,7 @@
         </div>
         <button type="submit" class="btn btn--black editcategory__submit-btn">UPDATE</button>
     </form>
+    <a class="go-back" href="/admin/viewcategories">GO BACK</a>
 
     <?php if (isset($data["err"])) { ?>
         <p> <?php echo $data["err"]; ?> </p>
