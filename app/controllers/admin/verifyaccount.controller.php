@@ -28,20 +28,15 @@ if ($is_valid) {
 
         // if either of the password fields are empty...
         if (empty($createPassword) || empty($confirmPassword)) {
-            $data["password_err"] = "Please fill out both fields.";
+            $data["err"] = "Please fill out both fields.";
         }
 
-        // if both of the password fields are empty...
-        if (empty($createPassword) && empty($confirmPassword)) {
-            $data["password_err"] = "You cannot submit empty fields. Please try again.";
-        }
-
-        // if the both of the password fields do not match and they are NOT empty...
+        // if the both of the password fields do not match and they are not empty...
         if ($createPassword !== $confirmPassword && !empty($createPassword) && !empty($confirmPassword)) {
-            $data["password_err"] = "Passwords do not match. Please try again";
+            $data["err"] = "Passwords do not match. Please try again";
         }
 
-        // if both password fields are NOT empty and they match...
+        // if both password fields are not empty and they match...
         if (!empty($createPassword) && !empty($confirmPassword) && $createPassword === $confirmPassword) {
             $user_id = Verification::getUser($_GET["c"]);
             $hashedPassword = password_hash($confirmPassword, PASSWORD_DEFAULT);

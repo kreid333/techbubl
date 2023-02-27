@@ -20,12 +20,12 @@ if (!isset($_SESSION["id"])) {
 
             // if any field is empty...
             if (empty($_POST["category"]) || empty($_POST["title"]) || empty($_POST["body"])) {
-                $data["publish_err"] = "You cannot submit a post with blank fields.";
+                $data["err"] = "You cannot submit a post with blank fields.";
             } else {
                 if (Posts::updatePost($_POST["category"], $_POST["title"], $_POST["body"], $_GET["id"])) {
                     redirect("/admin");
                 } else {
-                    $data["publish_err"] = "There was an error creating the post.";
+                    $data["err"] = "There was an error creating the post.";
                 }
             }
         }

@@ -32,7 +32,7 @@
     </button>
   </form>
 
-  <?php if (!empty($data["publish_err"])) { ?>
-    <p class="publish-err"><?php echo $data["publish_err"]; ?></p>
+  <?php if (isset($data["err"])) { ?>
+    <p class="publish-err"><?php echo $data["err"]; ?></p>
   <?php } ?>
 </div>

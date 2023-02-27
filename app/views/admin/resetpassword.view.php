@@ -15,7 +15,7 @@
         <button type="submit" class="btn btn--black resetpassword-form__submit-btn">SUBMIT</button>
     </form>
 
-    <?php if (!empty($data["password_err"])) { ?>
-        <p><?php echo $data["password_err"];  ?></p>
+    <?php if (!empty($data["err"])) { ?>
+        <p><?php echo $data["err"];  ?></p>
     <?php } ?>
 </div>

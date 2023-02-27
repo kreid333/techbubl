@@ -18,11 +18,11 @@ if (isset($_SESSION["id"])) {
 
         // if the password field is empty or the given email is not formatted properly...
         if (empty($password) || !$formattedEmail) {
-            $data["login_err"] = "Please fill in all fields correctly.";
+            $data["err"] = "Please fill in all fields correctly.";
         }
 
         // if both fields were filled in correctly...
-        if (empty($data["login_err"])) {
+        if (!isset($data["err"])) {
             $user = User::getUser($formattedEmail);
 
             // if the user provided email gave us a user...
@@ -35,10 +35,10 @@ if (isset($_SESSION["id"])) {
                     $_SESSION["role"] = $user["role"];
                     redirect("/admin");
                 } else {
-                    $data["login_err"] = "Wrong credentials. Please try again.";
+                    $data["err"] = "Wrong credentials. Please try again.";
                 }
             } else {
-                $data["login_err"] = "Wrong credentials. Please try again.";
+                $data["err"] = "Wrong credentials. Please try again.";
             }
         }
     }

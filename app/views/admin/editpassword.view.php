@@ -20,7 +20,7 @@
     </form>
     <a class="go-back" href="/admin/settings">GO BACK</a>
 
-    <?php if (!empty($data["err"])) { ?>
+    <?php if (isset($data["err"])) { ?>
         <p class="publish-err"><?php echo $data["err"]; ?></p>
     <?php } ?>
 

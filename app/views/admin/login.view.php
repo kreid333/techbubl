@@ -17,7 +17,7 @@
 
     <a class="forgot-password" href="/admin/forgotpassword">Forgot password?</a>
 
-    <?php if (!empty($data["login_err"])) { ?>
-        <p class="login-err"><?php echo $data["login_err"];  ?></p>
+    <?php if (isset($data["err"])) { ?>
+        <p class="login-err"><?php echo $data["err"];  ?></p>
     <?php } ?>
 </div>

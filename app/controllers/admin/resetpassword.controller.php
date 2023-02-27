@@ -28,17 +28,12 @@ if ($is_valid) {
 
         // if either of the password fields are empty...
         if (empty($newPassword) || empty($confirmPassword)) {
-            $data["password_err"] = "Please fill out both fields.";
-        }
-
-        // if both of the password fields are empty...
-        if (empty($newPassword) && empty($confirmPassword)) {
-            $data["password_err"] = "You cannot submit empty fields. Please try again.";
+            $data["err"] = "Please fill out both fields.";
         }
 
         // if the both of the password fields do not match and they are NOT empty...
         if ($newPassword !== $confirmPassword && !empty($newPassword) && !empty($confirmPassword)) {
-            $data["password_err"] = "Passwords do not match. Please try again";
+            $data["err"] = "Passwords do not match. Please try again";
         }
 
         // if both password fields are NOT empty and they match...
