@@ -43,6 +43,15 @@
     color: #939393;
   }
 
+  &__role {
+    &[data-value="Verified"] {
+      color: green;
+    }
+    &[data-value="Not Verified"] {
+      color: red;
+    }
+  }
+
   &__actions {
     display: flex;
     .btn {

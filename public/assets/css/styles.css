@@ -1139,6 +1139,12 @@
 .editor-card__email {
   color: #939393;
 }
+.editor-card__role[data-value=Verified] {
+  color: green;
+}
+.editor-card__role[data-value="Not Verified"] {
+  color: red;
+}
 .editor-card__actions {
   display: flex;
 }

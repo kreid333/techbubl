@@ -25,10 +25,22 @@
     <!-- EDITORS GRID -->
     <div class="editor-grid">
         <?php foreach ($data["editors"] as $editor) { ?>
+            <?php
+            switch ($editor["is_verified"]) {
+                case 1:
+                    $editor["is_verified"] = "Verified";
+                    break;
+
+                case 0:
+                    $editor["is_verified"] = "Not Verified";
+                    break;
+            }
+            ?>
             <div class="editor-card">
                 <div class="editor-card__info">
                     <span class="editor-card__name"><?php echo $editor["first_name"] . " " . $editor["last_name"]; ?></span>
                     <span class="editor-card__email"><?php echo $editor["email"]; ?></span>
+                    <span class="editor-card__role" data-value="<?php echo $editor["is_verified"]; ?>"><?php echo $editor["is_verified"]; ?></span>
                 </div>
                 <div class="editor-card__actions">
                     <a class="btn btn--white" href="/admin/editeditor?id=<?php echo $editor["id"]; ?>">EDIT INFO</a>

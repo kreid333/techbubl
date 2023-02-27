@@ -57,7 +57,7 @@ class User
 
     public static function getEditors()
     {
-        $sql = "SELECT id, first_name, last_name, role, email FROM users WHERE role = 'Editor'";
+        $sql = "SELECT id, first_name, last_name, role, email, is_verified FROM users WHERE role = 'Editor'";
         $stmt = DB::conn()->query($sql);
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $stmt = NULL;
