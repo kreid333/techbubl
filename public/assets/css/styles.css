@@ -362,7 +362,11 @@
 
 .search-bar.admin-search {
   margin: 0 auto;
-  margin-bottom: 2rem;
+}
+
+.adminsearch-err {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .admin-actions {
@@ -372,6 +376,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  padding-top: 2rem;
 }
 .admin-actions .btn {
   text-align: center;

@@ -21,7 +21,8 @@ for ($i = 0; $i < count($codes); $i++) {
 }
 
 if ($is_valid) {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // if the request method is POST and the POST variable "newsletter-email" is not set...
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) {
         $newPassword = $_POST["new-password"];
         $confirmPassword = $_POST["confirm-password"];
 

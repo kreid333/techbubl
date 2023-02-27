@@ -18,7 +18,7 @@
     <a href="/admin/settings" class="settings-icon">
         <i class="fa fa-cog"></i>
     </a>
-    <?php if (!empty($_POST["search"])) { ?>
+    <?php if (!empty($_POST["search"]) && !isset($data["err"])) { ?>
         <a href="/admin" class="home-icon">
             <i class="fa fa-house"></i>
         </a>
@@ -37,6 +37,10 @@
     <input type="search" name="search" placeholder="Search">
 </form>
 
+<?php if (isset($data["err"])) { ?>
+    <p class="adminsearch-err"><?php echo $data["err"]; ?></p>
+<?php } ?>
+
 <!-- ADMIN ACTIONS -->
 <div class="admin-actions">
     <a class="btn btn--white" href="/admin/createpost">CREATE POST</a>
@@ -48,8 +52,8 @@
     <?php } ?>
 </div>
 
-<?php if (!empty($_POST)) { ?>
-    <h2 class="search">Search Results for "<?php echo $_POST["search"]; ?>"</h2>
+<?php if (!empty($_POST["search"]) && !isset($data["err"])) { ?>
+    <h2 class="search">Search Results for "<?php echo trim($_POST["search"]); ?>"</h2>
 <?php } ?>
 <!-- ADMIN GRID -->
 <div class="admin-grid">

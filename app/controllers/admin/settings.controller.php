@@ -5,7 +5,8 @@ session_start();
 
 $data = [];
 
-if (!isset($_SESSION["id"])) {
+// if the id of admin user is not stored in a session variable...
+if (isset($_SESSION["id"])) {
     redirect("/admin/login");
 }
 

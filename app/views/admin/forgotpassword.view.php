@@ -14,8 +14,8 @@
 
     <a class="forgotpassword__go-back" href="/admin/login">GO BACK</a>
 
-    <?php if (!empty($data["email_err"])) { ?>
-        <p class="submit-mess"><?php echo $data["email_err"]; ?></p>
+    <?php if (!empty($data["err"])) { ?>
+        <p class="submit-mess"><?php echo $data["err"]; ?></p>
     <?php } ?>
 
     <?php if (!empty($data["success"])) { ?>

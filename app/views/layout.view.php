@@ -128,11 +128,11 @@
                     <input type="email" name="newsletter-email" placeholder="Email Address">
                     <button class="btn btn--black">Sign Up</button>
                 </form>
-                <?php if (isset($data["err"])) { ?>
-                    <span><?php echo $data["err"]; ?></span>
+                <?php if (isset($data["newsletter_err"])) { ?>
+                    <span><?php echo $data["newsletter_err"]; ?></span>
                 <?php } ?>
-                <?php if (isset($data["success"])) { ?>
-                    <span><?php echo $data["success"]; ?></span>
+                <?php if (isset($data["newsletter_success"])) { ?>
+                    <span><?php echo $data["newsletter_success"]; ?></span>
                 <?php } ?>
             </div>
         </div>

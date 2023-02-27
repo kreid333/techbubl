@@ -21,4 +21,7 @@
         <button type="submit" class="btn btn--black info__submit-btn">UPDATE</button>
     </form>
     <a class="go-back" href="/admin/settings">GO BACK</a>
+    <?php if (isset($data["err"])) { ?>
+        <p><?php echo $data["err"]; ?></p>
+    <?php } ?>
 </div>

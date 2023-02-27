@@ -6,19 +6,26 @@ session_start();
 
 $data = [];
 
+// if the id of admin user is not stored in a session variable...
 if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
     $data["categories"] = Categories::getCategories();
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["category"]) ||empty($_POST["title"]) || empty($_POST["body"])) {
-            $data["publish_err"] = "You cannot submit a post with blank fields.";
+    // if the request method is POST and the POST variable "newsletter-email" is not set...
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) {
+        $category = $_POST["category"];
+        $title = trim($_POST["title"]);
+        $body = $_POST["body"];
+
+        // if any field is empty...
+        if (empty($category) || empty($title) || empty($body)) {
+            $data["err"] = "You cannot submit a post with blank fields.";
         } else {
-            if (Posts::createPost($_SESSION["id"], $_POST["category"], $_POST["title"], $_POST["body"])) {
+            if (Posts::createPost($_SESSION["id"], $category, $title, $body)) {
                 redirect("/admin");
             } else {
-                $data["publish_err"] = "There was an error creating the post.";
+                $data["err"] = "There was an error creating the post.";
             }
         }
     }

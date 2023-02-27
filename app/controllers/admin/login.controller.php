@@ -5,45 +5,40 @@ session_start();
 
 $data = [];
 
-// if the user is already logged in...
+// if the id of admin user is not stored in a session variable...
 if (isset($_SESSION["id"])) {
     redirect("/admin");
 } else {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $email = $_POST["email-address"];
+    // if the request method is POST and the POST variable "newsletter-email" is not set...
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) {
+        // validating the format of the given email
+        $formattedEmail = filter_var($_POST["email-address"], FILTER_VALIDATE_EMAIL);
         $password = $_POST["password"];
 
-        $is_emailFormatted = filter_var($_POST["email-address"], FILTER_VALIDATE_EMAIL);
 
-        // if the password or email field was not filled in...
-        if (empty($password) || empty($email)) {
-            $data["login_err"] = "Please fill in all fields.";
+        // if the password field is empty or the given email is not formatted properly...
+        if (empty($password) || !$formattedEmail) {
+            $data["login_err"] = "Please fill in all fields correctly.";
         }
 
-        // if both fields were filled...
+        // if both fields were filled in correctly...
         if (empty($data["login_err"])) {
+            $user = User::getUser($formattedEmail);
 
-            // if the email is formatted correctly...
-            if ($is_emailFormatted) {
-                $user = User::getUser($email);
+            // if the user provided email gave us a user...
+            if ($user) {
 
-                // if the user provided email gave us a user...
-                if ($user) {
-                    
-                    // if the user provided password matches the one in the database...
-                    if (password_verify($password, $user["password"])) {
-                        $_SESSION["id"] = $user["id"];
-                        $_SESSION["email"] = $user["email"];
-                        $_SESSION["role"] = $user["role"];
-                        redirect("/admin");
-                    } else {
-                        $data["login_err"] = "Wrong credentials. Please try again.";
-                    }
+                // if the user provided password matches the one in the database...
+                if (password_verify($password, $user["password"])) {
+                    $_SESSION["id"] = $user["id"];
+                    $_SESSION["email"] = $user["email"];
+                    $_SESSION["role"] = $user["role"];
+                    redirect("/admin");
                 } else {
                     $data["login_err"] = "Wrong credentials. Please try again.";
                 }
             } else {
-                $data["login_err"] = "Invalid email format.";
+                $data["login_err"] = "Wrong credentials. Please try again.";
             }
         }
     }

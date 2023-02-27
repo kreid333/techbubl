@@ -5,6 +5,7 @@ require(dirname(__FILE__, 3) . "/models/Categories.php");
 
 $data = [];
 
+// if the requested uri is not "/"...
 if ($_SERVER["REQUEST_URI"] != "/") {
     switch ($_SERVER["REQUEST_URI"]) {
         case "/crypto":
@@ -21,7 +22,7 @@ if ($_SERVER["REQUEST_URI"] != "/") {
     $data["posts"] = Categories::getCategory($data["category_title"]);
 }
 
-
+// if the requested uri is "/"...
 if ($_SERVER["REQUEST_URI"] == "/") {
     $data["posts"] = Posts::getPosts();
 }
