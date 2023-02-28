@@ -23,7 +23,7 @@ if (isset($_SESSION["id"])) {
 
         // if both fields were filled in correctly...
         if (!isset($data["err"])) {
-            $user = Users::getUser($formattedEmail);
+            $user = Users::getUserByEmail($formattedEmail);
 
             // if the user provided email gave us a user...
             if ($user) {

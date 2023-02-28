@@ -8,7 +8,7 @@ session_start();
 if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
-    $data["user"] = Users::getUser($_SESSION["email"]);
+    $data["user"] = Users::getUserByID($_SESSION["id"]);
 
     if ($_SESSION["role"] == "Admin") {
         $data["posts"] = Posts::getPosts();

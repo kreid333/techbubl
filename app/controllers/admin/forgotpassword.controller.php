@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) 
         // if the provided email exists...
         if ($acc_found) {
             $code = uniqid();
-            $user = Users::getUser($formattedEmail);
+            $user = Users::getUserByEmail($formattedEmail);
             $full_name = $user["first_name"] . " " . $user["last_name"];
 
             Verification::createVerificationCode($user["id"], $code);

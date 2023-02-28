@@ -48,7 +48,7 @@ if (!isset($_SESSION["id"])) {
                     Users::createUser($first_name, $last_name, $role, $formattedEmail);
 
                     // retrieve the created user and create a verification code for them
-                    $createdUser = Users::getUser($formattedEmail);
+                    $createdUser = Users::getUserByEmail($formattedEmail);
                     Verification::createVerificationCode($createdUser["id"], $code);
 
                     $subject = "Verify your account";

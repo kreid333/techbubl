@@ -2,7 +2,7 @@
 require_once(dirname(__FILE__, 3) . "/helpers/classes.php");
 class Users
 {
-    public static function getUser($user_email)
+    public static function getUserByEmail($user_email)
     {
         $sql = "SELECT * FROM users WHERE email = :email";
         $stmt = DB::conn()->prepare($sql);

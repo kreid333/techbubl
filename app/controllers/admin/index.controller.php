@@ -10,7 +10,7 @@ $data = [];
 if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
-    $data["user"] = Users::getUser($_SESSION["email"]);
+    $data["user"] = Users::getUserByID($_SESSION["id"]);
 
     if ($_SESSION["role"] == "Admin") {
         // if the request method is POST and the POST variable "newsletter-email" is not set...
