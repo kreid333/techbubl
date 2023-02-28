@@ -24,7 +24,7 @@
         </div>
         <div class="createeditor-form__input-field">
             <label for="email-address">Email Address</label>
-            <input name="email-address" type="text" placeholder="Email Address">
+            <input name="email-address" type="email" placeholder="Email Address">
         </div>
         <button type="submit" class="btn btn--black createeditor__submit-btn">CREATE</button>
     </form>

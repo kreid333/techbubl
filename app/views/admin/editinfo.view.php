@@ -16,7 +16,7 @@
         </div>
         <div class="info-form__input-field">
             <label for="email-address">Email Address</label>
-            <input name="email-address" type="text" value="<?php echo $data["user"]["email"]; ?>">
+            <input name="email-address" type="email" value="<?php echo $data["user"]["email"]; ?>">
         </div>
         <button type="submit" class="btn btn--black info__submit-btn">UPDATE</button>
     </form>
