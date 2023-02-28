@@ -18,6 +18,6 @@
     <a class="forgot-password" href="/admin/forgotpassword">Forgot password?</a>
 
     <?php if (isset($data["err"])) { ?>
-        <p class="login-err"><?php echo $data["err"];  ?></p>
+        <p class="err"><?php echo $data["err"];  ?></p>
     <?php } ?>
 </div>

@@ -24,7 +24,7 @@
                 </a>
             <?php } ?>
         <?php } else { ?>
-            <span class="search-err"><?php echo $data["err"]; ?></span>
+            <span class="search-err err"><?php echo $data["err"]; ?></span>
         <?php } ?>
     </div>
 </div>

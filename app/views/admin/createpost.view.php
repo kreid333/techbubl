@@ -33,6 +33,6 @@
   </form>
 
   <?php if (isset($data["err"])) { ?>
-    <p class="publish-err"><?php echo $data["err"]; ?></p>
+    <p class="err"><?php echo $data["err"]; ?></p>
   <?php } ?>
 </div>

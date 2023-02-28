@@ -38,7 +38,7 @@
 </form>
 
 <?php if (isset($data["err"])) { ?>
-    <p class="adminsearch-err"><?php echo $data["err"]; ?></p>
+    <p class="err"><?php echo $data["err"]; ?></p>
 <?php } ?>
 
 <!-- ADMIN ACTIONS -->

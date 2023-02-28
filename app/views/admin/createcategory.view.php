@@ -19,10 +19,10 @@
     </form>
 
     <?php if (isset($data["err"])) { ?>
-        <p> <?php echo $data["err"]; ?> </p>
+        <p class="err"> <?php echo $data["err"]; ?> </p>
     <?php } ?>
 
     <?php if (isset($data["success"])) { ?>
-        <p> <?php echo $data["success"]; ?> </p>
+        <p class="success"> <?php echo $data["success"]; ?> </p>
     <?php } ?>
 </div>

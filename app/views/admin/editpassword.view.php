@@ -21,10 +21,10 @@
     <a class="go-back" href="/admin/settings">GO BACK</a>
 
     <?php if (isset($data["err"])) { ?>
-        <p class="publish-err"><?php echo $data["err"]; ?></p>
+        <p class="err"><?php echo $data["err"]; ?></p>
     <?php } ?>
 
-    <?php if (!empty($data["success"])) { ?>
-        <p class="publish-err"><?php echo $data["success"]; ?></p>
+    <?php if (isset($data["success"])) { ?>
+        <p class="success"><?php echo $data["success"]; ?></p>
     <?php } ?>
 </div>

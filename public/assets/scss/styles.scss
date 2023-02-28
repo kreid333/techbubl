@@ -203,15 +203,9 @@ input {
   }
 }
 
-.publish-err {
+.err, .success {
   text-align: center;
   margin-top: 1rem;
-}
-
-.message {
-  display: block;
-  text-align: center;
-  margin-top: 2rem;
 }
 
 .search {

@@ -29,10 +29,10 @@
     </form>
 </div>
 
-<?php if (isset($data["success"])) { ?>
-    <span class="message"><?php echo $data["success"]; ?></span>
+<?php if (isset($data["err"])) { ?>
+    <span class="err"><?php echo $data["err"]; ?></span>
 <?php } ?>
 
-<?php if (isset($data["err"])) { ?>
-    <span class="message"><?php echo $data["err"]; ?></span>
+<?php if (isset($data["success"])) { ?>
+    <span class="success"><?php echo $data["success"]; ?></span>
 <?php } ?>

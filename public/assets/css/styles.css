@@ -332,9 +332,7 @@
   gap: 1rem;
 }
 .search-err {
-  text-align: center;
   font-size: 1.5rem;
-  padding: 1rem 0;
 }
 
 .settings-icon {
@@ -362,11 +360,6 @@
 
 .search-bar.admin-search {
   margin: 0 auto;
-}
-
-.adminsearch-err {
-  text-align: center;
-  margin-top: 1rem;
 }
 
 .admin-actions {
@@ -488,9 +481,6 @@
 .login__submit-btn:hover {
   background-color: #ffffff;
   color: #000000;
-}
-.login-err {
-  margin: 1rem;
 }
 
 .forgot-password {
@@ -1481,15 +1471,9 @@ input {
   white-space: nowrap;
 }
 
-.publish-err {
+.err, .success {
   text-align: center;
   margin-top: 1rem;
-}
-
-.message {
-  display: block;
-  text-align: center;
-  margin-top: 2rem;
 }
 
 .search {

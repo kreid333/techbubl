@@ -29,6 +29,6 @@
     </form>
     <a class="go-back" href="/admin/vieweditors">GO BACK</a>
     <?php if (isset($data["err"])) { ?>
-        <p><?php echo $data["err"]; ?></p>
+        <p class="err"><?php echo $data["err"]; ?></p>
     <?php } ?>
 </div>

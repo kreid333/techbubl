@@ -15,11 +15,11 @@
     <a class="forgotpassword__go-back" href="/admin/login">GO BACK</a>
 
     <?php if (isset($data["err"])) { ?>
-        <p class="submit-mess"><?php echo $data["err"]; ?></p>
+        <p class="err"><?php echo $data["err"]; ?></p>
     <?php } ?>
 
     <?php if (isset($data["success"])) { ?>
-        <p class="submit-mess"><?php echo $data["success"]; ?></p>
+        <p class="success"><?php echo $data["success"]; ?></p>
     <?php } ?>
 
 </div>
