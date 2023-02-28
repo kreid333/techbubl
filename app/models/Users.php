@@ -1,6 +1,6 @@
 <?php
 require_once(dirname(__FILE__, 3) . "/helpers/classes.php");
-class User
+class Users
 {
     public static function getUser($user_email)
     {

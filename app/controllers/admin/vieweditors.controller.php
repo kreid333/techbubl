@@ -1,6 +1,6 @@
 <?php
 require(dirname(__FILE__, 4) . "/helpers/functions.php");
-require(dirname(__FILE__, 3) . "/models/User.php");
+require(dirname(__FILE__, 3) . "/models/Users.php");
 session_start();
 
 $data = [];
@@ -12,6 +12,6 @@ if (!isset($_SESSION["id"])) {
     redirect("/admin");
 }
 
-$data["editors"] = User::getEditors();
+$data["editors"] = Users::getEditors();
 
 view("admin/vieweditors", $data);

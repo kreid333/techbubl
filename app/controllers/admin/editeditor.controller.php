@@ -1,6 +1,6 @@
 <?php
 require(dirname(__FILE__, 4) . "/helpers/functions.php");
-require(dirname(__FILE__, 3) . "/models/User.php");
+require(dirname(__FILE__, 3) . "/models/Users.php");
 session_start();
 
 $data = [];
@@ -11,7 +11,7 @@ if (!isset($_SESSION["id"])) {
 } else {
     // if the admin user is an admin...
     if ($_SESSION["role"] == "Admin") {
-        $data["user"] = User::getUserByID($_GET["id"]);
+        $data["user"] = Users::getUserByID($_GET["id"]);
 
         // if the request method is POST and the POST variable "newsletter-email" is not set...
         if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) {
@@ -28,7 +28,7 @@ if (!isset($_SESSION["id"])) {
 
             // if the "err" key for the data array is not set...
             if (!isset($data["err"])) {
-                User::updateUser($first_name, $last_name, $formattedEmail, $_GET["id"]);
+                Users::updateUser($first_name, $last_name, $formattedEmail, $_GET["id"]);
                 redirect("/admin/vieweditors");
             }
         }

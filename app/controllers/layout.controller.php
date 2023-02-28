@@ -7,8 +7,8 @@ if (!class_exists("Posts")) {
 }
 
 // if the "User" class does not exist, require the file that stores the class...
-if (!class_exists("User")) {
-    require(dirname(__FILE__, 2) . "/models/User.php");
+if (!class_exists("Users")) {
+    require(dirname(__FILE__, 2) . "/models/Users.php");
 }
 
 // if the $data variable is not set...
@@ -20,7 +20,7 @@ if (!isset($data)) {
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newsletter-email"])) {
 
     // retrieving all users
-    $users = User::getUsers();
+    $users = Users::getUsers();
 
     // validating the format of the given email
     $formattedEmail = filter_var($_POST["newsletter-email"], FILTER_VALIDATE_EMAIL);

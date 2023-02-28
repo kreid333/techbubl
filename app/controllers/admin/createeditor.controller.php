@@ -1,6 +1,6 @@
 <?php
 require(dirname(__FILE__, 4) . "/helpers/functions.php");
-require(dirname(__FILE__, 3) . "/models/User.php");
+require(dirname(__FILE__, 3) . "/models/Users.php");
 require(dirname(__FILE__, 3) . "/models/Verification.php");
 session_start();
 
@@ -29,7 +29,7 @@ if (!isset($_SESSION["id"])) {
 
             // if all fields are not empty and the given email is formatted correctly...
             if (!empty($first_name) && !empty($last_name) && $formattedEmail) {
-                $users = User::getUsers();
+                $users = Users::getUsers();
 
                 // looping through all users to see if the provided email already exitsts
                 for ($i = 0; $i < count($users); $i++) {
@@ -45,10 +45,10 @@ if (!isset($_SESSION["id"])) {
                     $full_name = $first_name . " " . $last_name;
 
                     // create user
-                    User::createUser($first_name, $last_name, $role, $formattedEmail);
+                    Users::createUser($first_name, $last_name, $role, $formattedEmail);
 
                     // retrieve the created user and create a verification code for them
-                    $createdUser = User::getUser($formattedEmail);
+                    $createdUser = Users::getUser($formattedEmail);
                     Verification::createVerificationCode($createdUser["id"], $code);
 
                     $subject = "Verify your account";

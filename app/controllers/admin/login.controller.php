@@ -1,6 +1,6 @@
 <?php
 require(dirname(__FILE__, 4) . "/helpers/functions.php");
-require(dirname(__FILE__, 3) . "/models/User.php");
+require(dirname(__FILE__, 3) . "/models/Users.php");
 session_start();
 
 $data = [];
@@ -23,7 +23,7 @@ if (isset($_SESSION["id"])) {
 
         // if both fields were filled in correctly...
         if (!isset($data["err"])) {
-            $user = User::getUser($formattedEmail);
+            $user = Users::getUser($formattedEmail);
 
             // if the user provided email gave us a user...
             if ($user) {

@@ -1,6 +1,6 @@
 <?php
 require(dirname(__FILE__, 4) . "/helpers/functions.php");
-require(dirname(__FILE__, 3) . "/models/User.php");
+require(dirname(__FILE__, 3) . "/models/Users.php");
 session_start();
 
 $data = [];
@@ -9,7 +9,7 @@ $data = [];
 if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
-    $data["user"] = User::getUserByID($_SESSION["id"]);
+    $data["user"] = Users::getUserByID($_SESSION["id"]);
 
     // if the request method is POST and the POST variable "newsletter-email" is not set...
     if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) {
@@ -26,7 +26,7 @@ if (!isset($_SESSION["id"])) {
 
         // if the "err" key for the data array is not set...
         if (!isset($data["err"])) {
-            User::updateUser($first_name, $last_name, $formattedEmail, $_SESSION["id"]);
+            Users::updateUser($first_name, $last_name, $formattedEmail, $_SESSION["id"]);
             redirect("/admin");
         }
     }

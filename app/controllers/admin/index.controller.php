@@ -1,6 +1,6 @@
 <?php
 require(dirname(__FILE__, 4) . "/helpers/functions.php");
-require(dirname(__FILE__, 3) . "/models/User.php");
+require(dirname(__FILE__, 3) . "/models/Users.php");
 require(dirname(__FILE__, 3) . "/models/Posts.php");
 session_start();
 
@@ -10,7 +10,7 @@ $data = [];
 if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
-    $data["user"] = User::getUser($_SESSION["email"]);
+    $data["user"] = Users::getUser($_SESSION["email"]);
 
     if ($_SESSION["role"] == "Admin") {
         // if the request method is POST and the POST variable "newsletter-email" is not set...

@@ -1,6 +1,6 @@
 <?php
 require(dirname(__FILE__, 4) . "/helpers/functions.php");
-require(dirname(__FILE__, 3) . "/models/User.php");
+require(dirname(__FILE__, 3) . "/models/Users.php");
 require(dirname(__FILE__, 3) . "/models/Verification.php");
 
 $data = [];
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) 
     // if the email field is formatted correctly...
     if ($formattedEmail) {
         $acc_found;
-        $users = User::getUsers();
+        $users = Users::getUsers();
 
         // looping through all users to see if the provided email exitsts as well as if they are verified
         for ($i = 0; $i < count($users); $i++) {
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) 
         // if the provided email exists...
         if ($acc_found) {
             $code = uniqid();
-            $user = User::getUser($formattedEmail);
+            $user = Users::getUser($formattedEmail);
             $full_name = $user["first_name"] . " " . $user["last_name"];
 
             Verification::createVerificationCode($user["id"], $code);

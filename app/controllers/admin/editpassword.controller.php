@@ -1,6 +1,6 @@
 <?php
 require(dirname(__FILE__, 4) . "/helpers/functions.php");
-require(dirname(__FILE__, 3) . "/models/User.php");
+require(dirname(__FILE__, 3) . "/models/Users.php");
 session_start();
 
 $data = [];
@@ -9,7 +9,7 @@ $data = [];
 if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
-    $user = User::getUserByID($_SESSION["id"]);
+    $user = Users::getUserByID($_SESSION["id"]);
 
     // if the request method is POST and the POST variable "newsletter-email" is not set...
     if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) {
@@ -26,7 +26,7 @@ if (!isset($_SESSION["id"])) {
                 // if the given old password matches the password stored in the database...
                 if (password_verify($oldPassword, $user["password"])) {
                     $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-                    User::updatePassword($hashedPassword, $_SESSION["id"]);
+                    Users::updatePassword($hashedPassword, $_SESSION["id"]);
                     $data["success"] = "Your password has been updated.";
                 } else {
                     $data["err"] = "Your old password is incorrect. Please try again.";
