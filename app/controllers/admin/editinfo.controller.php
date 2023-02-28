@@ -9,7 +9,10 @@ $data = [];
 if (!isset($_SESSION["id"])) {
     redirect("/admin/login");
 } else {
-    $data["user"] = Users::getUserByID($_SESSION["id"]);
+    // if the request method is GET... 
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        $data["user"] = Users::getUserByID($_SESSION["id"]);
+    }
 
     // if the request method is POST and the POST variable "newsletter-email" is not set...
     if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) {
@@ -27,7 +30,8 @@ if (!isset($_SESSION["id"])) {
         // if the "err" key for the data array is not set...
         if (!isset($data["err"])) {
             Users::updateUser($first_name, $last_name, $formattedEmail, $_SESSION["id"]);
-            redirect("/admin");
+            $data["user"] = Users::getUserByID($_SESSION["id"]);
+            $data["success"] = "Your info has been updated.";
         }
     }
 }
