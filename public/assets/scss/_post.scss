@@ -1,3 +1,4 @@
+// ARTICLE
 .article {
   width: 80%;
   margin: 0 auto;
@@ -87,14 +88,14 @@
   }
 
   a {
-      color: #0000EE;
-      &:visited {
-        color: #551A8B;
-      }
+    color: #0000ee;
+    &:visited {
+      color: #551a8b;
+    }
 
-      &:active {
-        color: #EE0000;
-      }
+    &:active {
+      color: #ee0000;
+    }
   }
 }
 

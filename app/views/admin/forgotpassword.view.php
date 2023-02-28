@@ -12,7 +12,7 @@
         <button type="submit" class="btn btn--black forgotpassword__submit-btn">REQUEST RESET LINK</button>
     </form>
 
-    <a class="forgotpassword__go-back" href="/admin/login">GO BACK</a>
+    <a class="go-back" href="/admin/login">GO BACK</a>
 
     <?php if (isset($data["err"])) { ?>
         <p class="err"><?php echo $data["err"]; ?></p>

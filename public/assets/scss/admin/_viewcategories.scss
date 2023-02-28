@@ -20,9 +20,7 @@
   padding: 2rem 0;
 }
 
-/* =========================== */
-/* START OF CATEGORY CARD */
-/* =========================== */
+// CATEGORY CARD
 .category-card {
   display: flex;
   flex-direction: column;
@@ -52,9 +50,6 @@
     }
   }
 }
-/* =========================== */
-/* END OF CATEGORY CARD */
-/* =========================== */
 
 // MEDIA QUERIES
 @media (max-width: 768px) {

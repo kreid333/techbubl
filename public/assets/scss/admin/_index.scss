@@ -58,9 +58,7 @@
   padding: 2rem 0;
 }
 
-/* =========================== */
-/* START OF ADMIN POST */
-/* =========================== */
+// ADMIN POST
 .admin-post {
   display: flex;
   flex-direction: column;
@@ -100,9 +98,6 @@
     }
   }
 }
-/* =========================== */
-/* END OF ADMIN POST */
-/* =========================== */
 
 // MEDIA QUERIES
 @media (max-width: 1024px) {

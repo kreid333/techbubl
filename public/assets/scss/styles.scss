@@ -24,9 +24,7 @@
 @use "admin/success";
 @use "admin/forgotpassword";
 
-/* =========================== */
-/* START OF GLOBAL */
-/* =========================== */
+// GLOBAL
 * {
   box-sizing: border-box;
 }
@@ -203,7 +201,8 @@ input {
   }
 }
 
-.err, .success {
+.err,
+.success {
   text-align: center;
   margin-top: 1rem;
 }
@@ -218,13 +217,8 @@ input {
   padding: 5px;
   white-space: nowrap;
 }
-/* =========================== */
-/* END OF GLOBAL */
-/* =========================== */
 
-/* =========================== */
-/* START OF NAVBAR */
-/* =========================== */
+// NAVBAR
 .nav {
   background-color: #ffffff;
   width: 100%;
@@ -310,13 +304,8 @@ input {
     }
   }
 }
-/* =========================== */
-/* END OF NAVBAR */
-/* =========================== */
 
-/* =========================== */
-/* START OF MOBILE MENU */
-/* =========================== */
+// MOBILE MENU
 .mobile-menu {
   background-color: #ffffff;
   display: flex;
@@ -358,10 +347,8 @@ input {
     left: 0;
   }
 }
-/* =========================== */
-/* END OF MOBILE MENU */
-/* =========================== */
 
+// SEARCH MODAL
 .search-modal {
   position: fixed;
   left: 0;
@@ -420,9 +407,7 @@ input {
   display: none;
 }
 
-/* =========================== */
-/* START OF ASIDE SECTION */
-/* =========================== */
+// ASIDE
 .aside {
   padding: 1.5rem;
   display: flex;
@@ -479,9 +464,6 @@ input {
     }
   }
 }
-/* =========================== */
-/* END OF ASIDE SECTION */
-/* =========================== */
 
 // FOOTER
 footer {
@@ -493,9 +475,7 @@ footer {
   }
 }
 
-/* =========================== */
-/* START OF MEDIA QUERIES */
-/* =========================== */
+// MEDIA QUERIES
 @media (max-width: 768px) {
   .modal__card {
     width: 60%;
@@ -549,6 +529,3 @@ footer {
     text-align: center;
   }
 }
-/* =========================== */
-/* END OF MEDIA QUERIES */
-/* =========================== */
