@@ -218,6 +218,20 @@ input {
   white-space: nowrap;
 }
 
+.pagination {
+  text-align: center;
+  margin-top: auto;
+  &__link {
+    display: inline-block;
+    padding: 0.5rem;
+    border: 1px solid #000000;
+    &--active {
+      background-color: #000000;
+      color: white;
+    }
+  }
+}
+
 // NAVBAR
 .nav {
   background-color: #ffffff;
@@ -400,6 +414,8 @@ input {
 .main {
   padding: 1.5rem;
   min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
 }
 
 // DIVIDER

@@ -3,6 +3,12 @@
 $request = $_SERVER["REQUEST_URI"];
 $root_directory = $_SERVER["DOCUMENT_ROOT"];
 
+if (isset($_GET["page"])) {
+    $page = $_GET["page"];
+} else {
+    $page = NULL;
+}
+
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
 } else {
@@ -36,6 +42,10 @@ switch ($request) {
     case "/webdev/":
     case "/ai":
     case "/ai/":
+    case "/?page=" . $page:
+    case "/crypto?page=" . $page:
+    case "/webdev?page=" . $page:
+    case "/ai?page=" . $page:
         require($root_directory . "/app/controllers/main/index.controller.php");
         break;
 
@@ -111,7 +121,7 @@ switch ($request) {
     case "/admin/vieweditors/":
         require($root_directory . "/app/controllers/admin/vieweditors.controller.php");
         break;
-        
+
     case "/admin/viewcategories":
     case "/admin/viewcategories/":
         require($root_directory . "/app/controllers/admin/viewcategories.controller.php");

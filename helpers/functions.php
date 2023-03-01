@@ -22,6 +22,7 @@ function redirect($url)
     header("Location:$url");
     die();
 }
+
 function sendEmail($recipient_email, $recipient_name, $subject, $body)
 {
 
