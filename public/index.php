@@ -74,6 +74,8 @@ switch ($request) {
 
     case "/admin":
     case "/admin/":
+    case "/admin?page=" . $page:
+    case "/admin/?page=" . $page:
         require($root_directory . "/app/controllers/admin/index.controller.php");
         break;
 

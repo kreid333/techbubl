@@ -58,6 +58,28 @@ if (!isset($_SESSION["id"])) {
             $data["posts"] = Posts::getPostsByID($_SESSION["id"]);
         }
     }
+
+    if (!isset($_POST["search"]) || empty(trim($_POST["search"]))) {
+        // if the GET variable "page" is set...
+        if (isset($_GET["page"])) {
+            $page_num = $_GET["page"];
+        } else {
+            $page_num = 1;
+        }
+
+        $num_of_results = count($data["posts"]);
+
+        $Paginator = new Paginator($page_num, $num_of_results);
+
+        if ($_SESSION["role"] == "Editor") {
+            $data["posts"] = $Paginator->getPostsByID($_SESSION["id"]);
+        } else {
+            $data["posts"] = $Paginator->getPosts();
+        }
+
+        $data["page_num"] = $page_num;
+        $data["num_of_pages"] = $Paginator->num_of_pages;
+    }
 }
 
 view("admin/index", $data);
