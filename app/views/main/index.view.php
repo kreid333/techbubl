@@ -82,7 +82,7 @@
         <?php } ?>
     <?php } ?>
 
-    <?php if ($initial_link == $data["num_of_pages"]) { ?>
+    <?php if ($initial_link == $data["num_of_pages"] && $initial_link != 1) { ?>
         <a class="pagination__link pagination__link--active" href="<?php echo parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH) . "?page=" . $initial_link ?>"><?php echo $initial_link ?></a>
     <?php } ?>
 
