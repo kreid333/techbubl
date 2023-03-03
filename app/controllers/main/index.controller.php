@@ -43,6 +43,10 @@ if (isset($data["category_title"])) {
 $data["page_num"] = $page_num;
 $data["num_of_pages"] = $Paginator->num_of_pages;
 
+if ($data["page_num"] <= $data["num_of_pages"]) {
+    $page = "main/index";
+} else {
+    $page = "notfound";
+}
 
-
-view("main/index", $data);
+view($page, $data);

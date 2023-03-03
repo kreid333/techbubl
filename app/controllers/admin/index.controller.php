@@ -79,7 +79,13 @@ if (!isset($_SESSION["id"])) {
 
         $data["page_num"] = $page_num;
         $data["num_of_pages"] = $Paginator->num_of_pages;
+
+        if ($data["page_num"] <= $data["num_of_pages"]) {
+            $page = "admin/index";
+        } else {
+            $page = "notfound";
+        }
     }
 }
 
-view("admin/index", $data);
+view($page, $data);
