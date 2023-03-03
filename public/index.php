@@ -177,6 +177,6 @@ switch ($request) {
 
     default:
         http_response_code(404);
-        require($root_directory . "/app/views/404.php");
+        require($root_directory . "/app/controllers/notfound.controller.php");
         break;
 }

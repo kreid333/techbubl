@@ -311,6 +311,24 @@
   font-size: 1.5rem;
 }
 
+.notfound {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.notfound__header {
+  font-family: "IBM Plex Mono", monospace;
+}
+.notfound__btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .settings-icon {
   position: absolute;
   right: 0;
