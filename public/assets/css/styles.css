@@ -1282,6 +1282,7 @@ input {
 
 .btn {
   border: none;
+  margin: 0;
   padding: 10px 15px;
   white-space: nowrap;
   transition: 0.45s;
@@ -1657,8 +1658,9 @@ input {
   -webkit-border-radius: 0;
   appearance: none;
   -webkit-appearance: none;
+  margin: 0;
   padding: 10px;
-  height: 42px;
+  height: 100%;
   min-width: 120px;
   font-size: 12px;
 }
