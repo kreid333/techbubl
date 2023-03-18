@@ -470,8 +470,12 @@ input {
       input {
         background-color: #f5f5f5;
         border: none;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        appearance: none;
+        -webkit-appearance: none;
         padding: 10px;
-        height: 41px;
+        height: 42px;
         min-width: 120px;
         font-size: 12px;
         &:focus-visible {
