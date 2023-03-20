@@ -53,7 +53,7 @@ if (!isset($_SESSION["id"])) {
 
                     $subject = "Verify your account";
                     $body = '<span style="display: block;">Please click the link below to verify your account.</span>
-                    <a href="localhost/admin/verifyaccount?c=' . $code . '" style="display: block; margin-top: 10px;">Click here</a>';
+                    <a href="' . $_SERVER["HTTP_HOST"] . '/admin/verifyaccount?c=' . $code . '" style="display: block; margin-top: 10px;">Click here</a>';
 
                     sendEmail($formattedEmail, $full_name, $subject, $body);
                     $data["success"] = "A verification email has been sent to " . $formattedEmail . ".";

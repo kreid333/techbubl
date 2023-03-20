@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["newsletter-email"])) 
 
             $subject = "Reset Password";
             $body = '<span style="display: block;">Please click the link below to reset your password.</span>
-            <a href="localhost/admin/resetpassword?c=' . $code . '" style="display: block; margin-top: 10px;">Click here</a>';
+            <a href="' . $_SERVER["HTTP_HOST"] . '/admin/resetpassword?c=' . $code . '" style="display: block; margin-top: 10px;">Click here</a>';
 
             sendEmail($formattedEmail, $full_name, $subject, $body);
             $data["success"] = "A reset link has been sent to " . $formattedEmail . ".";
