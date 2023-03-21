@@ -29,22 +29,25 @@ if (isset($_GET["page"])) {
     $page_num = 1;
 }
 
-$num_of_results = count($data["posts"]);
+if ($page_num > 0) {
+    $num_of_results = count($data["posts"]);
 
-$Paginator = new Paginator($page_num, $num_of_results);
+    $Paginator = new Paginator($page_num, $num_of_results);
+    $data["page_num"] = $page_num;
+    $data["num_of_pages"] = $Paginator->num_of_pages;
 
-// if category_title is set in the data array...
-if (isset($data["category_title"])) {
-    $data["posts"] = $Paginator->getPostsByCategory($data["category_title"]);
-} else {
-    $data["posts"] = $Paginator->getPosts();
-}
+    // if category_title is set in the data array...
+    if (isset($data["category_title"])) {
+        $data["posts"] = $Paginator->getPostsByCategory($data["category_title"]);
+    } else {
+        $data["posts"] = $Paginator->getPosts();
+    }
 
-$data["page_num"] = $page_num;
-$data["num_of_pages"] = $Paginator->num_of_pages;
-
-if ($data["page_num"] <= $data["num_of_pages"]) {
-    $page = "main/index";
+    if ($data["page_num"] <= $data["num_of_pages"]) {
+        $page = "main/index";
+    } else {
+        $page = "notfound";
+    }
 } else {
     $page = "notfound";
 }
