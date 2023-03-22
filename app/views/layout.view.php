@@ -107,19 +107,31 @@
             </div>
             <div class="aside__popular-articles">
                 <h3>Popular Articles</h3>
-                <?php foreach ($data["popular_posts"] as $post) { ?>
-                    <a href="/post?id=<?php echo $post["id"]; ?>">
-                        <div class="aside__article"><?php echo $post["title"]; ?></div>
-                    </a>
-                <?php } ?>
+                <?php if (count($data["popular_posts"]) == 0) : ?>
+                    <p>No posts have been created.</p>
+                <?php endif ?>
+
+                <?php if (count($data["popular_posts"]) > 0) : ?>
+                    <?php foreach ($data["popular_posts"] as $post) : ?>
+                        <a href="/post?id=<?php echo $post["id"]; ?>">
+                            <div class="aside__article"><?php echo $post["title"]; ?></div>
+                        </a>
+                    <?php endforeach ?>
+                <?php endif ?>
             </div>
             <div class="aside__most-recent">
                 <h3>Most Recent</h3>
-                <?php foreach ($data["recent_posts"] as $post) { ?>
-                    <a href="/post?id=<?php echo $post["id"]; ?>">
-                        <div class="aside__article"><?php echo $post["title"]; ?></div>
-                    </a>
-                <?php } ?>
+                <?php if (count($data["recent_posts"]) == 0) : ?>
+                    <p>No posts have been created.</p>
+                <?php endif ?>
+
+                <?php if (count($data["recent_posts"]) > 0) : ?>
+                    <?php foreach ($data["recent_posts"] as $post) : ?>
+                        <a href="/post?id=<?php echo $post["id"]; ?>">
+                            <div class="aside__article"><?php echo $post["title"]; ?></div>
+                        </a>
+                    <?php endforeach ?>
+                <?php endif ?>
             </div>
             <div class="aside__newsletter">
                 <h3>Sign up for Daily Bubls</h3>

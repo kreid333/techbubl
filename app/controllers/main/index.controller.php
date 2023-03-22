@@ -24,26 +24,26 @@ if (isset($data["category_title"])) {
 
 // if the GET variable "page" is set...
 if (isset($_GET["page"])) {
-    $page_num = $_GET["page"];
+    $data["page_num"] = $_GET["page"];
 } else {
-    $page_num = 1;
+    $data["page_num"] = 1;
 }
 
-if ($page_num > 0) {
-    $num_of_results = count($data["posts"]);
+// if the page number is greater than 0...
+if ($data["page_num"] > 0) {
+    $data["num_of_results"] = count($data["posts"]);
 
-    $Paginator = new Paginator($page_num, $num_of_results);
-    $data["page_num"] = $page_num;
+    $Paginator = new Paginator($data["page_num"], $data["num_of_results"]);
+
     $data["num_of_pages"] = $Paginator->num_of_pages;
 
-    // if category_title is set in the data array...
     if (isset($data["category_title"])) {
         $data["posts"] = $Paginator->getPostsByCategory($data["category_title"]);
     } else {
         $data["posts"] = $Paginator->getPosts();
     }
 
-    if ($data["page_num"] <= $data["num_of_pages"]) {
+    if ($data["page_num"] <= $data["num_of_pages"] || $data["num_of_results"] == 0) {
         $page = "main/index";
     } else {
         $page = "notfound";
