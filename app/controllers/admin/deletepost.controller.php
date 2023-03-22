@@ -12,10 +12,12 @@ if (!isset($_SESSION["id"])) {
 
     if ($_SESSION["role"] == "Admin") {
         $data["posts"] = Posts::getPosts();
+        $data["num_of_results"] = count($data["posts"]);
     }
 
     if ($_SESSION["role"] == "Editor") {
         $data["posts"] = Posts::getPostsByID($_SESSION["id"]);
+        $data["num_of_results"] = count($data["posts"]);
     }
 
     if (isset($_GET["id"])) {
