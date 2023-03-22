@@ -20,15 +20,15 @@ if (!isset($data)) {
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newsletter-email"])) {
 
     // retrieving all users
-    $users = Users::getUsers();
+    $subscribers = Newsletter::getSubscribers();
 
     // validating the format of the given email
     $formattedEmail = filter_var($_POST["newsletter-email"], FILTER_VALIDATE_EMAIL);
 
     // looping through all users to see if the provided email already exitsts
-    for ($i = 0; $i < count($users); $i++) {
-        if ($users[$i][0] == $formattedEmail) {
-            $data["newsletter_err"] = $formattedEmail . " is already in use. Please try again.";
+    for ($i = 0; $i < count($subscribers); $i++) {
+        if ($subscribers[$i][0] == $formattedEmail) {
+            $data["newsletter_err"] = $formattedEmail . " is already subscribed. Please enter a different email.";
             break;
         }
     }

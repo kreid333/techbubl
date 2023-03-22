@@ -7,4 +7,13 @@ class Newsletter {
         $stmt->execute(["email" => $email]);
         $stmt = NULL;
     }
+
+    public static function getSubscribers()
+    {
+        $sql = "SELECT email FROM newsletter";
+        $stmt = DB::conn()->query($sql);
+        $users = $stmt->fetchAll(PDO::FETCH_NUM);
+        $stmt = NULL;
+        return $users;
+    }
 }
