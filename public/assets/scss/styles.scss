@@ -432,9 +432,6 @@ input {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 80px);
-  top: 80px;
-  position: sticky;
-  overflow-y: scroll;
   &__popular-articles,
   &__most-recent {
     width: 100%;
