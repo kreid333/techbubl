@@ -62,26 +62,32 @@ if (!isset($_SESSION["id"])) {
     if (!isset($_POST["search"]) || empty(trim($_POST["search"]))) {
         // if the GET variable "page" is set...
         if (isset($_GET["page"])) {
-            $page_num = $_GET["page"];
+            $data["page_num"] = $_GET["page"];
         } else {
-            $page_num = 1;
+            $data["page_num"] = 1;
         }
 
-        $num_of_results = count($data["posts"]);
+        // if the page number is greater than 0...
+        if ($data["page_num"] > 0) {
+            $data["num_of_results"] = count($data["posts"]);
 
-        $Paginator = new Paginator($page_num, $num_of_results);
+            $Paginator = new Paginator($data["page_num"], $data["num_of_results"]);
 
-        if ($_SESSION["role"] == "Editor") {
-            $data["posts"] = $Paginator->getPostsByID($_SESSION["id"]);
-        } else {
-            $data["posts"] = $Paginator->getPosts();
-        }
+            if ($_SESSION["role"] == "Editor") {
+                $data["posts"] = $Paginator->getPostsByID($_SESSION["id"]);
+            } else {
+                $data["posts"] = $Paginator->getPosts();
+            }
 
-        $data["page_num"] = $page_num;
-        $data["num_of_pages"] = $Paginator->num_of_pages;
+            $data["num_of_pages"] = $Paginator->num_of_pages;
 
-        if ($data["page_num"] <= $data["num_of_pages"]) {
-            $page = "admin/index";
+            if ($data["num_of_pages"] == 0 && $data["page_num"] == 1) {
+                $page = "admin/index";
+            } else if ($data["page_num"] <= $data["num_of_pages"]) {
+                $page = "admin/index";
+            } else {
+                $page = "notfound";
+            }
         } else {
             $page = "notfound";
         }

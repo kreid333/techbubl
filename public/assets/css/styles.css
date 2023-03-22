@@ -374,6 +374,13 @@
   color: white;
 }
 
+.createapost-mess {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 2rem;
+  text-align: center;
+}
+
 .admin-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
