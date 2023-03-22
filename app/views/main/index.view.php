@@ -1,7 +1,20 @@
 <?php if ($data["num_of_results"] == 0) : ?>
-    <p>No posts have been created. To create a post, login to an admin account using the link below.</p>
-    <br />
-    <a class="btn btn--black" href="/admin/login">Login</a>
+    <?php if ($_SERVER["REQUEST_URI"] == "/") : ?>
+        <p>No posts have been created. To create a post, login to an admin account using the link below.</p>
+        <br />
+        <a class="btn btn--black" href="/admin/login">Login</a>
+    <?php endif ?>
+
+    <?php $arr = ["crypto" => "Cryptocurrency", "webdev" => "Web Development", "ai" => "Artificial Intelligence"]; ?>
+
+    <?php for ($i = 0; $i < count($arr); $i++) : ?>
+        <?php if (strpos($_SERVER["REQUEST_URI"], array_keys($arr)[$i]) != false) : ?>
+            <p>There are currently no posts in the <?php echo $arr[array_keys($arr)[$i]]; ?> category.</p>
+            <br />
+            <a class="btn btn--black" href="/">GO HOME</a>
+            <?php break; ?>
+        <?php endif ?>
+    <?php endfor ?>
 <?php endif ?>
 
 <?php if ($data["num_of_results"] > 0) : ?>
@@ -77,7 +90,7 @@
         <?php endif ?>
 
 
-        <?php if ($initial_link != $data["num_of_pages"]) :?>
+        <?php if ($initial_link != $data["num_of_pages"]) : ?>
             <?php for ($page = $initial_link; $page <= $last_link; $page++) { ?>
 
                 <?php if ($page == $data["page_num"]) { ?>
