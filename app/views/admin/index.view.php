@@ -97,7 +97,7 @@
                     break;
             }
 
-            // if the link that is suppose to ne displayed in the middle is the total number of pages...
+            // if the link that is suppose to be displayed in the middle is the total number of pages...
             if (($last_link - 1) == $data["num_of_pages"]) {
                 $last_link = $last_link - 1;
             }
