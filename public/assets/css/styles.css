@@ -1456,7 +1456,7 @@ input {
   align-items: center;
   height: 80px;
   padding: 0px 10px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
 }
 .nav__logo {
   width: fit-content;
@@ -1494,7 +1494,7 @@ input {
 }
 .nav__search-btn i {
   padding: 0;
-  font-size: 1.75rem;
+  font-size: 1.675rem;
   color: #a5a5a5;
 }
 .nav__hamburger {
@@ -1509,7 +1509,7 @@ input {
   content: "";
   background-color: #a5a5a5;
   height: 4px;
-  width: 2.5rem;
+  width: 2rem;
   border-radius: 5px;
   margin: 3px 0px;
 }
@@ -1517,7 +1517,7 @@ input {
   transform: rotate(-45deg) translate(-4px, 4px);
 }
 .nav__hamburger--active::after {
-  transform: rotate(45deg) translate(-3px, -3px);
+  transform: rotate(45deg) translate(-2px, -3px);
 }
 .nav__hamburger--active div {
   display: none;
