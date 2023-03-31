@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Questrial&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/public/assets/images/TechBubl.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="/public/assets/js/scripts.js" defer></script>
     <script src="/vendor/tinymce/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
