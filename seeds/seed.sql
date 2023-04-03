@@ -68,5 +68,3 @@ VALUES (3, "John", "Roberts", "Editor", "johnroberts@techbubl.com", "$2y$10$QOok
 INSERT INTO posts (user_id, category_id, title, body) VALUES (1, 1, "This is a title", "<p>Hello World!</p>");
 INSERT INTO posts (user_id, category_id, title, body) VALUES (1, 1, "This is a title", "<p>Hello World!</p>");
 INSERT INTO posts (user_id, category_id, title, body) VALUES (1, 1, "This is a title", "<p>Hello World!</p>");
-
-SELECT * FROM newsletter;
